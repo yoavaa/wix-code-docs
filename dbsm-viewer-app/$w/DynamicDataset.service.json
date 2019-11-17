@@ -1,8 +1,9 @@
 { "name": "DynamicDataset",
   "memberOf": "$w",
   "mixes":
-    [ "wix-dataset.Dataset" ],
-  "labels": [],
+    [ "$w.Dataset" ],
+  "labels":
+    [ "changed" ],
   "location":
     { "lineno": 5,
       "filename": "routerDatasetApi.js" },
