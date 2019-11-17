@@ -2,8 +2,7 @@
   "memberOf": "$w",
   "mixes":
     [ "wix-dataset.Dataset" ],
-  "labels":
-    [ "new" ],
+  "labels": [],
   "location":
     { "lineno": 5,
       "filename": "routerDatasetApi.js" },

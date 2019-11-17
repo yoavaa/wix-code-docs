@@ -1,12 +1,13 @@
-{ "name": "wix-dataset",
+{ "name": "Dataset",
+  "memberOf": "$w",
   "mixes": [],
   "labels":
-    [ "removed" ],
+    [ "new" ],
   "location":
     { "lineno": 93,
       "filename": "datasetApi.js" },
   "docs":
-    { "summary": "A dataset connects page elements to a set of items in a data collection.",
+    { "summary": "A [dataset](wix-dataset.html) connects page elements to a set of items in a data collection.",
       "description":
         [ "A dataset serves as an intermediary between page elements, such as input",
           " elements and buttons, and the data in a collection. The dataset",
