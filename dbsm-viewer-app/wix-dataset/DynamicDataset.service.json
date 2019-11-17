@@ -2,7 +2,8 @@
   "memberOf": "wix-dataset",
   "mixes":
     [ "wix-dataset.Dataset" ],
-  "labels": [],
+  "labels":
+    [ "removed" ],
   "location":
     { "lineno": 5,
       "filename": "routerDatasetApi.js" },
