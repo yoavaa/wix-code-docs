@@ -23,18 +23,12 @@
           "   + **Read-only**: Display data.",
           "",
           "",
-          " ![Dataset modes](images/dataset_modes.png \"Dataset modes\")",
-          "",
           " Another way to work with collection data and page elements is to use the",
           " [Data API](wix-data.html). The Data API lets you work directly with your",
           " collections. However, you'll need to write code to read from and write to",
           " your page elements. Using the Dataset API allows you to take advantage of",
           " the [data binding](https://support.wix.com/en/article/data-binding) that",
           " can be set up in the Editor's connect panels.",
-          "",
-          " The wix-dataset API can only be used in your site’s front-end code.",
-          "",
-          " You do not need to import `wix-dataset`.",
           "",
           " <h3 id=\"data-paging\">Dataset Pages</h3>",
           " Datasets retrieve information from your collections in chunks of items.",
@@ -60,8 +54,7 @@
   "properties": [],
   "operations":
     [ { "name": "getNextDynamicPage",
-        "labels":
-          [ "new" ],
+        "labels": [],
         "nameParams": [],
         "params": [],
         "ret":
@@ -71,7 +64,7 @@
                   [ "string" ] },
             "doc": "Fulfilled - The URL of the next dynamic page, or `null` if there is no next page." },
         "locations":
-          [ { "lineno": 64,
+          [ { "lineno": 58,
               "filename": "routerDatasetApi.js" } ],
         "docs":
           { "summary": "Gets the next dynamic page URL.",
@@ -132,8 +125,7 @@
         "extra":
           {  } },
       { "name": "getPreviousDynamicPage",
-        "labels":
-          [ "new" ],
+        "labels": [],
         "nameParams": [],
         "params": [],
         "ret":
@@ -143,7 +135,7 @@
                   [ "string" ] },
             "doc": "Fulfilled - The URL of the previous dynamic page, or `null` if there is no previous page." },
         "locations":
-          [ { "lineno": 111,
+          [ { "lineno": 105,
               "filename": "routerDatasetApi.js" } ],
         "docs":
           { "summary": "Gets the previous dynamic page URL.",
