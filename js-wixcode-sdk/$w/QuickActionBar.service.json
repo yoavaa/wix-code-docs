@@ -3,14 +3,13 @@
   "mixes":
     [ "$w.HiddenCollapsedMixin",
       "$w.StyleMixin" ],
-  "labels": [],
+  "labels":
+    [ "changed" ],
   "location":
     { "lineno": 10,
       "filename": "QuickActionBar.es6" },
   "docs":
-    { "summary": "A [quick action bar](https://support.wix.com/en/article/adding-and-setting-up-the-quick-action-bar-on-your-mobile-site)\n helps your visitors contact you instantly from their mobile devices.",
-      "description":
-        [ "You can choose which actions appear on a quick action bar and customize its design to match your site." ],
+    { "summary": "A [quick action bar](https://support.wix.com/en/article/adding-and-setting-up-the-quick-action-bar-on-your-mobile-site)\n helps your visitors contact you instantly from their mobile devices. You can\n choose which actions appear on it and customize the design to match your site.",
       "links": [],
       "examples": [],
       "extra":
@@ -22,9 +21,9 @@
         "set": true,
         "type": "boolean",
         "locations":
-          [ { "lineno": 74,
+          [ { "lineno": 73,
               "filename": "QuickActionBar.es6" },
-            { "lineno": 102,
+            { "lineno": 101,
               "filename": "QuickActionBar.es6" } ],
         "docs":
           { "summary": "Sets or gets a quick action bar's alignment.",
@@ -58,9 +57,9 @@
         "set": true,
         "type": "string",
         "locations":
-          [ { "lineno": 122,
+          [ { "lineno": 121,
               "filename": "QuickActionBar.es6" },
-            { "lineno": 146,
+            { "lineno": 145,
               "filename": "QuickActionBar.es6" } ],
         "docs":
           { "summary": "Sets or gets a quick action bar's color scheme.",
@@ -92,9 +91,9 @@
         "set": true,
         "type": "boolean",
         "locations":
-          [ { "lineno": 171,
+          [ { "lineno": 170,
               "filename": "QuickActionBar.es6" },
-            { "lineno": 195,
+            { "lineno": 194,
               "filename": "QuickActionBar.es6" } ],
         "docs":
           { "summary": "Sets or gets whether a quick action bar's color scheme is inverted.",
@@ -127,9 +126,9 @@
         "set": true,
         "type": "boolean",
         "locations":
-          [ { "lineno": 31,
+          [ { "lineno": 30,
               "filename": "QuickActionBar.es6" },
-            { "lineno": 54,
+            { "lineno": 53,
               "filename": "QuickActionBar.es6" } ],
         "docs":
           { "summary": "Sets or gets whether a quick action bar's labels are shown.",
@@ -166,7 +165,7 @@
           { "type": "$w.QuickActionBar",
             "doc": "The quick action bar that triggered the event." },
         "locations":
-          [ { "lineno": 222,
+          [ { "lineno": 221,
               "filename": "QuickActionBar.es6" } ],
         "docs":
           { "summary": "Adds an event handler that runs when an item in a quick action bar is\n clicked.",

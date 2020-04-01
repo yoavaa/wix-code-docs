@@ -8,16 +8,13 @@
       "$w.ClickableMixin",
       "$w.StyleMixin",
       "$w.RequiredMixin" ],
-  "labels": [],
+  "labels":
+    [ "changed" ],
   "location":
     { "lineno": 26,
       "filename": "CheckboxGroup.es6" },
   "docs":
-    { "summary": "Checkbox groups are used for selecting any number of the given\n options.",
-      "description":
-        [ "Checkbox groups consist of a list of [options](#Option). Each",
-          " [option](#Option) contains a label, which is what the user sees, and a",
-          " value, which is what is used in code and stored in your collections." ],
+    { "summary": "Checkbox groups are used for selecting any number of the given\n options. Checkbox groups consist of a list of [options](#Option). Each\n [option](#Option) contains a label, which is what the user sees, and a\n value, which is what is used in code and stored in you collections.",
       "links": [],
       "examples": [],
       "extra":
@@ -33,9 +30,9 @@
               [ "$w.CheckboxGroup.Option" ] },
         "defaultValue": "An empty array",
         "locations":
-          [ { "lineno": 58,
+          [ { "lineno": 56,
               "filename": "CheckboxGroup.es6" },
-            { "lineno": 92,
+            { "lineno": 90,
               "filename": "CheckboxGroup.es6" } ],
         "docs":
           { "summary": "Sets or gets the options of a checkbox group.",
@@ -92,9 +89,9 @@
             "typeParams":
               [ "number" ] },
         "locations":
-          [ { "lineno": 211,
+          [ { "lineno": 209,
               "filename": "CheckboxGroup.es6" },
-            { "lineno": 239,
+            { "lineno": 237,
               "filename": "CheckboxGroup.es6" } ],
         "docs":
           { "summary": "Sets or gets the indices of the selected options.",
@@ -130,7 +127,7 @@
         "set": false,
         "type": "$w.Style",
         "locations":
-          [ { "lineno": 288,
+          [ { "lineno": 286,
               "filename": "CheckboxGroup.es6" } ],
         "docs":
           { "summary": "Gets an object containing information about the checkbox group's styles.",
@@ -172,9 +169,9 @@
             "typeParams":
               [ "string" ] },
         "locations":
-          [ { "lineno": 143,
+          [ { "lineno": 141,
               "filename": "CheckboxGroup.es6" },
-            { "lineno": 173,
+            { "lineno": 171,
               "filename": "CheckboxGroup.es6" } ],
         "docs":
           { "summary": "Sets or gets the value of the selected options.",
@@ -211,7 +208,7 @@
   "messages":
     [ { "name": "Option",
         "locations":
-          [ { "lineno": 49,
+          [ { "lineno": 47,
               "filename": "CheckboxGroup.es6" } ],
         "docs":
           { "summary": "An object used by the `options` property that contains the attributes of checkbox item.",

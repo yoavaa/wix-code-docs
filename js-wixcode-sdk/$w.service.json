@@ -1,19 +1,12 @@
 { "name": "$w",
   "mixes": [],
-  "labels": [],
+  "labels":
+    [ "changed" ],
   "location":
     { "lineno": 28,
       "filename": "wixCode.es6" },
   "docs":
-    { "summary": "The `$w` namespace contains everything you need in order to work\n with your site's components.",
-      "description":
-        [ "It contains all of the UI elements, nodes, and",
-          " events that make up your site. It also includes the [`$w()`]($w.html#w),",
-          " [`onReady()`]($w.html#onReady), and [`at()`]($w.html#at) functions.",
-          "",
-          " The APIs in `$w` can only be used in front-end code.",
-          "",
-          " You do not need to import `$w`." ],
+    { "summary": "The `$w` namespace contains everything you need in order to work\n with your site's components. It contains all of the UI elements, nodes, and\n events that make up your site. It also includes the [`$w()`]($w.html#w),\n [`onReady()`]($w.html#onReady), and [`at()`]($w.html#at) functions.\n\n The APIs in `$w` can only be used in front-end code.\n\n You do not need to import `$w`.",
       "links": [],
       "examples": [],
       "extra":
@@ -35,7 +28,7 @@
                     [ "$w.Element" ] } ],
             "doc": "A single selected element or an array of selected elements." },
         "locations":
-          [ { "lineno": 42,
+          [ { "lineno": 40,
               "filename": "wixCode.es6" } ],
         "docs":
           { "summary": "Selects and returns elements from a page.",
@@ -96,7 +89,8 @@
           { "notes":
               [ "Most elements accessible for selection by `$w` have basic API properties and functions, \n like `id`, `type`, `show()`, `hide()`, and others. Use Corvid's autocomplete\n in the code panel to see which API functions and properties are available\n for each element." ] } },
       { "name": "at",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "context",
@@ -106,7 +100,7 @@
           { "type": "$w.$w",
             "doc": "A selector function for the given context." },
         "locations":
-          [ { "lineno": 137,
+          [ { "lineno": 135,
               "filename": "wixCode.es6" } ],
         "docs":
           { "summary": "Gets a selector function for a specific context.",
@@ -115,19 +109,23 @@
                 " context property. Usually, you will use `at()` in a event handler that handles",
                 " events fired on an element contained in a repeater to get a [selector with",
                 " repeated item scope]($w.Repeater.html#repeated-item-scope). The returned function",
-                " selects the elements from the same repeater item where the event was fired." ],
+                " selects the elements from the same repeater item where the event was fired.",
+                "",
+                " For example, suppose we have a repeater where each item contains an image and",
+                " a text element. Here, when an image is clicked, the value of the text element in",
+                " the same repeated item is changed to \"Selected\". All the other text elements",
+                " in the other repeated items are not affected.",
+                "",
+                " ```javascript",
+                " $w.onReady( function () {",
+                "   $w(\"#myRepeatedImage\").onClick( (event, $w) => {",
+                "     let $item = $w.at(event.context)",
+                "     $item(\"#myRepeatedText\").text = \"Selected\";",
+                "   } );",
+                " } );",
+                " ```" ],
             "links": [],
-            "examples":
-              [ { "title": "Select an element in a repeated item",
-                  "body":
-                    [ "$w.onReady( function () {",
-                      "  $w(\"#myRepeatedImage\").onClick( (event) => {",
-                      "    let $item = $w.at(event.context);",
-                      "    $item(\"#myRepeatedText\").text = \"Selected\";",
-                      "  } );",
-                      "} )" ],
-                  "extra":
-                    { "description": "In this example, we have a repeater where each item contains an image and\n a text element. When an image is clicked, the value of the text element in\n the same repeated item is changed to \"Selected\". All the other text elements\n in the other repeated items are not affected." } } ],
+            "examples": [],
             "extra":
               {  } },
         "extra":
@@ -142,7 +140,7 @@
         "ret":
           { "type": "void" },
         "locations":
-          [ { "lineno": 89,
+          [ { "lineno": 87,
               "filename": "wixCode.es6" } ],
         "docs":
           { "summary": "Sets the function that runs when all the page elements have finished loading.",
@@ -248,7 +246,67 @@
               {  } },
         "extra":
           { "notes":
-              [ "Because `onReady()` code may be run twice, you need to be aware that if your\n `onReady()` code causes a side effect, such as inserting an item into a collection,\n that side effect might happen twice. To avoid a side effect from happening twice,\n use the [`wixWindow.rendering.env`](wix-window.rendering.html#env) to determine \n where your code is being executed." ] } } ],
+              [ "Because `onReady()` code may be run twice, you need to be aware that if your\n `onReady()` code causes a side effect, such as inserting an item into a collection,\n that side effect might happen twice. To avoid a side effect from happening twice,\n use the [`wixWindow.rendering.env`](wix-window.rendering.html#env) to determine \n where your code is being executed." ] } },
+      { "name": "rendered",
+        "labels":
+          [ "new" ],
+        "nameParams": [],
+        "params":
+          [ { "name": "elementId",
+              "type": "string",
+              "doc": "The ID of the element to check." } ],
+        "ret":
+          { "type": "boolean",
+            "doc": "`true` if the element is rendered on the current page." },
+        "locations":
+          [ { "lineno": 165,
+              "filename": "wixCode.es6" } ],
+        "docs":
+          { "summary": "Indicates if an element is currently in the <a href=\"https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction\" target=\"_blank\">DOM structure</a> of the current page.",
+            "description":
+              [ "If `rendered()` returns `true`, the element is in the current DOM structure and",
+                " can be used.",
+                "",
+                " If `rendered()` returns `false`, the element is not in the current DOM structure.",
+                "",
+                " An element might not be in the DOM if it is in a [slide]($w.Slide.html) or a [state]($w.State.html)",
+                " which is not currently showing.",
+                "",
+                " You can prevent errors by using `rendered()` to check whether an element exists before running code on it. `rendered()` is useful in the following scenarios:",
+                "",
+                " + An element exists in the desktop version of your site but not in the mobile version.",
+                " + An identical element exists on some, but not all, pages in your site and you are running code on the element from the <a href=\"https://support.wix.com/en/article/corvid-working-in-the-code-panel#page-and-site-tabs-1\" target=\"_blank\">Site tab</a>." ],
+            "links": [],
+            "examples":
+              [ { "title": "Get an element's rendered status",
+                  "body":
+                    [ "let isRendered = $w.rendered(\"#myElement\");  // true" ],
+                  "extra":
+                    {  } },
+                { "title": "Check whether an element exists on the mobile version of a site",
+                  "body":
+                    [ "if($w.rendered(\"#myButton\")) {",
+                      "    $w(\"#myButton\").enable();",
+                      "} else {",
+                      "    console.log(\"Selected element does not exist on the mobile site\");",
+                      "}  " ],
+                  "extra":
+                    { "description": "This example demonstrates how to prevent an error when running code on a button that exists on the desktop version of a site, but not on the mobile version. On the desktop site, the button will be enabled. On the mobile site, a message will log to the console." } },
+                { "title": "Check whether an element exists on the current page before running site code",
+                  "body":
+                    [ "// Site code",
+                      "",
+                      "if($w.rendered(\"#myTextElement\")) {",
+                      "    $w(\"#myTextElement\").text = \"Some text\";",
+                      "} else {",
+                      "    console.log(\"Selected element does not exist on this page\");",
+                      "}  " ],
+                  "extra":
+                    { "description": "This example demonstrates how to prevent errors when running code on a text element that exists in most, but not all, pages of a site. On the pages with the element, the text will be defined. On pages without the element, a message will log to the console." } } ],
+            "extra":
+              {  } },
+        "extra":
+          {  } } ],
   "callbacks":
     [ { "name": "EventHandler",
         "labels": [],
@@ -290,7 +348,7 @@
         "ret":
           { "type": "void" },
         "locations":
-          [ { "lineno": 581,
+          [ { "lineno": 568,
               "filename": "Repeater.es6" } ],
         "docs":
           { "description":
@@ -453,7 +511,7 @@
         "ret":
           { "type": "void" },
         "locations":
-          [ { "lineno": 441,
+          [ { "lineno": 428,
               "filename": "Repeater.es6" } ],
         "docs":
           { "description":
@@ -474,7 +532,7 @@
         "ret":
           { "type": "void" },
         "locations":
-          [ { "lineno": 536,
+          [ { "lineno": 523,
               "filename": "Repeater.es6" } ],
         "docs":
           { "description":
@@ -565,7 +623,7 @@
                     [ "void" ] },
                 "void" ] },
         "locations":
-          [ { "lineno": 81,
+          [ { "lineno": 79,
               "filename": "wixCode.es6" } ],
         "docs":
           { "summary": "Function that runs when all page elements have finished loading.",
@@ -639,7 +697,7 @@
         "ret":
           { "type": "void" },
         "locations":
-          [ { "lineno": 132,
+          [ { "lineno": 134,
               "filename": "ValidatableMixin.es6" } ],
         "docs":
           { "summary": "Function that runs when custom validation is checked.",

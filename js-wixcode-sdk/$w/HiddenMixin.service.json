@@ -1,15 +1,13 @@
 { "name": "HiddenMixin",
   "memberOf": "$w",
   "mixes": [],
-  "labels": [],
+  "labels":
+    [ "changed" ],
   "location":
-    { "lineno": 11,
+    { "lineno": 10,
       "filename": "HiddenMixin.es6" },
   "docs":
-    { "summary": "Provides functionality for elements that can be hidden.",
-      "description":
-        [ "To learn about the behavior of a hidden element,",
-          " see the [`hidden`](#hidden) property." ],
+    { "summary": "Provides functionality for elements that can be hidden.\n\n To learn about the behavior of a hidden element,\n see the [`hidden`](#hidden) property.",
       "links": [],
       "examples": [],
       "extra":
@@ -22,7 +20,7 @@
         "type": "boolean",
         "defaultValue": "false",
         "locations":
-          [ { "lineno": 127,
+          [ { "lineno": 126,
               "filename": "HiddenMixin.es6" } ],
         "docs":
           { "summary": "Indicates if the element is visible or hidden.",
@@ -90,7 +88,7 @@
         "type": "boolean",
         "defaultValue": "true",
         "locations":
-          [ { "lineno": 268,
+          [ { "lineno": 267,
               "filename": "HiddenMixin.es6" } ],
         "docs":
           { "summary": "Indicates if the element is actually visible.",
@@ -154,7 +152,7 @@
                   [ "void" ] },
             "doc": "Fulfilled - When the effect is complete and the element's `hidden` property has been set to `true`." },
         "locations":
-          [ { "lineno": 40,
+          [ { "lineno": 39,
               "filename": "HiddenMixin.es6" } ],
         "docs":
           { "summary": "Hides the element and sets its `hidden` property\n to `true`, using an effect if specified.",
@@ -238,7 +236,8 @@
         "extra":
           {  } },
       { "name": "show",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "effectName",
@@ -270,7 +269,7 @@
                   [ "void" ] },
             "doc": "Fulfilled - When the effect is complete and the element's `hidden` property has been set to `false`." },
         "locations":
-          [ { "lineno": 186,
+          [ { "lineno": 185,
               "filename": "HiddenMixin.es6" } ],
         "docs":
           { "summary": "Shows the element and sets its `hidden` property\n to `false`, using an effect if specified.",
@@ -285,20 +284,20 @@
                 "",
                 " Effects:",
                 "",
-                " + `\"arc\"`",
-                " + `\"bounce\"`",
-                " + `\"fade\"`",
-                " + `\"flip\"`",
-                " + `\"float\"`",
-                " + `\"fly\"`",
-                " + `\"fold\"`",
-                " + `\"glide\"`",
-                " + `\"puff\"`",
-                " + `\"roll\"`",
-                " + `\"slide\"`",
-                " + `\"spin\"`",
-                " + `\"turn\"`",
-                " + `\"zoom\"`" ],
+                " + [`\"arc\"`]($w.EffectOptions.html#ArcEffectOptions)",
+                " + [`\"bounce\"`]($w.EffectOptions.html#BounceEffectOptions)",
+                " + [`\"fade\"`]($w.EffectOptions.html#FadeEffectOptions)",
+                " + [`\"flip\"`]($w.EffectOptions.html#FlipEffectOptions)",
+                " + [`\"float\"`]($w.EffectOptions.html#FloatEffectOptions)",
+                " + [`\"fly\"`]($w.EffectOptions.html#FlyEffectOptions)",
+                " + [`\"fold\"`]($w.EffectOptions.html#FoldEffectOptions)",
+                " + [`\"glide\"`]($w.EffectOptions.html#GlideEffectOptions)",
+                " + [`\"puff\"`]($w.EffectOptions.html#PuffEffectOptions)",
+                " + [`\"roll\"`]($w.EffectOptions.html#RollEffectOptions)",
+                " + [`\"slide\"`]($w.EffectOptions.html#SlideEffectOptions)",
+                " + [`\"spin\"`]($w.EffectOptions.html#SpinEffectOptions)",
+                " + [`\"turn\"`]($w.EffectOptions.html#TurnEffectOptions)",
+                " + [`\"zoom\"`]($w.EffectOptions.html#ZoomEffectOptions)" ],
             "links":
               [ "[hide( )](#hide)",
                 "[hidden](#hidden)",

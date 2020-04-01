@@ -2,20 +2,13 @@
   "memberOf": "$w",
   "mixes":
     [ "$w.IFrame" ],
-  "labels": [],
+  "labels":
+    [ "changed" ],
   "location":
     { "lineno": 18,
       "filename": "HtmlComponent.es6" },
   "docs":
-    { "summary": "A container for internal or external HTML code.",
-      "description":
-        [ "Messages can be sent",
-          " from your page code to the code in an HTML component and from the HTML",
-          " component to your page code using the [`postMessage()`](#postMessage) and",
-          " [`onMessage()`](#onMessage) functions. To learn more about what code an HTML",
-          " component can hold, see <a href=\"https://support.wix.com/en/article/using-iframes-to-display-visible-content-on-your-site\" target=\"_blank\">here</a>.",
-          "",
-          " For an overview of working with an HTML Component using code, see <a href=\"https://support.wix.com/en/article/working-with-the-html-element\" target=\"_blank\">Working with the HTML Element</a>." ],
+    { "summary": "A container for internal or external HTML code. Messages can be sent\n from your page code to the code in an HTML component and from the HTML\n component to your page code using the [`postMessage()`](#postMessage) and\n [`onMessage()`](#onMessage) functions. To learn more about what code an HTML\n component can hold, see <a href=\"https://support.wix.com/en/article/using-iframes-to-display-visible-content-on-your-site\" target=\"_blank\">here</a>.\n\n For an overview of working with an HTML Component using code, see <a href=\"https://support.wix.com/en/article/working-with-the-html-element\" target=\"_blank\">Working with the HTML Element</a>.",
       "links": [],
       "examples": [],
       "extra":
@@ -27,9 +20,9 @@
         "set": true,
         "type": "string",
         "locations":
-          [ { "lineno": 86,
+          [ { "lineno": 84,
               "filename": "HtmlComponent.es6" },
-            { "lineno": 111,
+            { "lineno": 109,
               "filename": "HtmlComponent.es6" } ],
         "docs":
           { "summary": "Sets or gets whether the HTML Component displays scrollbars.",
@@ -67,9 +60,9 @@
         "set": true,
         "type": "string",
         "locations":
-          [ { "lineno": 40,
+          [ { "lineno": 38,
               "filename": "HtmlComponent.es6" },
-            { "lineno": 59,
+            { "lineno": 57,
               "filename": "HtmlComponent.es6" } ],
         "docs":
           { "summary": "Sets or gets the URL of the HTML Component's code.",
@@ -106,7 +99,7 @@
         "ret":
           { "type": "$w.HtmlComponent" },
         "locations":
-          [ { "lineno": 300,
+          [ { "lineno": 295,
               "filename": "HtmlComponent.es6" } ],
         "docs":
           { "summary": "Allows the HTML Component to be put into full screen mode.",
@@ -125,7 +118,8 @@
         "extra":
           {  } },
       { "name": "onMessage",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "handler",
@@ -135,7 +129,7 @@
           { "type": "$w.HtmlComponent",
             "doc": "The HTML Code element that triggered the event." },
         "locations":
-          [ { "lineno": 230,
+          [ { "lineno": 228,
               "filename": "HtmlComponent.es6" } ],
         "docs":
           { "summary": "Adds an event handler that runs when the HTML Component\n sends a message.",
@@ -151,13 +145,10 @@
                 "",
                 "     <script type=\"text/javascript\">",
                 "       function sendReturnMessage(msg) {",
-                "         window.parent.postMessage(msg, \"http://mysite.com\");",
+                "         window.parent.postMessage(msg, \"*\");",
                 "       }",
                 "     </script>",
                 "",
-                " When posting a message from within your HTML Component, you should specify your",
-                " site's URL as the `targetOrigin`. If you use `\"*\"` instead, your message can",
-                " be intercepted by a malicious site. To learn more, see <a href=\"https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage\" target=\"_blank\">Window.postMessage()</a>.",
                 "",
                 " For more information on sending and receiving messages between your page",
                 " and your HTML Component, see <a href=\"https://support.wix.com/en/article/working-with-the-html-component-in-wix-code#messaging-1\" target=\"_blank\">Working with the HTML Component in Wix Code</a>." ],
@@ -200,7 +191,7 @@
                       "",
                       "// send message to the page code",
                       "function sendReturnMessage(msg) {",
-                      "  window.parent.postMessage(msg, \"http://mysite.com\");",
+                      "  window.parent.postMessage(msg, \"*\");",
                       "}",
                       "</script>",
                       "",
@@ -237,7 +228,8 @@
               [ "**Deprecation note:** The $w parameter of event handlers is being deprecated. To get\n a scoped selector for working with elements in repeater items, use the [$w.at()]($w.html#at) function\n and pass it the context property of the event parameter: `$item = $w.at(event.context)`. To learn more, see\n <a href=\"https://www.wix.com/code/home/forum/wix-tips-and-updates/removal-of-the-w-parameter-from-event-handlers\" target=\"_blank\">here</a>." ],
             "eventType": "message" } },
       { "name": "postMessage",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "message",
@@ -253,7 +245,7 @@
         "ret":
           { "type": "void" },
         "locations":
-          [ { "lineno": 143,
+          [ { "lineno": 141,
               "filename": "HtmlComponent.es6" } ],
         "docs":
           { "summary": "Sends a message to the HTML Component.",
@@ -320,7 +312,7 @@
                       "",
                       "// send message to the page code",
                       "function sendReturnMessage(msg) {",
-                      "  window.parent.postMessage(msg, \"http://mysite.com\");",
+                      "  window.parent.postMessage(msg, \"*\");",
                       "}",
                       "</script>",
                       "",

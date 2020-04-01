@@ -3,14 +3,13 @@
   "mixes":
     [ "$w.Node",
       "$w.ViewportMixin" ],
-  "labels": [],
+  "labels":
+    [ "changed" ],
   "location":
     { "lineno": 6,
       "filename": "Anchor.es6" },
   "docs":
-    { "summary": "<a href=\"https://www.wix.com/support/html5/article/about-anchors\" target=\"_blank\">Anchors</a>\n are invisible position markers which you can place anywhere on your site.",
-      "description":
-        [ "Use anchors to direct users to important sections on a page." ],
+    { "summary": "<a href=\"https://www.wix.com/support/html5/article/about-anchors\" target=\"_blank\">Anchors</a>\n are invisible position markers which you can place anywhere on your site.\n They are a useful way to direct users to important sections.",
       "links": [],
       "examples": [],
       "extra":
@@ -22,7 +21,7 @@
         "set": false,
         "type": "string",
         "locations":
-          [ { "lineno": 21,
+          [ { "lineno": 20,
               "filename": "Anchor.es6" } ],
         "docs":
           { "summary": "Gets the name of an anchor.",

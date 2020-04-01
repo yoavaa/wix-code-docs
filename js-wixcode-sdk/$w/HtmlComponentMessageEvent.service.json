@@ -19,7 +19,7 @@
           [ "changed" ],
         "get": true,
         "set": false,
-        "type": "*",
+        "type": "$w.Element",
         "locations":
           [ { "lineno": 26,
               "filename": "HtmlComponentMessageEvent.es6" } ],
