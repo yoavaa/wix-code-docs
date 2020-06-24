@@ -1,0 +1,53 @@
+{ "name": "root-module-two",
+  "mixes": [],
+  "labels":
+    [ "new" ],
+  "location":
+    { "lineno": 1,
+      "filename": "withNestedTypedef.js" },
+  "docs":
+    { "summary": "a module that you can import",
+      "links": [],
+      "examples": [],
+      "extra":
+        {  } },
+  "properties":
+    [ { "name": "sub",
+        "labels": [],
+        "get": true,
+        "set": false,
+        "type": "root-module-two.subTypeDef",
+        "locations":
+          [ { "lineno": 15,
+              "filename": "withNestedTypedef.js" } ],
+        "docs":
+          { "summary": "a property called \"sub\" on the root module with a type defined by the sub type definition",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          {  } } ],
+  "operations": [],
+  "callbacks": [],
+  "messages":
+    [ { "name": "subTypeDef",
+        "locations":
+          [ { "lineno": 6,
+              "filename": "withNestedTypedef.js" } ],
+        "docs":
+          { "summary": "a nested type definition",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "propOfSubTypeDef",
+              "type": "string" },
+            { "name": "funcOfSubTypeDef",
+              "type": "Function" } ],
+        "extra":
+          {  },
+        "labels": [] } ],
+  "extra":
+    {  } }
