@@ -1,6 +1,7 @@
 { "name": "root-module-two",
   "mixes": [],
-  "labels": [],
+  "labels":
+    [ "removed" ],
   "location":
     { "lineno": 1,
       "filename": "withNestedTypedef.js" },

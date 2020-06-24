@@ -1,0 +1,35 @@
+{ "name": "root-module",
+  "mixes": [],
+  "labels":
+    [ "new" ],
+  "location":
+    { "lineno": 1,
+      "filename": "withNestedNamespace.js" },
+  "docs":
+    { "summary": "a module that you can import",
+      "links": [],
+      "examples": [],
+      "extra":
+        {  } },
+  "properties":
+    [ { "name": "sub",
+        "labels": [],
+        "get": true,
+        "set": false,
+        "type": "root-module.sub-ns",
+        "locations":
+          [ { "lineno": 11,
+              "filename": "withNestedNamespace.js" } ],
+        "docs":
+          { "summary": "a property called \"sub\" on the root module with a type defined by the sub namespace",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          {  } } ],
+  "operations": [],
+  "callbacks": [],
+  "messages": [],
+  "extra":
+    {  } }

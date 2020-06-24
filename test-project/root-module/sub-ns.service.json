@@ -1,0 +1,53 @@
+{ "name": "sub-ns",
+  "memberOf": "root-module",
+  "mixes": [],
+  "labels":
+    [ "new" ],
+  "location":
+    { "lineno": 6,
+      "filename": "withNestedNamespace.js" },
+  "docs":
+    { "summary": "a nested namespace inside the root module",
+      "links": [],
+      "examples": [],
+      "extra":
+        {  } },
+  "properties":
+    [ { "name": "propOfsub-ns",
+        "labels": [],
+        "get": true,
+        "set": false,
+        "type": "string",
+        "locations":
+          [ { "lineno": 18,
+              "filename": "withNestedNamespace.js" } ],
+        "docs":
+          { "summary": "a property of the sub namespace",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          {  } } ],
+  "operations":
+    [ { "name": "funcOfsub-ns",
+        "labels": [],
+        "nameParams": [],
+        "params": [],
+        "ret":
+          { "type": "void" },
+        "locations":
+          [ { "lineno": 25,
+              "filename": "withNestedNamespace.js" } ],
+        "docs":
+          { "summary": "a function of the sub namespace",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          {  } } ],
+  "callbacks": [],
+  "messages": [],
+  "extra":
+    {  } }
