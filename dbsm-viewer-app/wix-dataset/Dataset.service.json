@@ -15,7 +15,8 @@
   "properties": [],
   "operations":
     [ { "name": "getCurrentItem",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params": [],
         "ret":
@@ -42,7 +43,7 @@
                 " + Has not loaded yet.",
                 "",
                 "",
-                " > **Note:** ",
+                " > **Note:**",
                 " >",
                 " > A dataset needs to load its data before you call its `getCurrentItem()` function.",
                 " Usually a dataset finishes loading a short time after the page it is on finishes",
@@ -112,7 +113,8 @@
         "extra":
           {  } },
       { "name": "getCurrentItemIndex",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params": [],
         "ret":
@@ -138,7 +140,7 @@
                 " + Has not loaded yet.",
                 "",
                 "",
-                " > **Note:** ",
+                " > **Note:**",
                 " >",
                 " > A dataset needs to load its data before you call its `getCurrentItemIndex()` function.",
                 " Usually a dataset finishes loading a short time after the page it is on finishes",
@@ -172,7 +174,8 @@
         "extra":
           {  } },
       { "name": "getCurrentPageIndex",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params": [],
         "ret":
@@ -186,8 +189,8 @@
             "description":
               [ "The `getCurrentPageIndex()` function returns the index of current dataset",
                 " [page](wix-dataset/introduction#dataset-pages). The indices of the dataset's pages start at `1`.",
-                " > **Note:** ",
-                " > ",
+                " > **Note:**",
+                " >",
                 " > A dataset needs to load its data before you call its `getCurrentPageIndex()` function.",
                 " Usually a dataset finishes loading a short time after the page it is on finishes",
                 " loading. So if you call `getCurrentPageIndex()` inside the page’s [`onReady()`]($w.html#onReady)",
@@ -208,7 +211,8 @@
         "extra":
           {  } },
       { "name": "getItems",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "fromIndex",
@@ -235,7 +239,7 @@
                 "",
                 " Calling `getItems()` on a write-only dataset causes an error.",
                 "",
-                " > **Note:** ",
+                " > **Note:**",
                 " >",
                 " > A dataset needs to load its data before you call its `getItems()` function.",
                 " Usually a dataset finishes loading a short time after the page it is on finishes",
@@ -314,7 +318,8 @@
         "extra":
           {  } },
       { "name": "getTotalCount",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params": [],
         "ret":
@@ -328,7 +333,7 @@
             "description":
               [ "Calling `getTotalCount()` on a write-only dataset causes an error.",
                 "",
-                " > **Note:** ",
+                " > **Note:**",
                 " >",
                 " > A dataset needs to load its data before you call its `getTotalCount()` function.",
                 " Usually a dataset finishes loading a short time after the page it is on finishes",
@@ -361,7 +366,8 @@
         "extra":
           {  } },
       { "name": "getTotalPageCount",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params": [],
         "ret":
@@ -378,8 +384,8 @@
                 "",
                 " For example, if you have 20 items and your page size is 6, you have",
                 " 4 pages. The first 3 pages have 6 items each and the last page has 2 items.",
-                " > **Note:** ",
-                " > ",
+                " > **Note:**",
+                " >",
                 " > A dataset needs to load its data before you call its `getTotalPageCount()` function.",
                 " Usually a dataset finishes loading a short time after the page it is on finishes",
                 " loading. So if you call `getTotalPageCount()` inside the page’s [`onReady()`]($w.html#onReady)",
@@ -400,7 +406,8 @@
         "extra":
           {  } },
       { "name": "hasNext",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params": [],
         "ret":
@@ -418,7 +425,7 @@
                 "",
                 " Calling `hasNext()` on a write-only dataset causes an error.",
                 "",
-                " > **Note:** ",
+                " > **Note:**",
                 " >",
                 " > A dataset needs to load its data before you call its `hasNext()` function.",
                 " Usually a dataset finishes loading a short time after the page it is on finishes",
@@ -452,7 +459,8 @@
         "extra":
           {  } },
       { "name": "hasNextPage",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params": [],
         "ret":
@@ -471,7 +479,7 @@
                 " [page](wix-dataset/introduction#dataset-pages) in the dataset.",
                 "",
                 " Calling `hasNextPage()` on a write-only dataset causes an error.",
-                " > **Note:** ",
+                " > **Note:**",
                 " >",
                 " > A dataset needs to load its data before you call its `hasNextPage()` function.",
                 " Usually a dataset finishes loading a short time after the page it is on finishes",
@@ -506,7 +514,8 @@
         "extra":
           {  } },
       { "name": "hasPrevious",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params": [],
         "ret":
@@ -524,7 +533,7 @@
                 "",
                 " Calling `hasPrevious()` on a write-only dataset causes an error.",
                 "",
-                " > **Note:** ",
+                " > **Note:**",
                 " >",
                 " > A dataset needs to load its data before you call its `hasPrevious()` function.",
                 " Usually a dataset finishes loading a short time after the page it is on finishes",
@@ -558,7 +567,8 @@
         "extra":
           {  } },
       { "name": "hasPreviousPage",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params": [],
         "ret":
@@ -578,13 +588,13 @@
                 "",
                 " Calling `hasPreviousPage()` on a write-only dataset causes an error.",
                 "",
-                " > **Note:** ",
-                " > ",
+                " > **Note:**",
+                " >",
                 " > A dataset needs to load its data before you call its `hasPreviousPage()` function.",
                 " Usually a dataset finishes loading a short time after the page it is on finishes",
                 " loading. So if you call `hasPreviousPage()` inside the page’s [`onReady()`]($w.html#onReady)",
                 " event handler, the dataset might not be ready yet.",
-                " > ",
+                " >",
                 " > To call `hasPreviousPage()` as soon as possible after a page loads, use the **dataset's**",
                 " [`onReady()`](#onReady) function inside the **page’s** [`onReady()`]($w.html#onReady)",
                 " event handler to ensure that both the page and the dataset have finished loading." ],
@@ -613,7 +623,8 @@
         "extra":
           {  } },
       { "name": "loadMore",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params": [],
         "ret":
@@ -646,7 +657,7 @@
                 " + Change the dataset's current item.",
                 "",
                 "",
-                " > **Note:** ",
+                " > **Note:**",
                 " >",
                 " > A dataset needs to load its data before you call its `loadMore()` function.",
                 " Usually a dataset finishes loading a short time after the page it is on finishes",
@@ -685,7 +696,8 @@
         "extra":
           {  } },
       { "name": "loadPage",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "pageIndex",
@@ -715,7 +727,7 @@
                 "",
                 "",
                 " The indices of the dataset's [pages](wix-dataset/introduction#dataset-pages) start at `1`.",
-                " > **Note:** ",
+                " > **Note:**",
                 " >",
                 " > A dataset needs to load its data before you call its `loadPage()` function.",
                 " Usually a dataset finishes loading a short time after the page it is on finishes",
@@ -766,7 +778,8 @@
         "extra":
           {  } },
       { "name": "new",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params": [],
         "ret":
@@ -794,7 +807,7 @@
                 "",
                 " Calling `new()` on a read-only dataset causes an error.",
                 "",
-                " > **Note:** ",
+                " > **Note:**",
                 " >",
                 " > A dataset needs to load its data before you call its `new()` function.",
                 " Usually a dataset finishes loading a short time after the page it is on finishes",
@@ -839,7 +852,8 @@
         "extra":
           {  } },
       { "name": "next",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params": [],
         "ret":
@@ -867,7 +881,7 @@
                 " If the dataset is read-write, the current item is saved even if there is",
                 " no next item.",
                 "",
-                " > **Note:** ",
+                " > **Note:**",
                 " >",
                 " > A dataset needs to load its data before you call its `next()` function.",
                 " Usually a dataset finishes loading a short time after the page it is on finishes",
@@ -914,7 +928,8 @@
         "extra":
           {  } },
       { "name": "nextPage",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params": [],
         "ret":
@@ -946,7 +961,7 @@
                 " are shown at once, such as tables and galleries, are not affected.",
                 "",
                 " Calling `nextPage()` on a write-only dataset causes an error.",
-                " > **Note:** ",
+                " > **Note:**",
                 " >",
                 " > A dataset needs to load its data before you call its `nextPage()` function.",
                 " Usually a dataset finishes loading a short time after the page it is on finishes",
@@ -1048,7 +1063,7 @@
             "description":
               [ "The `onBeforeSave()` function allows you to optionally perform actions",
                 " right before a [`save()`](#save) operation. When you call `save()`, the",
-                " callback is run before the save operation. Any validity checks on the ",
+                " callback is run before the save operation. Any validity checks on the",
                 " data are run after the callback runs. If the callback function",
                 " returns `false`, returns a rejected Promise, or throws an error, the",
                 " save operation is canceled.",
@@ -1221,7 +1236,8 @@
         "extra":
           { "eventType": "datasetReady" } },
       { "name": "previous",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params": [],
         "ret":
@@ -1249,7 +1265,7 @@
                 " If the dataset is read-write, the current item is saved even if there is",
                 " no previous item.",
                 "",
-                " > **Note:** ",
+                " > **Note:**",
                 " >",
                 " > A dataset needs to load its data before you call its `previous()` function.",
                 " Usually a dataset finishes loading a short time after the page it is on finishes",
@@ -1296,7 +1312,8 @@
         "extra":
           {  } },
       { "name": "previousPage",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params": [],
         "ret":
@@ -1328,7 +1345,7 @@
                 " are shown at once, such as tables and galleries, are not affected.",
                 "",
                 " Calling `previousPage()` on a write-only dataset causes an error.",
-                " > **Note:** ",
+                " > **Note:**",
                 " >",
                 " > A dataset needs to load its data before you call its `previousPage()` function.",
                 " Usually a dataset finishes loading a short time after the page it is on finishes",
@@ -1380,7 +1397,8 @@
         "extra":
           {  } },
       { "name": "refresh",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params": [],
         "ret":
@@ -1407,8 +1425,8 @@
                 " Refreshing the dataset sets the current item back to the first item in",
                 " the dataset regardless of what the current item was before refreshing.",
                 "",
-                " > **Note:** ",
-                " > ",
+                " > **Note:**",
+                " >",
                 " > A dataset needs to load its data before you call its `refresh()` function.",
                 " Usually a dataset finishes loading a short time after the page it is on finishes",
                 " loading. So if you call `refresh()` inside the page’s [`onReady()`]($w.html#onReady)",
@@ -1448,7 +1466,8 @@
         "extra":
           {  } },
       { "name": "remove",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params": [],
         "ret":
@@ -1474,7 +1493,7 @@
                 "",
                 " Calling `remove()` on a write-only or read-only dataset causes an error.",
                 "",
-                " > **Note:** ",
+                " > **Note:**",
                 " >",
                 " > A dataset needs to load its data before you call its `remove()` function.",
                 " Usually a dataset finishes loading a short time after the page it is on finishes",
@@ -1515,7 +1534,8 @@
         "extra":
           {  } },
       { "name": "revert",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params": [],
         "ret":
@@ -1540,8 +1560,8 @@
                 "",
                 " Calling `revert()` on a read-only dataset causes the Promise to reject.",
                 "",
-                " > **Note:** ",
-                " > ",
+                " > **Note:**",
+                " >",
                 " > A dataset needs to load its data before you call its `revert()` function.",
                 " Usually a dataset finishes loading a short time after the page it is on finishes",
                 " loading. So if you call `revert()` inside the page’s [`onReady()`]($w.html#onReady)",
@@ -1587,7 +1607,8 @@
         "extra":
           {  } },
       { "name": "save",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params": [],
         "ret":
@@ -1612,14 +1633,14 @@
                 "",
                 " Calling `save()` on a read-only dataset causes the Promise to reject.",
                 "",
-                " > **Note:** ",
-                " > ",
+                " > **Note:**",
+                " >",
                 " > A dataset needs to load its data before you call its `save()` function.",
                 " Usually a dataset finishes loading a short time after the page it is on finishes",
                 " loading. So if you call `save()` inside the page’s [`onReady()`]($w.html#onReady)",
                 " event handler, the dataset might not be ready yet.",
-                " > ",
-                " > ",
+                " >",
+                " >",
                 " > To call `save()` as soon as possible after a page loads, use the **dataset's**",
                 " [`onReady()`](#onReady) function inside the **page’s** [`onReady()`]($w.html#onReady)",
                 " event handler to ensure that both the page and the dataset have finished loading." ],
@@ -1660,7 +1681,8 @@
         "extra":
           {  } },
       { "name": "setCurrentItemIndex",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "index",
@@ -1688,7 +1710,7 @@
                 " Calling `setCurrentItemIndex()` on a write-only dataset causes the",
                 " Promise to reject.",
                 "",
-                " > **Note:** ",
+                " > **Note:**",
                 " >",
                 " > A dataset needs to load its data before you call its `setCurrentItemIndex()` function.",
                 " Usually a dataset finishes loading a short time after the page it is on finishes",
@@ -1728,7 +1750,8 @@
         "extra":
           {  } },
       { "name": "setFieldValue",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "fieldKey",
@@ -1756,7 +1779,7 @@
                 "",
                 " Calling `setFieldValue()` on a read-only dataset causes an error.",
                 "",
-                " > **Note:** ",
+                " > **Note:**",
                 " >",
                 " > A dataset needs to load its data before you call its `setFieldValue()` function.",
                 " Usually a dataset finishes loading a short time after the page it is on finishes",
@@ -1796,7 +1819,8 @@
         "extra":
           {  } },
       { "name": "setFieldValues",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "fieldValues",
@@ -1816,7 +1840,7 @@
                 "",
                 " Calling `setFieldValues()` on a read-only dataset causes an error.",
                 "",
-                " > **Note:** ",
+                " > **Note:**",
                 " >",
                 " > A dataset needs to load its data before you call its `setFieldValues()` function.",
                 " Usually a dataset finishes loading a short time after the page it is on finishes",
