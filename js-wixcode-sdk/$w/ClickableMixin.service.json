@@ -39,7 +39,7 @@
                 " before a `doubleClick` event is also fired.",
                 "",
                 " You can also define an event handler using the Properties and Events panel.",
-                " [Properties and Events panel](images/properties_and_events.png \"Properties and Events panel\")",
+                " [Properties and Events panel](../../../../jsdoc/assets/images/properties_and_events.png \"Properties and Events panel\")",
                 "",
                 " This will automatically add the required code for the selected element and event:",
                 " ```javascript ",
