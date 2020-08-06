@@ -1,7 +1,8 @@
 { "name": "TextInputMixin",
   "memberOf": "$w",
   "mixes": [],
-  "labels": [],
+  "labels":
+    [ "changed" ],
   "location":
     { "lineno": 6,
       "filename": "TextInputMixin.es6" },
@@ -103,7 +104,7 @@
           { "type": "$w.Element",
             "doc": "The element on which the event is now registered." },
         "locations":
-          [ { "lineno": 179,
+          [ { "lineno": 181,
               "filename": "TextInputMixin.es6" } ],
         "docs":
           { "summary": "Adds an event handler that runs when the input element receives\ninput.",
@@ -132,7 +133,8 @@
         "extra":
           { "eventType": "onInput" } },
       { "name": "onKeyPress",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "eventHandler",
@@ -150,6 +152,8 @@
               [ "A text input receives a `keyPress` event when a user presses a key on",
                 " the keyboard while the cursor is inside the input element. A `keyPress`",
                 " event is fired for printable and non-printable characters.",
+                "",
+                " You can also [define an event handler using the Properties and Events panel](https://support.wix.com/en/article/corvid-reacting-to-user-actions-using-events).",
                 "",
                 "> **Notes:**",
                 "> + Some browsers do not issue a key press event for certain keys,",

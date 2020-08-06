@@ -50,7 +50,7 @@
                 "       // Add your code for this event here: ",
                 "     }  ",
                 "```",
-                "Learn more about [adding events using the Properties and Events panel](https://support.wix.com/en/article/corvid-reacting-to-user-actions-using-events).",
+                "",
                 "",
                 "> **Note:** Do not use the Editor Link panel to redirect on click when a link is already ",
                 " defined using the `onClick()` function. To avoid unpredictable behavior, remove ",
@@ -90,8 +90,7 @@
         "extra":
           { "eventType": "click" } },
       { "name": "onDblClick",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "handler",
