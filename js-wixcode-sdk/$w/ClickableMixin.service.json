@@ -50,6 +50,8 @@
                 "       // Add your code for this event here: ",
                 "     }  ",
                 "```",
+                "Learn more about adding events using the [Properties and Events panel](https://support.wix.com/en/article/corvid-reacting-to-user-actions-using-events)",
+                "",
                 "> **Note:** Do not use the Editor Link panel to redirect on click when a link is already ",
                 " defined using the `onClick()` function. To avoid unpredictable behavior, remove ",
                 " the link from the Editor Link panel.",
@@ -98,7 +100,7 @@
           { "type": "$w.Element",
             "doc": "The element to which the event handler was added." },
         "locations":
-          [ { "lineno": 73,
+          [ { "lineno": 75,
               "filename": "ClickableMixin.es6" } ],
         "docs":
           { "summary": "Adds an event handler that runs when the element is double-clicked.",
