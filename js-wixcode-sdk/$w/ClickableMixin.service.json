@@ -16,8 +16,7 @@
   "properties": [],
   "operations":
     [ { "name": "onClick",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "handler",
@@ -112,7 +111,8 @@
                 " When a user double-clicks an element, two `click` events are fired",
                 " before a `doubleClick` event is also fired.",
                 "",
-                " You can also define an event handler using the Properties and Events panel .",
+                " You can also define an event handler using the Properties and Events panel.",
+                "",
                 " Learn more about adding events using the the [Properties and Events panel](https://support.wix.com/en/article/corvid-reacting-to-user-actions-using-events) .",
                 "",
                 "",
