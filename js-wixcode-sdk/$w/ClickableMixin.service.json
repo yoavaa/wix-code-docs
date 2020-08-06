@@ -50,7 +50,7 @@
                 "       // Add your code for this event here: ",
                 "     }  ",
                 "```",
-                "Learn more about [adding events using the Properties and Events panel](https://support.wix.com/en/article/corvid-reacting-to-user-actions-using-events)",
+                "Learn more about [adding events using the Properties and Events panel](https://support.wix.com/en/article/corvid-reacting-to-user-actions-using-events).",
                 "",
                 "> **Note:** Do not use the Editor Link panel to redirect on click when a link is already ",
                 " defined using the `onClick()` function. To avoid unpredictable behavior, remove ",
@@ -90,7 +90,8 @@
         "extra":
           { "eventType": "click" } },
       { "name": "onDblClick",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "handler",
@@ -110,6 +111,10 @@
                 "",
                 " When a user double-clicks an element, two `click` events are fired",
                 " before a `doubleClick` event is also fired.",
+                "",
+                " You can also define an event handler using the Properties and Events panel .",
+                " Learn more about adding events using the the [Properties and Events panel](https://support.wix.com/en/article/corvid-reacting-to-user-actions-using-events) .",
+                "",
                 "",
                 " > **Deprecation note:** The $w parameter of event handlers is being deprecated. To get",
                 " a scoped selector for working with elements in repeater items, use the [$w.at()]($w.html#at) function",
