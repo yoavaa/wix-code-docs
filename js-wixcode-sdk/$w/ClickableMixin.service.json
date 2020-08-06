@@ -38,7 +38,7 @@
                 " When a user double-clicks an element, two `click` events are fired",
                 " before a `doubleClick` event is also fired.",
                 "",
-                " You can also define an event handler using the Properties and Events panel.",
+                " You can also define an event handler using the [Properties and Events](https://support.wix.com/en/article/corvid-reacting-to-user-actions-using-events) panel.",
                 " ![Properties and Events panel](images/properties_and_events.png \"Properties and Events panel\")",
                 "",
                 " This will automatically add the required code for the selected element and event:",
