@@ -153,7 +153,7 @@
                 " the keyboard while the cursor is inside the input element. A `keyPress`",
                 " event is fired for printable and non-printable characters.",
                 "",
-                " You can also [define an event handler using the Properties and Events panel](https://support.wix.com/en/article/corvid-reacting-to-user-actions-using-events).",
+                " You can create an event handler using the function or [using the Properties and Events panel](https://support.wix.com/en/article/corvid-reacting-to-user-actions-using-events).",
                 "",
                 "> **Notes:**",
                 "> + Some browsers do not issue a key press event for certain keys,",
