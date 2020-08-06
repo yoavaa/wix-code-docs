@@ -112,7 +112,6 @@
                 " before a `doubleClick` event is also fired.",
                 "",
                 " You can also define an event handler using the Properties and Events panel.",
-                "",
                 " Learn more about adding events using the the [Properties and Events panel](https://support.wix.com/en/article/corvid-reacting-to-user-actions-using-events) .",
                 "",
                 "",
