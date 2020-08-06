@@ -42,6 +42,7 @@
                 " ![Properties and Events panel](images/properties_and_events.png \"Properties and Events panel\")",
                 "",
                 " This will automatically add the required code for the selected element and event:",
+                "",
                 " ```javascript ",
                 "    export function button1_click(event) {",
                 "       // This function was added from the Properties & Events panel. To learn more, visit http://wix.to/UcBnC-4",
@@ -96,7 +97,7 @@
           { "type": "$w.Element",
             "doc": "The element to which the event handler was added." },
         "locations":
-          [ { "lineno": 71,
+          [ { "lineno": 72,
               "filename": "ClickableMixin.es6" } ],
         "docs":
           { "summary": "Adds an event handler that runs when the element is double-clicked.",
