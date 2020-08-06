@@ -15,8 +15,7 @@
   "properties": [],
   "operations":
     [ { "name": "onViewportEnter",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "handler",
@@ -60,7 +59,8 @@
         "extra":
           { "eventType": "viewportEnter" } },
       { "name": "onViewportLeave",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "handler",
@@ -82,6 +82,9 @@
                 " of the current window.  `onViewportLeave()` ",
                 " is not fired for [hidden]($w.HiddenMixin.html#hidden) or [collapsed]($w.CollapsedMixin.html#collapsed) ",
                 " elements even if they are scrolled out of view.",
+                "",
+                " You can also [define an event handler using the Properties and Events panel](https://support.wix.com/en/article/corvid-reacting-to-user-actions-using-events).",
+                "",
                 "",
                 "> **Deprecation note:** The $w parameter of event handlers is being deprecated. To get",
                 " a scoped selector for working with elements in repeater items, use the [$w.at()]($w.html#at) function",
