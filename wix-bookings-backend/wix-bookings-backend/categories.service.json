@@ -1,0 +1,295 @@
+{ "name": "categories",
+  "memberOf": "wix-bookings-backend",
+  "mixes": [],
+  "labels":
+    [ "new" ],
+  "location":
+    { "lineno": 137,
+      "filename": "index.js" },
+  "docs":
+    { "links": [],
+      "examples": [],
+      "extra":
+        {  } },
+  "properties": [],
+  "operations":
+    [ { "name": "createCategory",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "category",
+              "type": "wix-bookings-backend.categories.Category",
+              "doc": "Category data." } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-bookings-backend.categories.Category" ] },
+            "doc": "Fulfilled - Category data." },
+        "locations":
+          [ { "lineno": 43,
+              "filename": "com.wixpress.bookings.services.api.v1.CategoriesService.js" } ],
+        "docs":
+          { "summary": "Creates a new category.",
+            "links": [],
+            "examples":
+              [ { "title": "basic usage",
+                  "body":
+                    [ "import { categories } from 'wix-bookings-backend';",
+                      "",
+                      "export function createCategory(request) {",
+                      "  return categories.createCategory(request)",
+                      "    .then((response) => {",
+                      "      console.log(response);",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.log(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          { "customLabels":
+              [ { "id": "maturity-beta" } ] } },
+      { "name": "deleteCategory",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "id",
+              "type": "string",
+              "doc": "Category ID." },
+            { "name": "deleteServices",
+              "type": "boolean",
+              "doc": "Cascade delete all the services in this category. Defaults to false (when false, the services will still exist but will not be accessible in the Wix Business Manager)." } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "void" ] },
+            "doc": "" },
+        "locations":
+          [ { "lineno": 54,
+              "filename": "com.wixpress.bookings.services.api.v1.CategoriesService.js" } ],
+        "docs":
+          { "summary": "Deletes a category.",
+            "links": [],
+            "examples":
+              [ { "title": "basic usage",
+                  "body":
+                    [ "import { categories } from 'wix-bookings-backend';",
+                      "",
+                      "export function deleteCategory(request) {",
+                      "  return categories.deleteCategory(request)",
+                      "    .then((response) => {",
+                      "      console.log(response);",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.log(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          { "customLabels":
+              [ { "id": "maturity-beta" } ] } },
+      { "name": "list",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "listCategoryRequest",
+              "type": "wix-bookings-backend.categories.ListCategoryRequest" } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-bookings-backend.categories.ListCategoryResponse" ] },
+            "doc": "" },
+        "locations":
+          [ { "lineno": 66,
+              "filename": "com.wixpress.bookings.services.api.v1.CategoriesService.js" } ],
+        "docs":
+          { "summary": "Lists all categories.",
+            "description":
+              [ "> **Permissions**",
+                "> This endpoint requires the Read Bookings - Public Data or the Read Bookings - Including Participants permissions scope" ],
+            "links": [],
+            "examples":
+              [ { "title": "basic usage",
+                  "body":
+                    [ "import { categories } from 'wix-bookings-backend';",
+                      "",
+                      "export function list(request) {",
+                      "  return categories.list(request)",
+                      "    .then((response) => {",
+                      "      console.log(response);",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.log(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          { "customLabels":
+              [ { "id": "maturity-beta" } ] } },
+      { "name": "updateCategory",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "id",
+              "type": "string",
+              "doc": "Category ID." },
+            { "name": "updateCategoryOptions",
+              "type": "wix-bookings-backend.categories.UpdateCategoryOptions",
+              "doc": "<TODO>" } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "void" ] },
+            "doc": "" },
+        "locations":
+          [ { "lineno": 80,
+              "filename": "com.wixpress.bookings.services.api.v1.CategoriesService.js" } ],
+        "docs":
+          { "summary": "Updates an existing category.",
+            "links": [],
+            "examples":
+              [ { "title": "basic usage",
+                  "body":
+                    [ "import { categories } from 'wix-bookings-backend';",
+                      "",
+                      "export function updateCategory(request) {",
+                      "  return categories.updateCategory(request)",
+                      "    .then((response) => {",
+                      "      console.log(response);",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.log(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          { "customLabels":
+              [ { "id": "maturity-beta" } ] } } ],
+  "callbacks": [],
+  "messages":
+    [ { "name": "Category",
+        "locations":
+          [ { "lineno": 1,
+              "filename": "com.wixpress.bookings.services.api.v1.CategoriesService.js" } ],
+        "docs":
+          { "summary": "A service must be associated with a category in order to be exposed in the Wix Bookings UI. Categories are used to group multiple services together.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "name",
+              "type": "string",
+              "doc": "Category name.",
+              "optional": true },
+            { "name": "customProperties",
+              "type": "Object",
+              "doc": "Set of key-value pairs.Custom properties that can be associated with the category.",
+              "optional": true },
+            { "name": "id",
+              "type": "string",
+              "doc": "Category ID. (read-only, cannot be set in code)",
+              "optional": true },
+            { "name": "status",
+              "type": "string",
+              "doc": "Category status (read-only).\nOne of:\n + \"CREATED\"\n + \"DELETED\"\n(read-only, cannot be set in code)",
+              "optional": true },
+            { "name": "sortOrder",
+              "type": "number",
+              "doc": "Sorting order of the category for Wix Bookings UI.",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "ListCategoryRequest",
+        "locations":
+          [ { "lineno": 16,
+              "filename": "com.wixpress.bookings.services.api.v1.CategoriesService.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "categoryIds",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "string" ] },
+              "doc": "Category IDs.",
+              "optional": true },
+            { "name": "includeDeleted",
+              "type": "boolean",
+              "doc": "Whether deleted categories are included. Defaults to false.",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "ListCategoryResponse",
+        "locations":
+          [ { "lineno": 23,
+              "filename": "com.wixpress.bookings.services.api.v1.CategoriesService.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "categories",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-bookings-backend.categories.Category" ] },
+              "doc": "Category data.",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "UpdateCategoryOptions",
+        "locations":
+          [ { "lineno": 29,
+              "filename": "com.wixpress.bookings.services.api.v1.CategoriesService.js" } ],
+        "docs":
+          { "summary": "<TODO>",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "name",
+              "type": "string",
+              "doc": "Category name.",
+              "optional": true },
+            { "name": "customProperties",
+              "type": "Object",
+              "doc": "Set of key-value pairs.Custom properties that can be associated with the category.",
+              "optional": true },
+            { "name": "status",
+              "type": "string",
+              "doc": "Category status (read-only).\nOne of:\n + \"CREATED\"\n + \"DELETED\"\n(read-only, cannot be set in code)",
+              "optional": true },
+            { "name": "sortOrder",
+              "type": "number",
+              "doc": "Sorting order of the category for Wix Bookings UI.",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] } ],
+  "extra":
+    {  } }

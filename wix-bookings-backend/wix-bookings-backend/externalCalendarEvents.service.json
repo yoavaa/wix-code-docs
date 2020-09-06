@@ -1,0 +1,244 @@
+{ "name": "externalCalendarEvents",
+  "memberOf": "wix-bookings-backend",
+  "mixes": [],
+  "labels":
+    [ "new" ],
+  "location":
+    { "lineno": 77,
+      "filename": "index.js" },
+  "docs":
+    { "links": [],
+      "examples": [],
+      "extra":
+        {  } },
+  "properties": [],
+  "operations":
+    [ { "name": "listExternalCalendarEvents",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "listEventsRequest",
+              "type": "wix-bookings-backend.externalCalendarEvents.ListEventsRequest" } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ { "name": "Array",
+                      "typeParams":
+                        [ "wix-bookings-backend.externalCalendarEvents.ExternalCalendarEvent" ] } ] },
+            "doc": "Fulfilled - External calendar events." },
+        "locations":
+          [ { "lineno": 62,
+              "filename": "com.wix.bookings.external.calendar.api.v1.ExternalCalendarEventsService.js" } ],
+        "docs":
+          { "summary": "Lists the events pulled from the external calendar given the provided paging and filtering.",
+            "description":
+              [ "Query object support:",
+                "- **filter**: supports",
+                "- `start`: query range end time. Required.",
+                "- `end`: query range end time. Required.",
+                "- `resourceId`: The external resource Id to which the external calendar is synced.",
+                "- **fields**: not supported.",
+                "- **paging**: not supported.",
+                "- **fieldsets**: not supported.",
+                "",
+                "> **Permissions**",
+                "> This endpoint requires the Manage Bookings permission scope." ],
+            "links": [],
+            "examples":
+              [ { "title": "basic usage",
+                  "body":
+                    [ "import { externalCalendarEvents } from 'wix-bookings-backend';",
+                      "",
+                      "export function listExternalCalendarEvents(request) {",
+                      "  return externalCalendarEvents.listExternalCalendarEvents(request)",
+                      "    .then((response) => {",
+                      "      console.log(response);",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.log(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          { "customLabels":
+              [ { "id": "maturity-beta" } ] } } ],
+  "callbacks": [],
+  "messages":
+    [ { "name": "ExternalCalendarEvent",
+        "locations":
+          [ { "lineno": 1,
+              "filename": "com.wix.bookings.external.calendar.api.v1.ExternalCalendarEventsService.js" } ],
+        "docs":
+          { "summary": "External calendar event.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "resourceId",
+              "type": "string",
+              "doc": "ID of resource holding the schedule synced to the external calendar.",
+              "optional": true },
+            { "name": "calendar",
+              "type": "string",
+              "doc": "External calendar type.\nOne of:\n + \"GOOGLE\"",
+              "optional": true },
+            { "name": "start",
+              "type": "Date",
+              "doc": "Event start time.",
+              "optional": true },
+            { "name": "end",
+              "type": "Date",
+              "doc": "Event end time.",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "ListEventsRequest",
+        "locations":
+          [ { "lineno": 13,
+              "filename": "com.wix.bookings.external.calendar.api.v1.ExternalCalendarEventsService.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "query",
+              "type": "wix-bookings-backend.externalCalendarEvents.Query" } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "Paging",
+        "locations":
+          [ { "lineno": 34,
+              "filename": "com.wix.bookings.external.calendar.api.v1.ExternalCalendarEventsService.js" } ],
+        "docs":
+          { "summary": "Limit number of results",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "limit",
+              "type": "number",
+              "doc": "The number of items to load",
+              "optional": true },
+            { "name": "offset",
+              "type": "number",
+              "doc": "number of items to skip in the current sort order",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "Query",
+        "locations":
+          [ { "lineno": 42,
+              "filename": "com.wix.bookings.external.calendar.api.v1.ExternalCalendarEventsService.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "fieldsets",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "string" ] },
+              "doc": "Projection on the result object - list of named projections. E.g. \"basic\" will return id and name fields. Specifying multiple fieldsets will return the union of fields from all. Specifying fieldsets and fields will also return the union of fields.",
+              "optional": true },
+            { "name": "filter",
+              "type": "wix-bookings-backend.externalCalendarEvents.Value",
+              "doc": "A filter object. See documentation [here](https://bo.wix.com/wix-docs/rnd/platformization-guidelines/api-query-language#platformization-guidelines_api-query-language_defining-in-protobuf)",
+              "optional": true },
+            { "name": "paging",
+              "type": "wix-bookings-backend.externalCalendarEvents.Paging",
+              "doc": "Limit number of results",
+              "optional": true },
+            { "name": "fields",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "string" ] },
+              "doc": "Projection on the result object - list of specific field names to return. If fieldsets are also specified, return the union of fieldsets and fields",
+              "optional": true },
+            { "name": "sort",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-bookings-backend.externalCalendarEvents.Sorting" ] },
+              "doc": "Sort object in the form [{\"fieldName\":\"sortField1\"},{\"fieldName\":\"sortField2\",\"direction\":\"DESC\"}]",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "Sorting",
+        "locations":
+          [ { "lineno": 52,
+              "filename": "com.wix.bookings.external.calendar.api.v1.ExternalCalendarEventsService.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "fieldName",
+              "type": "string",
+              "doc": "Name of the field to sort by",
+              "optional": true },
+            { "name": "order",
+              "type": "string",
+              "doc": "Sort order (ASC/DESC). Defaults to ASC\nOne of:\n + \"ASC\"\n + \"DESC\"",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "Value",
+        "locations":
+          [ { "lineno": 19,
+              "filename": "com.wix.bookings.external.calendar.api.v1.ExternalCalendarEventsService.js" } ],
+        "docs":
+          { "summary": "A filter object. See documentation [here](https://bo.wix.com/wix-docs/rnd/platformization-guidelines/api-query-language#platformization-guidelines_api-query-language_defining-in-protobuf)",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "nullValue",
+              "type": "string",
+              "doc": "Represents a null value.\nOne of:\n + \"NULL_VALUE\"",
+              "optional": true },
+            { "name": "boolValue",
+              "type": "boolean",
+              "doc": "Represents a boolean value.",
+              "optional": true },
+            { "name": "numberValue",
+              "type": "number",
+              "doc": "Represents a double value.",
+              "optional": true },
+            { "name": "stringValue",
+              "type": "string",
+              "doc": "Represents a string value.",
+              "optional": true },
+            { "name": "listValue",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-bookings-backend.externalCalendarEvents.Value" ] },
+              "doc": "Represents a repeated `Value`.",
+              "optional": true },
+            { "name": "structValue",
+              "type": "Object",
+              "doc": "Represents a structured value.",
+              "optional": true } ],
+        "extra":
+          { "notes":
+              [ "This object must contain a value for exactly one of the properties: 'nullValue', 'boolValue', 'numberValue', 'stringValue', 'listValue', 'structValue'" ] },
+        "labels": [] } ],
+  "extra":
+    {  } }

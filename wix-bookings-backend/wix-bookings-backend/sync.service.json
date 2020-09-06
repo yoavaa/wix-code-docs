@@ -1,0 +1,273 @@
+{ "name": "sync",
+  "memberOf": "wix-bookings-backend",
+  "mixes": [],
+  "labels":
+    [ "new" ],
+  "location":
+    { "lineno": 89,
+      "filename": "index.js" },
+  "docs":
+    { "links": [],
+      "examples": [],
+      "extra":
+        {  } },
+  "properties": [],
+  "operations":
+    [ { "name": "getSyncStatus",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "resourceId",
+              "type": "string",
+              "doc": "Resource ID." } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ { "name": "Array",
+                      "typeParams":
+                        [ "wix-bookings-backend.sync.SyncStatus" ] } ] },
+            "doc": "Fulfilled - List of sync statuses per calendar type." },
+        "locations":
+          [ { "lineno": 62,
+              "filename": "com.wix.bookings.external.calendar.api.v1.SyncService.js" } ],
+        "docs":
+          { "summary": "Gets the sync status for an external calendar.",
+            "links": [],
+            "examples":
+              [ { "title": "basic usage",
+                  "body":
+                    [ "import { sync } from 'wix-bookings-backend';",
+                      "",
+                      "export function getSyncStatus(request) {",
+                      "  return sync.getSyncStatus(request)",
+                      "    .then((response) => {",
+                      "      console.log(response);",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.log(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          { "customLabels":
+              [ { "id": "maturity-beta" } ] } },
+      { "name": "listSyncStatus",
+        "labels": [],
+        "nameParams": [],
+        "params": [],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ { "name": "Array",
+                      "typeParams":
+                        [ "wix-bookings-backend.sync.SyncStatus" ] } ] },
+            "doc": "Fulfilled - List of sync statuses of all calendars under the meta-site." },
+        "locations":
+          [ { "lineno": 27,
+              "filename": "com.wix.bookings.external.calendar.api.v1.SyncService.js" } ],
+        "docs":
+          { "summary": "Lists the statuses of all sync requests in the Wix site.",
+            "links": [],
+            "examples":
+              [ { "title": "basic usage",
+                  "body":
+                    [ "import { sync } from 'wix-bookings-backend';",
+                      "",
+                      "export function listSyncStatus(request) {",
+                      "  return sync.listSyncStatus(request)",
+                      "    .then((response) => {",
+                      "      console.log(response);",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.log(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          { "customLabels":
+              [ { "id": "maturity-beta" } ] } },
+      { "name": "syncExternalCalendar",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "resourceId",
+              "type": "string",
+              "doc": "Resource ID." },
+            { "name": "syncRequestEmail",
+              "type": "string",
+              "doc": "Email address connected to the resource, to which the sync request will be sent." },
+            { "name": "calendar",
+              "type": "string",
+              "doc": "Calendar type." } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "void" ] },
+            "doc": "" },
+        "locations":
+          [ { "lineno": 37,
+              "filename": "com.wix.bookings.external.calendar.api.v1.SyncService.js" } ],
+        "docs":
+          { "summary": "Sends an email to the external calendar owner requesting sync approval.",
+            "links": [],
+            "examples":
+              [ { "title": "basic usage",
+                  "body":
+                    [ "import { sync } from 'wix-bookings-backend';",
+                      "",
+                      "export function syncExternalCalendar(request) {",
+                      "  return sync.syncExternalCalendar(request)",
+                      "    .then((response) => {",
+                      "      console.log(response);",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.log(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          { "customLabels":
+              [ { "id": "maturity-beta" } ] } },
+      { "name": "unSync",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "unSyncRequest",
+              "type": "wix-bookings-backend.sync.UnSyncRequest" } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "void" ] },
+            "doc": "" },
+        "locations":
+          [ { "lineno": 73,
+              "filename": "com.wix.bookings.external.calendar.api.v1.SyncService.js" } ],
+        "docs":
+          { "summary": "Removes the sync to/from an external calendar.",
+            "links": [],
+            "examples":
+              [ { "title": "basic usage",
+                  "body":
+                    [ "import { sync } from 'wix-bookings-backend';",
+                      "",
+                      "export function unSync(request) {",
+                      "  return sync.unSync(request)",
+                      "    .then((response) => {",
+                      "      console.log(response);",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.log(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          { "customLabels":
+              [ { "id": "maturity-beta" } ] } },
+      { "name": "unsyncExternalCalendar",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "resourceId",
+              "type": "string",
+              "doc": "Resource ID." },
+            { "name": "calendar",
+              "type": "string",
+              "doc": "Calendar type." } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "void" ] },
+            "doc": "" },
+        "locations":
+          [ { "lineno": 50,
+              "filename": "com.wix.bookings.external.calendar.api.v1.SyncService.js" } ],
+        "docs":
+          { "summary": "Sends an email to the external calendar owner requesting sync approval.",
+            "links": [],
+            "examples":
+              [ { "title": "basic usage",
+                  "body":
+                    [ "import { sync } from 'wix-bookings-backend';",
+                      "",
+                      "export function unsyncExternalCalendar(request) {",
+                      "  return sync.unsyncExternalCalendar(request)",
+                      "    .then((response) => {",
+                      "      console.log(response);",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.log(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          { "customLabels":
+              [ { "id": "maturity-beta" } ] } } ],
+  "callbacks": [],
+  "messages":
+    [ { "name": "SyncStatus",
+        "locations":
+          [ { "lineno": 1,
+              "filename": "com.wix.bookings.external.calendar.api.v1.SyncService.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "resourceId",
+              "type": "string",
+              "doc": "Resource ID that owns a schedule to be synced with the external calendar.",
+              "optional": true },
+            { "name": "calendar",
+              "type": "string",
+              "doc": "External calendar type.\nOne of:\n + \"GOOGLE\"",
+              "optional": true },
+            { "name": "status",
+              "type": "string",
+              "doc": "External calendar sync status.\nOne of:\n + \"UNDEFINED\"\n + \"NONE\"\n + \"CONNECTED\"\n + \"PENDING\"\n + \"DISCONNECTED\"\n + \"DISCONNECTED_TOKEN_REVOKED\"",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "UnSyncRequest",
+        "locations":
+          [ { "lineno": 18,
+              "filename": "com.wix.bookings.external.calendar.api.v1.SyncService.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "resourceId",
+              "type": "string",
+              "doc": "Resource ID." },
+            { "name": "calendar",
+              "type": "string",
+              "doc": "Calendar type.\nOne of:\n + \"GOOGLE\"",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] } ],
+  "extra":
+    {  } }
