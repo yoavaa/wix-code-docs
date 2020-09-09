@@ -2,7 +2,7 @@
   "memberOf": "wix-bookings-backend",
   "mixes": [],
   "labels":
-    [ "new" ],
+    [ "changed" ],
   "location":
     { "lineno": 101,
       "filename": "index.js" },
@@ -14,7 +14,8 @@
   "properties": [],
   "operations":
     [ { "name": "addParticipantToSchedule",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "scheduleId",
@@ -24,10 +25,7 @@
               "type": "wix-bookings-backend.schedules.Participant",
               "doc": "Participant." } ],
         "ret":
-          { "type":
-              { "name": "Promise",
-                "typeParams":
-                  [ "wix-bookings-backend.schedules.ModifyParticipantResult" ] },
+          { "type": "Promise",
             "doc": "" },
         "locations":
           [ { "lineno": 345,
@@ -60,7 +58,8 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "addParticipantToSession",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "sessionId",
@@ -70,10 +69,7 @@
               "type": "wix-bookings-backend.schedules.Participant",
               "doc": "Participant." } ],
         "ret":
-          { "type":
-              { "name": "Promise",
-                "typeParams":
-                  [ "wix-bookings-backend.schedules.ModifyParticipantResult" ] },
+          { "type": "Promise",
             "doc": "" },
         "locations":
           [ { "lineno": 359,
@@ -106,7 +102,8 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "cancelSchedule",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "scheduleId",
@@ -115,9 +112,7 @@
             { "name": "from",
               "type": "Date",
               "doc": "Time to cancel the sessions from. Optional. If this field is empty, all of this schedule's sessions will be canceled." },
-            { "name": "updateOptions",
-              "type": "wix-bookings-backend.schedules.UpdateOptions",
-              "doc": "<TODO>" } ],
+            { "type": "void" } ],
         "ret":
           { "type":
               { "name": "Promise",
@@ -245,15 +240,14 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "deleteSession",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "id",
               "type": "string",
               "doc": "Session ID. Required." },
-            { "name": "updateOptions",
-              "type": "wix-bookings-backend.schedules.UpdateOptions",
-              "doc": "<TODO>" } ],
+            { "type": "void" } ],
         "ret":
           { "type":
               { "name": "Promise",
@@ -483,7 +477,8 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "listSessions",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "ids",
@@ -492,9 +487,7 @@
                   "typeParams":
                     [ "string" ] },
               "doc": "Session ID." },
-            { "name": "updateOptions",
-              "type": "wix-bookings-backend.schedules.UpdateOptions",
-              "doc": "<TODO>" } ],
+            { "type": "void" } ],
         "ret":
           { "type":
               { "name": "Promise",
@@ -632,7 +625,8 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "updateInterval",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "scheduleId",
@@ -641,12 +635,8 @@
             { "name": "id",
               "type": "string",
               "doc": "The recurring interval identifier." },
-            { "name": "updateOptions",
-              "type": "wix-bookings-backend.schedules.UpdateOptions",
-              "doc": "<TODO>" },
-            { "name": "updateOptions",
-              "type": "wix-bookings-backend.schedules.UpdateOptions",
-              "doc": "<TODO>" } ],
+            { "type": "void" },
+            { "type": "void" } ],
         "ret":
           { "type":
               { "name": "Promise",
@@ -684,15 +674,14 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "updateParticipant",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "id",
               "type": "string",
               "doc": "Reservation ID. Required." },
-            { "name": "updateOptions",
-              "type": "wix-bookings-backend.schedules.UpdateOptions",
-              "doc": "<TODO>" } ],
+            { "type": "void" } ],
         "ret":
           { "type":
               { "name": "Promise",
@@ -732,18 +721,15 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "updateSchedule",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "id",
               "type": "string",
               "doc": "Schedule identifier." },
-            { "name": "updateOptions",
-              "type": "wix-bookings-backend.schedules.UpdateOptions",
-              "doc": "<TODO>" },
-            { "name": "updateOptions",
-              "type": "wix-bookings-backend.schedules.UpdateOptions",
-              "doc": "<TODO>" } ],
+            { "type": "void" },
+            { "type": "void" } ],
         "ret":
           { "type":
               { "name": "Promise",
@@ -784,18 +770,15 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "updateSession",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "id",
               "type": "string",
               "doc": "Identifier for this session when session is a single session or generated from recurring interval. Optional." },
-            { "name": "updateOptions",
-              "type": "wix-bookings-backend.schedules.UpdateOptions",
-              "doc": "<TODO>" },
-            { "name": "updateOptions",
-              "type": "wix-bookings-backend.schedules.UpdateOptions",
-              "doc": "<TODO>" } ],
+            { "type": "void" },
+            { "type": "void" } ],
         "ret":
           { "type":
               { "name": "Promise",
@@ -836,7 +819,51 @@
               [ { "id": "maturity-beta" } ] } } ],
   "callbacks": [],
   "messages":
-    [ { "name": "Availability",
+    [ { "name": "<TODO>",
+        "locations":
+          [ { "lineno": 329,
+              "filename": "com.wix.bookings.schedules.api.v1.Schedules.js" } ],
+        "docs":
+          { "summary": "<TODO>",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "participantNotification",
+              "type": "wix-bookings-backend.schedules.ParticipantNotification",
+              "doc": "Whether to notify participants about the change, and an optional custom message.",
+              "optional": true },
+            { "name": "preserveFutureSessionsWithParticipants",
+              "type": "boolean",
+              "doc": "Whether to preserve future sessions with reservations. Defaults to false.",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
+      { "name": "<TODO>0",
+        "locations":
+          [ { "lineno": 337,
+              "filename": "com.wix.bookings.schedules.api.v1.Schedules.js" } ],
+        "docs":
+          { "summary": "<TODO>",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "participant",
+              "type": "wix-bookings-backend.schedules.Participant",
+              "doc": "Participant. (read-only, cannot be set in code)" },
+            { "name": "schedule",
+              "type": "wix-bookings-backend.schedules.Schedule",
+              "doc": "Schedule. (read-only, cannot be set in code)" } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
+      { "name": "Availability",
         "locations":
           [ { "lineno": 32,
               "filename": "com.wix.bookings.schedules.api.v1.Schedules.js" } ],
@@ -1182,7 +1209,8 @@
               "doc": "Schedule. (read-only, cannot be set in code)" } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "removed" ] },
       { "name": "Participant",
         "locations":
           [ { "lineno": 156,
@@ -1631,6 +1659,7 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels": [] } ],
+        "labels":
+          [ "removed" ] } ],
   "extra":
     {  } }

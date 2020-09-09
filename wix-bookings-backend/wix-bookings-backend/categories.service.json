@@ -2,7 +2,7 @@
   "memberOf": "wix-bookings-backend",
   "mixes": [],
   "labels":
-    [ "new" ],
+    [ "changed" ],
   "location":
     { "lineno": 137,
       "filename": "index.js" },
@@ -139,15 +139,14 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "updateCategory",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "id",
               "type": "string",
               "doc": "Category ID." },
-            { "name": "updateCategoryOptions",
-              "type": "wix-bookings-backend.categories.UpdateCategoryOptions",
-              "doc": "<TODO>" } ],
+            { "type": "void" } ],
         "ret":
           { "type":
               { "name": "Promise",
@@ -183,7 +182,38 @@
               [ { "id": "maturity-beta" } ] } } ],
   "callbacks": [],
   "messages":
-    [ { "name": "Category",
+    [ { "name": "<TODO>",
+        "locations":
+          [ { "lineno": 29,
+              "filename": "com.wixpress.bookings.services.api.v1.CategoriesService.js" } ],
+        "docs":
+          { "summary": "<TODO>",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "customProperties",
+              "type": "Object",
+              "doc": "Set of key-value pairs.Custom properties that can be associated with the category.",
+              "optional": true },
+            { "name": "name",
+              "type": "string",
+              "doc": "Category name.",
+              "optional": true },
+            { "name": "sortOrder",
+              "type": "number",
+              "doc": "Sorting order of the category for Wix Bookings UI.",
+              "optional": true },
+            { "name": "status",
+              "type": "string",
+              "doc": "Category status (read-only).\nOne of:\n + \"CREATED\"\n + \"DELETED\"\n(read-only, cannot be set in code)",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
+      { "name": "Category",
         "locations":
           [ { "lineno": 1,
               "filename": "com.wixpress.bookings.services.api.v1.CategoriesService.js" } ],
@@ -290,6 +320,7 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels": [] } ],
+        "labels":
+          [ "removed" ] } ],
   "extra":
     {  } }

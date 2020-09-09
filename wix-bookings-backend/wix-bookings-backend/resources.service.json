@@ -2,7 +2,7 @@
   "memberOf": "wix-bookings-backend",
   "mixes": [],
   "labels":
-    [ "new" ],
+    [ "changed" ],
   "location":
     { "lineno": 113,
       "filename": "index.js" },
@@ -94,16 +94,14 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "listResources",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "listResourcesRequest",
               "type": "wix-bookings-backend.resources.ListResourcesRequest" } ],
         "ret":
-          { "type":
-              { "name": "Promise",
-                "typeParams":
-                  [ "wix-bookings-backend.resources.ListResourcesResult" ] },
+          { "type": "Promise",
             "doc": "" },
         "locations":
           [ { "lineno": 358,
@@ -145,15 +143,14 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "updateResource",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "id",
               "type": "string",
               "doc": "Resource's unique ID" },
-            { "name": "updateResourceOptions",
-              "type": "wix-bookings-backend.resources.UpdateResourceOptions",
-              "doc": "<TODO>" } ],
+            { "type": "void" } ],
         "ret":
           { "type":
               { "name": "Promise",
@@ -189,7 +186,87 @@
               [ { "id": "maturity-beta" } ] } } ],
   "callbacks": [],
   "messages":
-    [ { "name": "Availability",
+    [ { "name": "<TODO>",
+        "locations":
+          [ { "lineno": 308,
+              "filename": "com.wixpress.bookings.resources.core.api.v1.resource.ResourcesService.js" } ],
+        "docs":
+          { "summary": "<TODO>",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "description",
+              "type": "string",
+              "doc": "Resource description.",
+              "optional": true },
+            { "name": "email",
+              "type": "string",
+              "doc": "Resource's email address.",
+              "optional": true },
+            { "name": "images",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-bookings-backend.resources.Image" ] },
+              "doc": "Resource's images.",
+              "optional": true },
+            { "name": "name",
+              "type": "string",
+              "doc": "Resource's name. Required.",
+              "optional": true },
+            { "name": "phone",
+              "type": "string",
+              "doc": "Resource's phone number.",
+              "optional": true },
+            { "name": "schedules",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-bookings-backend.resources.Schedule" ] },
+              "doc": "List of schedules owned by the resources. Required.",
+              "optional": true },
+            { "name": "status",
+              "type": "string",
+              "doc": "Resource's status. Read only. Default is CREATED.\nOne of:\n + \"UNDEFINED\"\n + \"CREATED\"\n + \"DELETED\"\n + \"UPDATED\"\n(read-only, cannot be set in code)",
+              "optional": true },
+            { "name": "tags",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "string" ] },
+              "doc": "Resource tags, can be used to tag a resource and later filter resources by these tags.",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
+      { "name": "<TODO>0",
+        "locations":
+          [ { "lineno": 328,
+              "filename": "com.wixpress.bookings.resources.core.api.v1.resource.ResourcesService.js" } ],
+        "docs":
+          { "summary": "<TODO>",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "queryMetadata",
+              "type": "wix-bookings-backend.resources.QueryMetaData",
+              "doc": "(read-only, cannot be set in code)" },
+            { "name": "resources",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-bookings-backend.resources.Resource" ] },
+              "doc": "List of resources matching the query object. (read-only, cannot be set in code)" } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
+      { "name": "Availability",
         "locations":
           [ { "lineno": 40,
               "filename": "com.wixpress.bookings.resources.core.api.v1.resource.ResourcesService.js" } ],
@@ -482,7 +559,8 @@
               "doc": "List of resources matching the query object. (read-only, cannot be set in code)" } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "removed" ] },
       { "name": "Location",
         "locations":
           [ { "lineno": 1,
@@ -996,7 +1074,8 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "removed" ] },
       { "name": "Value",
         "locations":
           [ { "lineno": 255,
@@ -1036,8 +1115,16 @@
               "doc": "Represents a structured value.",
               "optional": true } ],
         "extra":
-          { "notes":
-              [ "This object must contain a value for exactly one of the properties: 'nullValue', 'boolValue', 'numberValue', 'stringValue', 'listValue', 'structValue'" ] },
-        "labels": [] } ],
+          { "oneOfGroups":
+              [ { "name": "kind",
+                  "members":
+                    [ "boolValue",
+                      "listValue",
+                      "nullValue",
+                      "numberValue",
+                      "stringValue",
+                      "structValue" ] } ] },
+        "labels":
+          [ "changed" ] } ],
   "extra":
     {  } }

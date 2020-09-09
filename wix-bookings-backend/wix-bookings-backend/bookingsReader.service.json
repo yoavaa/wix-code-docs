@@ -2,7 +2,7 @@
   "memberOf": "wix-bookings-backend",
   "mixes": [],
   "labels":
-    [ "new" ],
+    [ "changed" ],
   "location":
     { "lineno": 29,
       "filename": "index.js" },
@@ -14,17 +14,15 @@
   "properties": [],
   "operations":
     [ { "name": "listBookings",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "listBookingsRequest",
               "type": "wix-bookings-backend.bookingsReader.ListBookingsRequest" } ],
         "ret":
-          { "type":
-              { "name": "Promise",
-                "typeParams":
-                  [ "wix-bookings-backend.bookingsReader.ListBookingsResult" ] },
-            "doc": "Fulfilled - listBookingsResult" },
+          { "type": "Promise",
+            "doc": "" },
         "locations":
           [ { "lineno": 339,
               "filename": "com.wix.bookings.api.v1.BookingsReader.js" } ],
@@ -89,7 +87,31 @@
               [ { "id": "maturity-beta" } ] } } ],
   "callbacks": [],
   "messages":
-    [ { "name": "AllowedActions",
+    [ { "name": "<TODO>0",
+        "locations":
+          [ { "lineno": 331,
+              "filename": "com.wix.bookings.api.v1.BookingsReader.js" } ],
+        "docs":
+          { "summary": "<TODO>",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "bookings",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-bookings-backend.bookingsReader.ListBookingEntry" ] },
+              "doc": "(read-only, cannot be set in code)" },
+            { "name": "metadata",
+              "type": "wix-bookings-backend.bookingsReader.QueryMetaData",
+              "doc": "(read-only, cannot be set in code)" } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
+      { "name": "AllowedActions",
         "locations":
           [ { "lineno": 1,
               "filename": "com.wix.bookings.api.v1.BookingsReader.js" } ],
@@ -204,9 +226,13 @@
               "doc": "Online conference information",
               "optional": true } ],
         "extra":
-          { "notes":
-              [ "This object must contain a value for exactly one of the properties: 'setOfSessions', 'singleSession'" ] },
-        "labels": [] },
+          { "oneOfGroups":
+              [ { "name": "type",
+                  "members":
+                    [ "setOfSessions",
+                      "singleSession" ] } ] },
+        "labels":
+          [ "changed" ] },
       { "name": "BookedResource",
         "locations":
           [ { "lineno": 42,
@@ -512,7 +538,8 @@
               "doc": "(read-only, cannot be set in code)" } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "removed" ] },
       { "name": "Location",
         "locations":
           [ { "lineno": 240,
@@ -917,9 +944,17 @@
               "doc": "Represents a structured value.",
               "optional": true } ],
         "extra":
-          { "notes":
-              [ "This object must contain a value for exactly one of the properties: 'nullValue', 'boolValue', 'numberValue', 'stringValue', 'listValue', 'structValue'" ] },
-        "labels": [] },
+          { "oneOfGroups":
+              [ { "name": "kind",
+                  "members":
+                    [ "boolValue",
+                      "listValue",
+                      "nullValue",
+                      "numberValue",
+                      "stringValue",
+                      "structValue" ] } ] },
+        "labels":
+          [ "changed" ] },
       { "name": "WixPayDetails",
         "locations":
           [ { "lineno": 219,

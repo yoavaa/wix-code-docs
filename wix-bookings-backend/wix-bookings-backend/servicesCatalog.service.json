@@ -2,7 +2,7 @@
   "memberOf": "wix-bookings-backend",
   "mixes": [],
   "labels":
-    [ "new" ],
+    [ "changed" ],
   "location":
     { "lineno": 173,
       "filename": "index.js" },
@@ -105,17 +105,15 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "listServices",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "listServicesRequest",
               "type": "wix-bookings-backend.servicesCatalog.ListServicesRequest",
               "doc": "List catalog items request" } ],
         "ret":
-          { "type":
-              { "name": "Promise",
-                "typeParams":
-                  [ "wix-bookings-backend.servicesCatalog.ListServicesResult" ] },
+          { "type": "Promise",
             "doc": "" },
         "locations":
           [ { "lineno": 595,
@@ -152,7 +150,7 @@
                 "Example: ```\"filter { string_value: \"{ \"slugs.name\": \"woman-hair-cut\" }\" }\"```.",
                 "- `schedules.tags` - query for all services that has a schedule with given tag and status `CREATED`.",
                 "Example: ```\"filter { string_value: \"{ \"schedules.tags\": \"Group\" }\" }\"```.",
-                "- `resources.id` - query for all services that are given by a given resource.",
+                "- `resources.id` - query for all services that are given by a given resource, taking into account only ACTIVE status service schedule.",
                 "Example: ```\"filter { string_value: \"{ \"resources.id\": \"46ce4cd4-46ff-4aa7-9cc0-02fd4f0f3209\" }\" }\"```.",
                 "- `service.policy.bookingsApprovalPolicy.isBusinessApprovalRequired` - query for all services that require business approval.",
                 "Example: ```\"filter { string_value: \"{ \"service.policy.bookingsApprovalPolicy.isBusinessApprovalRequired\": true }\" }\"```.",
@@ -189,16 +187,14 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "listServicesByCategorySlug",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "listServicesBySlugRequest",
               "type": "wix-bookings-backend.servicesCatalog.ListServicesBySlugRequest" } ],
         "ret":
-          { "type":
-              { "name": "Promise",
-                "typeParams":
-                  [ "wix-bookings-backend.servicesCatalog.ListServicesResult" ] },
+          { "type": "Promise",
             "doc": "" },
         "locations":
           [ { "lineno": 649,
@@ -231,16 +227,14 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "listServicesByResourceSlug",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "listServicesBySlugRequest",
               "type": "wix-bookings-backend.servicesCatalog.ListServicesBySlugRequest" } ],
         "ret":
-          { "type":
-              { "name": "Promise",
-                "typeParams":
-                  [ "wix-bookings-backend.servicesCatalog.ListServicesResult" ] },
+          { "type": "Promise",
             "doc": "" },
         "locations":
           [ { "lineno": 663,
@@ -274,7 +268,34 @@
               [ { "id": "maturity-beta" } ] } } ],
   "callbacks": [],
   "messages":
-    [ { "name": "ActionLabels",
+    [ { "name": "<TODO>0",
+        "locations":
+          [ { "lineno": 567,
+              "filename": "com.wixpress.bookings.services.catalog.api.v1.service.ServicesCatalog.js" } ],
+        "docs":
+          { "summary": "<TODO>",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "queryMetadata",
+              "type": "wix-bookings-backend.servicesCatalog.QueryMetaData",
+              "doc": "(read-only, cannot be set in code)" },
+            { "name": "responseType",
+              "type": "string",
+              "doc": "One of:\n + \"CONSISTENT\"\n + \"EVENTUALLY_CONSISTENT\"\n(read-only, cannot be set in code)" },
+            { "name": "services",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-bookings-backend.servicesCatalog.GetServiceResponse" ] },
+              "doc": "(read-only, cannot be set in code)" } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
+      { "name": "ActionLabels",
         "locations":
           [ { "lineno": 249,
               "filename": "com.wixpress.bookings.services.catalog.api.v1.service.ServicesCatalog.js" } ],
@@ -317,9 +338,13 @@
               "type": "wix-bookings-backend.servicesCatalog.LinkLabel",
               "optional": true } ],
         "extra":
-          { "notes":
-              [ "This object must contain a value for exactly one of the properties: 'textLabel', 'linkLabel'" ] },
-        "labels": [] },
+          { "oneOfGroups":
+              [ { "name": "label",
+                  "members":
+                    [ "linkLabel",
+                      "textLabel" ] } ] },
+        "labels":
+          [ "changed" ] },
       { "name": "AddressFields",
         "locations":
           [ { "lineno": 266,
@@ -1043,7 +1068,8 @@
               "doc": "(read-only, cannot be set in code)" } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "removed" ] },
       { "name": "Location",
         "locations":
           [ { "lineno": 1,
@@ -1774,9 +1800,17 @@
               "doc": "Represents a structured value.",
               "optional": true } ],
         "extra":
-          { "notes":
-              [ "This object must contain a value for exactly one of the properties: 'nullValue', 'boolValue', 'numberValue', 'stringValue', 'listValue', 'structValue'" ] },
-        "labels": [] },
+          { "oneOfGroups":
+              [ { "name": "kind",
+                  "members":
+                    [ "boolValue",
+                      "listValue",
+                      "nullValue",
+                      "numberValue",
+                      "stringValue",
+                      "structValue" ] } ] },
+        "labels":
+          [ "changed" ] },
       { "name": "WaitingListPolicy",
         "locations":
           [ { "lineno": 421,

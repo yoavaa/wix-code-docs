@@ -2,7 +2,7 @@
   "memberOf": "wix-bookings-backend",
   "mixes": [],
   "labels":
-    [ "new" ],
+    [ "changed" ],
   "location":
     { "lineno": 5,
       "filename": "index.js" },
@@ -70,21 +70,17 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "cancelBooking",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "id",
               "type": "string",
               "doc": "Id of the Booking to be cancelled" },
-            { "name": "<TODO>",
-              "type": "wix-bookings-backend.bookings.ModifyBookingOptions",
-              "doc": "<TODO>" } ],
+            { "type": "void" } ],
         "ret":
-          { "type":
-              { "name": "Promise",
-                "typeParams":
-                  [ "wix-bookings-backend.bookings.CancelBookingResults" ] },
-            "doc": "Fulfilled - cancelBookingResults" },
+          { "type": "Promise",
+            "doc": "" },
         "locations":
           [ { "lineno": 536,
               "filename": "com.wix.bookings.api.v1.Bookings.js" } ],
@@ -122,15 +118,14 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "checkoutBooking",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "bookingId",
               "type": "string",
               "doc": "The booking identifier to pay." },
-            { "name": "<TODO>",
-              "type": "wix-bookings-backend.bookings.ModifyBookingOptions",
-              "doc": "<TODO>" } ],
+            { "type": "void" } ],
         "ret":
           { "type":
               { "name": "Promise",
@@ -175,15 +170,14 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "confirmBooking",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "id",
               "type": "string",
               "doc": "the Booking id to confirm" },
-            { "name": "<TODO>",
-              "type": "wix-bookings-backend.bookings.ModifyBookingOptions",
-              "doc": "<TODO>" } ],
+            { "type": "void" } ],
         "ret":
           { "type":
               { "name": "Promise",
@@ -227,15 +221,14 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "declineBooking",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "id",
               "type": "string",
               "doc": "the Booking id to decline" },
-            { "name": "<TODO>",
-              "type": "wix-bookings-backend.bookings.ModifyBookingOptions",
-              "doc": "<TODO>" } ],
+            { "type": "void" } ],
         "ret":
           { "type":
               { "name": "Promise",
@@ -450,7 +443,50 @@
               [ { "id": "maturity-beta" } ] } } ],
   "callbacks": [],
   "messages":
-    [ { "name": "AttendanceInfo",
+    [ { "name": "<TODO>",
+        "locations":
+          [ { "lineno": 494,
+              "filename": "com.wix.bookings.api.v1.Bookings.js" } ],
+        "docs":
+          { "summary": "<TODO>",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "participantNotification",
+              "type": "wix-bookings-backend.bookings.ParticipantNotification",
+              "doc": "Whether to notify participants about the change and an optional custom message",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
+      { "name": "<TODO>0",
+        "locations":
+          [ { "lineno": 501,
+              "filename": "com.wix.bookings.api.v1.Bookings.js" } ],
+        "docs":
+          { "summary": "<TODO>",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "errors",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-bookings-backend.bookings.Error" ] },
+              "doc": "(read-only, cannot be set in code)" },
+            { "name": "intervals",
+              "type": "string",
+              "doc": "Id of the Booking to be cancelled (read-only, cannot be set in code)" } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
+      { "name": "AttendanceInfo",
         "locations":
           [ { "lineno": 1,
               "filename": "com.wix.bookings.api.v1.Bookings.js" } ],
@@ -544,9 +580,14 @@
               "type": "string",
               "optional": true } ],
         "extra":
-          { "notes":
-              [ "This object must contain a value for exactly one of the properties: 'createSession', 'bySessionId', 'scheduleId'" ] },
-        "labels": [] },
+          { "oneOfGroups":
+              [ { "name": "schedule",
+                  "members":
+                    [ "bySessionId",
+                      "createSession",
+                      "scheduleId" ] } ] },
+        "labels":
+          [ "changed" ] },
       { "name": "BookRequest_FlowControlSettings",
         "locations":
           [ { "lineno": 42,
@@ -638,9 +679,13 @@
               "doc": "Online conference information",
               "optional": true } ],
         "extra":
-          { "notes":
-              [ "This object must contain a value for exactly one of the properties: 'setOfSessions', 'singleSession'" ] },
-        "labels": [] },
+          { "oneOfGroups":
+              [ { "name": "type",
+                  "members":
+                    [ "setOfSessions",
+                      "singleSession" ] } ] },
+        "labels":
+          [ "changed" ] },
       { "name": "BookedResource",
         "locations":
           [ { "lineno": 77,
@@ -859,7 +904,8 @@
               "doc": "(read-only, cannot be set in code)" } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "removed" ] },
       { "name": "ContactDetails",
         "locations":
           [ { "lineno": 138,
@@ -1137,7 +1183,8 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "removed" ] },
       { "name": "OnlineConference",
         "locations":
           [ { "lineno": 187,
@@ -1426,9 +1473,14 @@
               "doc": "Reschedule to an existing schedule",
               "optional": true } ],
         "extra":
-          { "notes":
-              [ "This object must contain a value for exactly one of the properties: 'createSession', 'bySessionId', 'scheduleId'" ] },
-        "labels": [] },
+          { "oneOfGroups":
+              [ { "name": "reschedule",
+                  "members":
+                    [ "bySessionId",
+                      "createSession",
+                      "scheduleId" ] } ] },
+        "labels":
+          [ "changed" ] },
       { "name": "RescheduleRequest_FlowControlSettings",
         "locations":
           [ { "lineno": 249,

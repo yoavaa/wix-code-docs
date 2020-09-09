@@ -2,7 +2,7 @@
   "memberOf": "wix-bookings-backend",
   "mixes": [],
   "labels":
-    [ "new" ],
+    [ "changed" ],
   "location":
     { "lineno": 77,
       "filename": "index.js" },
@@ -237,8 +237,16 @@
               "doc": "Represents a structured value.",
               "optional": true } ],
         "extra":
-          { "notes":
-              [ "This object must contain a value for exactly one of the properties: 'nullValue', 'boolValue', 'numberValue', 'stringValue', 'listValue', 'structValue'" ] },
-        "labels": [] } ],
+          { "oneOfGroups":
+              [ { "name": "kind",
+                  "members":
+                    [ "boolValue",
+                      "listValue",
+                      "nullValue",
+                      "numberValue",
+                      "stringValue",
+                      "structValue" ] } ] },
+        "labels":
+          [ "changed" ] } ],
   "extra":
     {  } }

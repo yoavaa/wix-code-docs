@@ -2,7 +2,7 @@
   "memberOf": "wix-bookings-backend",
   "mixes": [],
   "labels":
-    [ "new" ],
+    [ "changed" ],
   "location":
     { "lineno": 149,
       "filename": "index.js" },
@@ -97,15 +97,14 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "updateForm",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "id",
               "type": "string",
               "doc": "Form ID." },
-            { "name": "updateFormOptions",
-              "type": "wix-bookings-backend.forms.UpdateFormOptions",
-              "doc": "<TODO>" } ],
+            { "type": "void" } ],
         "ret":
           { "type":
               { "name": "Promise",
@@ -141,7 +140,52 @@
               [ { "id": "maturity-beta" } ] } } ],
   "callbacks": [],
   "messages":
-    [ { "name": "ActionLabels",
+    [ { "name": "<TODO>",
+        "locations":
+          [ { "lineno": 87,
+              "filename": "com.wixpress.bookings.services.api.v1.FormsService.js" } ],
+        "docs":
+          { "summary": "<TODO>",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "actionLabels",
+              "type": "wix-bookings-backend.forms.ActionLabels",
+              "doc": "Available payment actions.",
+              "optional": true },
+            { "name": "address",
+              "type": "wix-bookings-backend.forms.AddressFields",
+              "doc": "Customer's address (displayed in Wix Bookings UI only when a service’s location is set to \"Customer’s Place\")." },
+            { "name": "customFields",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-bookings-backend.forms.FormField" ] },
+              "doc": "Custom fields which can be added to the form.",
+              "optional": true },
+            { "name": "email",
+              "type": "wix-bookings-backend.forms.FormField",
+              "doc": "Number of participants being booked to the service (displayed in Wix Bookings UI only for services that allow booking multiple people per booking)." },
+            { "name": "header",
+              "type": "wix-bookings-backend.forms.Header",
+              "doc": "Form header",
+              "optional": true },
+            { "name": "name",
+              "type": "wix-bookings-backend.forms.FormField",
+              "doc": "Number of participants being booked to the service (displayed in Wix Bookings UI only for services that allow booking multiple people per booking)." },
+            { "name": "numberOfParticipants",
+              "type": "wix-bookings-backend.forms.FormField",
+              "doc": "Number of participants being booked to the service (displayed in Wix Bookings UI only for services that allow booking multiple people per booking)." },
+            { "name": "phone",
+              "type": "wix-bookings-backend.forms.FormField",
+              "doc": "Number of participants being booked to the service (displayed in Wix Bookings UI only for services that allow booking multiple people per booking)." } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
+      { "name": "ActionLabels",
         "locations":
           [ { "lineno": 1,
               "filename": "com.wixpress.bookings.services.api.v1.FormsService.js" } ],
@@ -184,9 +228,13 @@
               "type": "wix-bookings-backend.forms.LinkLabel",
               "optional": true } ],
         "extra":
-          { "notes":
-              [ "This object must contain a value for exactly one of the properties: 'textLabel', 'linkLabel'" ] },
-        "labels": [] },
+          { "oneOfGroups":
+              [ { "name": "label",
+                  "members":
+                    [ "linkLabel",
+                      "textLabel" ] } ] },
+        "labels":
+          [ "changed" ] },
       { "name": "AddressFields",
         "locations":
           [ { "lineno": 18,
@@ -432,6 +480,7 @@
               "doc": "Number of participants being booked to the service (displayed in Wix Bookings UI only for services that allow booking multiple people per booking)." } ],
         "extra":
           {  },
-        "labels": [] } ],
+        "labels":
+          [ "removed" ] } ],
   "extra":
     {  } }

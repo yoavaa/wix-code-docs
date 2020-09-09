@@ -2,7 +2,7 @@
   "memberOf": "wix-bookings-backend",
   "mixes": [],
   "labels":
-    [ "new" ],
+    [ "changed" ],
   "location":
     { "lineno": 65,
       "filename": "index.js" },
@@ -14,7 +14,8 @@
   "properties": [],
   "operations":
     [ { "name": "getCheckoutOptionsForSchedule",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "scheduleId",
@@ -26,9 +27,7 @@
             { "name": "couponCode",
               "type": "string",
               "doc": "Coupon to apply to price calculations. An error will be thrown if given coupon is invalid." },
-            { "name": "getCheckoutOptions",
-              "type": "wix-bookings-backend.checkout.GetCheckoutOptions",
-              "doc": "<TODO>" } ],
+            { "type": "void" } ],
         "ret":
           { "type":
               { "name": "Promise",
@@ -67,7 +66,8 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "getCheckoutOptionsForSession",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "sessionId",
@@ -79,9 +79,7 @@
             { "name": "couponCode",
               "type": "string",
               "doc": "Coupon to apply to price calculations. An error will be thrown if given coupon is invalid." },
-            { "name": "getCheckoutOptions",
-              "type": "wix-bookings-backend.checkout.GetCheckoutOptions",
-              "doc": "<TODO>" } ],
+            { "type": "void" } ],
         "ret":
           { "type":
               { "name": "Promise",
@@ -120,7 +118,8 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "getCheckoutOptionsForTimeSlot",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "createSession",
@@ -132,9 +131,7 @@
             { "name": "couponCode",
               "type": "string",
               "doc": "Coupon to apply to price calculations. An error will be thrown if given coupon is invalid." },
-            { "name": "getCheckoutOptions",
-              "type": "wix-bookings-backend.checkout.GetCheckoutOptions",
-              "doc": "<TODO>" } ],
+            { "type": "void" } ],
         "ret":
           { "type":
               { "name": "Promise",
@@ -174,7 +171,43 @@
               [ { "id": "maturity-beta" } ] } } ],
   "callbacks": [],
   "messages":
-    [ { "name": "CalendarConference",
+    [ { "name": "<TODO>",
+        "locations":
+          [ { "lineno": 246,
+              "filename": "com.wix.bookings.checkout.api.v1.CheckoutBackend.js" } ],
+        "docs":
+          { "summary": "<TODO>",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "contactId",
+              "type": "string",
+              "doc": "Member ID for which paid plans will be accessed.",
+              "optional": true },
+            { "name": "createSession",
+              "type": "wix-bookings-backend.checkout.Session",
+              "doc": "A session that will be created for this booking.\n schedule_id, schedule_owner_id, start, and rate are used to calculate the checkout options.\n Start is used to access the relevant paid plans.",
+              "optional": true },
+            { "name": "scheduleId",
+              "type": "string",
+              "doc": "Existing schedule ID. Will be used to access service properties including payment options, rate, and first session start time that will be used to access relevant plans.",
+              "optional": true },
+            { "name": "sessionId",
+              "type": "string",
+              "doc": "Existing session ID.",
+              "optional": true } ],
+        "extra":
+          { "oneOfGroups":
+              [ { "name": "schedule",
+                  "members":
+                    [ "createSession",
+                      "scheduleId",
+                      "sessionId" ] } ] },
+        "labels":
+          [ "new" ] },
+      { "name": "CalendarConference",
         "locations":
           [ { "lineno": 94,
               "filename": "com.wix.bookings.checkout.api.v1.CheckoutBackend.js" } ],
@@ -341,7 +374,8 @@
         "extra":
           { "notes":
               [ "This object must contain a value for exactly one of the properties: 'createSession', 'scheduleId', 'sessionId'" ] },
-        "labels": [] },
+        "labels":
+          [ "removed" ] },
       { "name": "LinkedSchedule",
         "locations":
           [ { "lineno": 130,

@@ -2,7 +2,7 @@
   "memberOf": "wix-bookings-backend",
   "mixes": [],
   "labels":
-    [ "new" ],
+    [ "changed" ],
   "location":
     { "lineno": 17,
       "filename": "index.js" },
@@ -14,7 +14,8 @@
   "properties": [],
   "operations":
     [ { "name": "isBookingAvailable",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "scheduleId",
@@ -24,10 +25,7 @@
               "type": "number",
               "doc": "Number of spots to query availability for." } ],
         "ret":
-          { "type":
-              { "name": "Promise",
-                "typeParams":
-                  [ "wix-bookings-backend.availability.AvailabilityResult" ] },
+          { "type": "Promise",
             "doc": "" },
         "locations":
           [ { "lineno": 71,
@@ -63,7 +61,8 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "isScheduleAvailable",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "scheduleId",
@@ -73,10 +72,7 @@
               "type": "number",
               "doc": "Number of spots to query availability for." } ],
         "ret":
-          { "type":
-              { "name": "Promise",
-                "typeParams":
-                  [ "wix-bookings-backend.availability.AvailabilityResult" ] },
+          { "type": "Promise",
             "doc": "" },
         "locations":
           [ { "lineno": 54,
@@ -112,7 +108,8 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "isSessionAvailable",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "sessionId",
@@ -122,10 +119,7 @@
               "type": "number",
               "doc": "Number of spots to query availability for." } ],
         "ret":
-          { "type":
-              { "name": "Promise",
-                "typeParams":
-                  [ "wix-bookings-backend.availability.AvailabilityResult" ] },
+          { "type": "Promise",
             "doc": "" },
         "locations":
           [ { "lineno": 20,
@@ -161,7 +155,8 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "isTimeSlotAvailable",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "session",
@@ -171,10 +166,7 @@
               "type": "number",
               "doc": "Number of spots to query availability for." } ],
         "ret":
-          { "type":
-              { "name": "Promise",
-                "typeParams":
-                  [ "wix-bookings-backend.availability.AvailabilityResult" ] },
+          { "type": "Promise",
             "doc": "" },
         "locations":
           [ { "lineno": 37,
@@ -308,7 +300,31 @@
               [ { "id": "maturity-beta" } ] } } ],
   "callbacks": [],
   "messages":
-    [ { "name": "AvailabilityResult",
+    [ { "name": "<TODO>0",
+        "locations":
+          [ { "lineno": 11,
+              "filename": "com.wix.bookings.availability.api.v1.Availability.js" } ],
+        "docs":
+          { "summary": "<TODO>",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "available",
+              "type": "boolean",
+              "doc": "whether or not the requested entity is available for booking of the specified party size (read-only, cannot be set in code)" },
+            { "name": "capacity",
+              "type": "number",
+              "doc": "The maximum number of participants that can be added to the session. (read-only, cannot be set in code)" },
+            { "name": "totalNumberOfParticipants",
+              "type": "number",
+              "doc": "The current number of registered participants on this session (read-only, cannot be set in code)" } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
+      { "name": "AvailabilityResult",
         "locations":
           [ { "lineno": 11,
               "filename": "com.wix.bookings.availability.api.v1.Availability.js" } ],
@@ -330,7 +346,8 @@
               "doc": "whether or not the requested entity is available for booking of the specified party size (read-only, cannot be set in code)" } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "removed" ] },
       { "name": "Slot",
         "locations":
           [ { "lineno": 1,

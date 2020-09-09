@@ -2,7 +2,7 @@
   "memberOf": "wix-bookings-backend",
   "mixes": [],
   "labels":
-    [ "new" ],
+    [ "changed" ],
   "location":
     { "lineno": 41,
       "filename": "index.js" },
@@ -14,20 +14,16 @@
   "properties": [],
   "operations":
     [ { "name": "enrollWaitlistParticipant",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "registrationId",
               "type": "string",
               "doc": "Registration to book." },
-            { "name": "modifyParticipantOptions",
-              "type": "wix-bookings-backend.waitingList.ModifyParticipantOptions",
-              "doc": "<TODO>" } ],
+            { "type": "void" } ],
         "ret":
-          { "type":
-              { "name": "Promise",
-                "typeParams":
-                  [ "wix-bookings-backend.waitingList.ModifyParticipantResult" ] },
+          { "type": "Promise",
             "doc": "" },
         "locations":
           [ { "lineno": 336,
@@ -110,7 +106,8 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "registerParticipantToWaitlist",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "waitingResource",
@@ -119,9 +116,7 @@
             { "name": "formInfo",
               "type": "wix-bookings-backend.waitingList.FormInfo",
               "doc": "Participant information as filled in the booking form (required).\n Contains contact details and other form fields specified by the owner for this 'waiting resource' (service)." },
-            { "name": "modifyParticipantOptions",
-              "type": "wix-bookings-backend.waitingList.ModifyParticipantOptions",
-              "doc": "<TODO>" } ],
+            { "type": "void" } ],
         "ret":
           { "type":
               { "name": "Promise",
@@ -160,7 +155,8 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "removeParticipantFromWaitlist",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "registrationId",
@@ -168,10 +164,7 @@
             { "name": "waitingResource",
               "type": "string" } ],
         "ret":
-          { "type":
-              { "name": "Promise",
-                "typeParams":
-                  [ "wix-bookings-backend.waitingList.ModifyParticipantResult" ] },
+          { "type": "Promise",
             "doc": "" },
         "locations":
           [ { "lineno": 351,
@@ -206,7 +199,58 @@
               [ { "id": "maturity-beta" } ] } } ],
   "callbacks": [],
   "messages":
-    [ { "name": "AttendanceInfo",
+    [ { "name": "<TODO>",
+        "locations":
+          [ { "lineno": 317,
+              "filename": "com.wix.bookings.api.v1.WaitingList.js" } ],
+        "docs":
+          { "summary": "<TODO>",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "couponCode",
+              "type": "string",
+              "doc": "Coupon code to apply to this booking at checkout.",
+              "optional": true },
+            { "name": "flowControlSettings",
+              "type": "wix-bookings-backend.waitingList.FlowControlSettings",
+              "doc": "Sets the book flow behavior, some behaviors required permissions.",
+              "optional": true },
+            { "name": "notifyParticipants",
+              "type": "boolean",
+              "optional": true },
+            { "name": "planSelection",
+              "type": "wix-bookings-backend.waitingList.PaidPlan",
+              "doc": "Selected paid plan to apply to this booking at checkout.",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
+      { "name": "<TODO>0",
+        "locations":
+          [ { "lineno": 327,
+              "filename": "com.wix.bookings.api.v1.WaitingList.js" } ],
+        "docs":
+          { "summary": "<TODO>",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "booking",
+              "type": "wix-bookings-backend.waitingList.Booking",
+              "doc": "Checked-out booking.\n (Online-payments can only be completed in the Wix Bookings UI.) (read-only, cannot be set in code)" },
+            { "name": "registrationId",
+              "type": "string",
+              "doc": "(read-only, cannot be set in code)" } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
+      { "name": "AttendanceInfo",
         "locations":
           [ { "lineno": 1,
               "filename": "com.wix.bookings.api.v1.WaitingList.js" } ],
@@ -317,9 +361,13 @@
               "doc": "Online conference information",
               "optional": true } ],
         "extra":
-          { "notes":
-              [ "This object must contain a value for exactly one of the properties: 'setOfSessions', 'singleSession'" ] },
-        "labels": [] },
+          { "oneOfGroups":
+              [ { "name": "type",
+                  "members":
+                    [ "setOfSessions",
+                      "singleSession" ] } ] },
+        "labels":
+          [ "changed" ] },
       { "name": "BookedResource",
         "locations":
           [ { "lineno": 41,
@@ -638,7 +686,8 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "removed" ] },
       { "name": "ModifyParticipantResult",
         "locations":
           [ { "lineno": 327,
@@ -658,7 +707,8 @@
               "doc": "Checked-out booking.\n (Online-payments can only be completed in the Wix Bookings UI.) (read-only, cannot be set in code)" } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "removed" ] },
       { "name": "OnlineConference",
         "locations":
           [ { "lineno": 151,

@@ -2,7 +2,7 @@
   "memberOf": "wix-bookings-backend",
   "mixes": [],
   "labels":
-    [ "new" ],
+    [ "changed" ],
   "location":
     { "lineno": 53,
       "filename": "index.js" },
@@ -14,16 +14,14 @@
   "properties": [],
   "operations":
     [ { "name": "listSessions",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "listSessionsRequest",
               "type": "wix-bookings-backend.calendar.ListSessionsRequest" } ],
         "ret":
-          { "type":
-              { "name": "Promise",
-                "typeParams":
-                  [ "wix-bookings-backend.calendar.ListResults" ] },
+          { "type": "Promise",
             "doc": "" },
         "locations":
           [ { "lineno": 239,
@@ -88,16 +86,14 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "listSlots",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "listSlotsRequest",
               "type": "wix-bookings-backend.calendar.ListSlotsRequest" } ],
         "ret":
-          { "type":
-              { "name": "Promise",
-                "typeParams":
-                  [ "wix-bookings-backend.calendar.ListResults" ] },
+          { "type": "Promise",
             "doc": "" },
         "locations":
           [ { "lineno": 284,
@@ -149,7 +145,31 @@
               [ { "id": "maturity-beta" } ] } } ],
   "callbacks": [],
   "messages":
-    [ { "name": "CalendarConference",
+    [ { "name": "<TODO>0",
+        "locations":
+          [ { "lineno": 230,
+              "filename": "com.wix.bookings.calendar.api.v1.CalendarService.js" } ],
+        "docs":
+          { "summary": "<TODO>",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "nextPageToken",
+              "type": "string",
+              "doc": "Slots paging response.\nToken for the next page of results (read-only, cannot be set in code)" },
+            { "name": "slots",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-bookings-backend.calendar.Session" ] },
+              "doc": "Slots on the calendar. (read-only, cannot be set in code)" } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
+      { "name": "CalendarConference",
         "locations":
           [ { "lineno": 46,
               "filename": "com.wix.bookings.calendar.api.v1.CalendarService.js" } ],
@@ -286,7 +306,8 @@
               "doc": "Slots on the calendar. (read-only, cannot be set in code)" } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "removed" ] },
       { "name": "ListSessionsRequest",
         "locations":
           [ { "lineno": 1,
@@ -733,8 +754,16 @@
               "doc": "Represents a structured value.",
               "optional": true } ],
         "extra":
-          { "notes":
-              [ "This object must contain a value for exactly one of the properties: 'nullValue', 'boolValue', 'numberValue', 'stringValue', 'listValue', 'structValue'" ] },
-        "labels": [] } ],
+          { "oneOfGroups":
+              [ { "name": "kind",
+                  "members":
+                    [ "boolValue",
+                      "listValue",
+                      "nullValue",
+                      "numberValue",
+                      "stringValue",
+                      "structValue" ] } ] },
+        "labels":
+          [ "changed" ] } ],
   "extra":
     {  } }
