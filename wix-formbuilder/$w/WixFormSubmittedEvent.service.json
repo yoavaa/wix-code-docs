@@ -16,7 +16,7 @@
       "extra":
         {  } },
   "properties":
-    [ { "name": "WixFormFields",
+    [ { "name": "wixFormFields",
         "labels":
           [ "changed" ],
         "get": true,
