@@ -2,7 +2,8 @@
   "memberOf": "$w",
   "mixes":
     [ "$w.Event" ],
-  "labels": [],
+  "labels":
+    [ "changed" ],
   "location":
     { "lineno": 137,
       "filename": "form.js" },
@@ -15,8 +16,67 @@
       "extra":
         {  } },
   "properties":
-    [ { "name": "wixFormFields",
-        "labels": [],
+    [ { "name": "WixFormFields",
+        "labels":
+          [ "new" ],
+        "get": true,
+        "set": false,
+        "type":
+          { "name": "Array",
+            "typeParams":
+              [ "$w.WixFormSubmittedEvent.WixFormField" ] },
+        "locations":
+          [ { "lineno": 175,
+              "filename": "form.js" } ],
+        "docs":
+          { "summary": "An array of objects representing the fields on a Wix Form.",
+            "description":
+              [ "An array of objects representing the fields on a Wix Form." ],
+            "links": [],
+            "examples":
+              [ { "title": "An event triggered on a WixForms element when the Wix Form is submitted",
+                  "body":
+                    [ "$w(\"#myWixForm\").onWixFormSubmitted( {fields} => {",
+                      "  let firstName = fields[0].fieldValue;",
+                      "  let lastName = fields[1].fieldValue;",
+                      "  let donation = fields[2].fieldValue;",
+                      "  let email = fields[3].fieldValue;",
+                      "  $w('#myText').text = `Thank you, ${firstName} ${lastName}, for your generous donation of ${donation}.`;",
+                      "});",
+                      "",
+                      "/* fields array of objects: ",
+                      " * [",
+                      " *    { ",
+                      " *      \"id\" : \"inputFirstName\",",
+                      " *      \"fieldValue\" : \"Maria\",",
+                      " *      \"fieldName\" : \"Enter first name\"",
+                      " *    },",
+                      " *    { ",
+                      " *      \"id\" : \"inputLastName\",",
+                      " *      \"fieldValue\" : \"Santora\",",
+                      " *      \"fieldName\" : \"Enter last name\"",
+                      " *    },",
+                      " *    { ",
+                      " *      \"id\" : \"inputDonation\",",
+                      " *      \"fieldValue\" : \"1000\",",
+                      " *      \"fieldName\" : \"Enter donation amount\"",
+                      " *    },",
+                      " *    { ",
+                      " *      \"id\" : \"inputEmail\",",
+                      " *      \"fieldValue\" : \"ms@theCompany\",",
+                      " *      \"fieldName\" : \"Enter email\"",
+                      " *    }",
+                      " * ] ",
+                      " */" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "wixFormFields",
+        "labels":
+          [ "removed" ],
         "get": true,
         "set": false,
         "type":
@@ -75,7 +135,7 @@
   "messages":
     [ { "name": "WixFormField",
         "locations":
-          [ { "lineno": 183,
+          [ { "lineno": 187,
               "filename": "form.js" } ],
         "docs":
           { "summary": "An object representing a field on a Wix Form and its value.",
