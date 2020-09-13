@@ -25,10 +25,13 @@
               "type": "number",
               "doc": "Number of spots to query availability for." } ],
         "ret":
-          { "type": "Promise",
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-bookings-backend.availability.IsAvailableResponse" ] },
             "doc": "" },
         "locations":
-          [ { "lineno": 71,
+          [ { "lineno": 70,
               "filename": "com.wix.bookings.availability.api.v1.Availability.js" } ],
         "docs":
           { "summary": "Returns the current availability of a requested entity.",
@@ -72,10 +75,13 @@
               "type": "number",
               "doc": "Number of spots to query availability for." } ],
         "ret":
-          { "type": "Promise",
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-bookings-backend.availability.IsAvailableResponse" ] },
             "doc": "" },
         "locations":
-          [ { "lineno": 54,
+          [ { "lineno": 53,
               "filename": "com.wix.bookings.availability.api.v1.Availability.js" } ],
         "docs":
           { "summary": "Returns the current availability of a requested entity.",
@@ -119,10 +125,13 @@
               "type": "number",
               "doc": "Number of spots to query availability for." } ],
         "ret":
-          { "type": "Promise",
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-bookings-backend.availability.IsAvailableResponse" ] },
             "doc": "" },
         "locations":
-          [ { "lineno": 20,
+          [ { "lineno": 19,
               "filename": "com.wix.bookings.availability.api.v1.Availability.js" } ],
         "docs":
           { "summary": "Returns the current availability of a requested entity.",
@@ -166,10 +175,13 @@
               "type": "number",
               "doc": "Number of spots to query availability for." } ],
         "ret":
-          { "type": "Promise",
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-bookings-backend.availability.IsAvailableResponse" ] },
             "doc": "" },
         "locations":
-          [ { "lineno": 37,
+          [ { "lineno": 36,
               "filename": "com.wix.bookings.availability.api.v1.Availability.js" } ],
         "docs":
           { "summary": "Returns the current availability of a requested entity.",
@@ -215,7 +227,7 @@
                   [ "string" ] },
             "doc": "Fulfilled - locked session key" },
         "locations":
-          [ { "lineno": 88,
+          [ { "lineno": 87,
               "filename": "com.wix.bookings.availability.api.v1.Availability.js" } ],
         "docs":
           { "summary": "Lock a session for bookings.",
@@ -267,7 +279,7 @@
                   [ "void" ] },
             "doc": "" },
         "locations":
-          [ { "lineno": 107,
+          [ { "lineno": 106,
               "filename": "com.wix.bookings.availability.api.v1.Availability.js" } ],
         "docs":
           { "summary": "Unlock a locked session for bookings.",
@@ -323,7 +335,7 @@
         "extra":
           {  },
         "labels":
-          [ "new" ] },
+          [ "removed" ] },
       { "name": "AvailabilityResult",
         "locations":
           [ { "lineno": 11,
@@ -348,6 +360,29 @@
           {  },
         "labels":
           [ "removed" ] },
+      { "name": "IsAvailableResponse",
+        "locations":
+          [ { "lineno": 11,
+              "filename": "com.wix.bookings.availability.api.v1.Availability.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "available",
+              "type": "boolean",
+              "doc": "whether or not the requested entity is available for booking of the specified party size (read-only, cannot be set in code)" },
+            { "name": "capacity",
+              "type": "number",
+              "doc": "The maximum number of participants that can be added to the session. (read-only, cannot be set in code)" },
+            { "name": "totalNumberOfParticipants",
+              "type": "number",
+              "doc": "The current number of registered participants on this session (read-only, cannot be set in code)" } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
       { "name": "Slot",
         "locations":
           [ { "lineno": 1,

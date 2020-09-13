@@ -26,7 +26,7 @@
                   [ "wix-bookings-backend.bookings.BookResponse" ] },
             "doc": "" },
         "locations":
-          [ { "lineno": 509,
+          [ { "lineno": 555,
               "filename": "com.wix.bookings.api.v1.Bookings.js" } ],
         "docs":
           { "summary": "Book a service.",
@@ -77,12 +77,16 @@
           [ { "name": "id",
               "type": "string",
               "doc": "Id of the Booking to be cancelled" },
-            { "type": "void" } ],
+            { "name": "cancelBookingRequest",
+              "type": "wix-bookings-backend.bookings.CancelBookingRequest" } ],
         "ret":
-          { "type": "Promise",
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-bookings-backend.bookings.CancelBookingResponse" ] },
             "doc": "" },
         "locations":
-          [ { "lineno": 536,
+          [ { "lineno": 582,
               "filename": "com.wix.bookings.api.v1.Bookings.js" } ],
         "docs":
           { "summary": "Cancel an existing booking.",
@@ -125,7 +129,8 @@
           [ { "name": "bookingId",
               "type": "string",
               "doc": "The booking identifier to pay." },
-            { "type": "void" } ],
+            { "name": "checkoutBookingRequest",
+              "type": "wix-bookings-backend.bookings.CheckoutBookingRequest" } ],
         "ret":
           { "type":
               { "name": "Promise",
@@ -133,7 +138,7 @@
                   [ "wix-bookings-backend.bookings.Booking" ] },
             "doc": "" },
         "locations":
-          [ { "lineno": 556,
+          [ { "lineno": 602,
               "filename": "com.wix.bookings.api.v1.Bookings.js" } ],
         "docs":
           { "summary": "Checkout a booking.",
@@ -177,7 +182,8 @@
           [ { "name": "id",
               "type": "string",
               "doc": "the Booking id to confirm" },
-            { "type": "void" } ],
+            { "name": "confirmBookingRequest",
+              "type": "wix-bookings-backend.bookings.ConfirmBookingRequest" } ],
         "ret":
           { "type":
               { "name": "Promise",
@@ -185,7 +191,7 @@
                   [ "string" ] },
             "doc": "Fulfilled - the Booking id that confirmed" },
         "locations":
-          [ { "lineno": 577,
+          [ { "lineno": 623,
               "filename": "com.wix.bookings.api.v1.Bookings.js" } ],
         "docs":
           { "summary": "Confirm a booking request.",
@@ -228,7 +234,8 @@
           [ { "name": "id",
               "type": "string",
               "doc": "the Booking id to decline" },
-            { "type": "void" } ],
+            { "name": "declineBookingRequest",
+              "type": "wix-bookings-backend.bookings.DeclineBookingRequest" } ],
         "ret":
           { "type":
               { "name": "Promise",
@@ -236,7 +243,7 @@
                   [ "string" ] },
             "doc": "" },
         "locations":
-          [ { "lineno": 597,
+          [ { "lineno": 643,
               "filename": "com.wix.bookings.api.v1.Bookings.js" } ],
         "docs":
           { "summary": "Decline a booking request.",
@@ -284,7 +291,7 @@
                   [ "wix-bookings-backend.bookings.Booking" ] },
             "doc": "Fulfilled - Updated booking info." },
         "locations":
-          [ { "lineno": 616,
+          [ { "lineno": 662,
               "filename": "com.wix.bookings.api.v1.Bookings.js" } ],
         "docs":
           { "summary": "Mark a booking as fully paid.",
@@ -323,7 +330,7 @@
                   [ "wix-bookings-backend.bookings.RescheduleResponse" ] },
             "doc": "" },
         "locations":
-          [ { "lineno": 627,
+          [ { "lineno": 673,
               "filename": "com.wix.bookings.api.v1.Bookings.js" } ],
         "docs":
           { "summary": "Reschedule a Booking.",
@@ -372,7 +379,7 @@
                   [ "wix-bookings-backend.bookings.Booking" ] },
             "doc": "" },
         "locations":
-          [ { "lineno": 643,
+          [ { "lineno": 689,
               "filename": "com.wix.bookings.api.v1.Bookings.js" } ],
         "docs":
           { "summary": "Set the booking attendance status.",
@@ -415,7 +422,7 @@
                   [ "wix-bookings-backend.bookings.Booking" ] },
             "doc": "" },
         "locations":
-          [ { "lineno": 655,
+          [ { "lineno": 701,
               "filename": "com.wix.bookings.api.v1.Bookings.js" } ],
         "docs":
           { "summary": "Update client’s information on a Booking.",
@@ -461,7 +468,7 @@
         "extra":
           {  },
         "labels":
-          [ "new" ] },
+          [ "removed" ] },
       { "name": "<TODO>0",
         "locations":
           [ { "lineno": 501,
@@ -485,7 +492,7 @@
         "extra":
           {  },
         "labels":
-          [ "new" ] },
+          [ "removed" ] },
       { "name": "AttendanceInfo",
         "locations":
           [ { "lineno": 1,
@@ -586,8 +593,7 @@
                     [ "bySessionId",
                       "createSession",
                       "scheduleId" ] } ] },
-        "labels":
-          [ "changed" ] },
+        "labels": [] },
       { "name": "BookRequest_FlowControlSettings",
         "locations":
           [ { "lineno": 42,
@@ -684,8 +690,7 @@
                   "members":
                     [ "setOfSessions",
                       "singleSession" ] } ] },
-        "labels":
-          [ "changed" ] },
+        "labels": [] },
       { "name": "BookedResource",
         "locations":
           [ { "lineno": 77,
@@ -818,7 +823,7 @@
         "labels": [] },
       { "name": "CalendarConference",
         "locations":
-          [ { "lineno": 346,
+          [ { "lineno": 407,
               "filename": "com.wix.bookings.api.v1.Bookings.js" } ],
         "docs":
           { "summary": "Holding the conference meeting created when the session is created, according to the details set in the Schedule's conference provider information.",
@@ -856,7 +861,7 @@
         "labels": [] },
       { "name": "CalendarDateTime",
         "locations":
-          [ { "lineno": 358,
+          [ { "lineno": 419,
               "filename": "com.wix.bookings.api.v1.Bookings.js" } ],
         "docs":
           { "summary": "The end time of the session. Required.",
@@ -882,6 +887,74 @@
         "extra":
           {  },
         "labels": [] },
+      { "name": "CancelBookingRequest",
+        "locations":
+          [ { "lineno": 138,
+              "filename": "com.wix.bookings.api.v1.Bookings.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "authorizationToken",
+              "type": "string",
+              "doc": "An optional token that will be used to authorize the request\n\n\n If null, authorization will be determined based on the request context\n\n\n Token can be retrieved by calling GenerateAuthorizationToken",
+              "optional": true },
+            { "name": "flowControlSettings",
+              "type": "wix-bookings-backend.bookings.CancelBookingRequest_FlowControlSettings",
+              "doc": "Sets the cancel flow behavior, some settings required permissions.",
+              "optional": true },
+            { "name": "participantNotification",
+              "type": "wix-bookings-backend.bookings.ParticipantNotification",
+              "doc": "Whether to notify participants about the change and an optional custom message",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
+      { "name": "CancelBookingRequest_FlowControlSettings",
+        "locations":
+          [ { "lineno": 152,
+              "filename": "com.wix.bookings.api.v1.Bookings.js" } ],
+        "docs":
+          { "summary": "Sets the cancel flow behavior, some settings required permissions.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "ignoreCancellationPolicy",
+              "type": "boolean",
+              "doc": "when defined as true, skips the service defined cancellation policy.\n required BOOKINGS.IGNORE_BOOKING_POLICY permission.",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
+      { "name": "CancelBookingResponse",
+        "locations":
+          [ { "lineno": 160,
+              "filename": "com.wix.bookings.api.v1.Bookings.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "errors",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-bookings-backend.bookings.Error" ] },
+              "doc": "(read-only, cannot be set in code)" },
+            { "name": "intervals",
+              "type": "string",
+              "doc": "Id of the Booking to be cancelled (read-only, cannot be set in code)" } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
       { "name": "CancelBookingResults",
         "locations":
           [ { "lineno": 501,
@@ -906,9 +979,84 @@
           {  },
         "labels":
           [ "removed" ] },
+      { "name": "CheckoutBookingRequest",
+        "locations":
+          [ { "lineno": 167,
+              "filename": "com.wix.bookings.api.v1.Bookings.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "couponCode",
+              "type": "string",
+              "doc": "optional. Coupon code to use. (cannot be used with a paid plan)",
+              "optional": true },
+            { "name": "flowControlSettings",
+              "type": "wix-bookings-backend.bookings.CheckoutBookingRequest_FlowControlSettings",
+              "doc": "Sets the book flow behavior, some behaviors required permissions.",
+              "optional": true },
+            { "name": "lockedSessionKey",
+              "type": "string",
+              "doc": "optional. The locked session key.",
+              "optional": true },
+            { "name": "notifyParticipants",
+              "type": "boolean",
+              "doc": "A field We pass forward when publishing a booking notification",
+              "optional": true },
+            { "name": "planSelection",
+              "type": "wix-bookings-backend.bookings.PaidPlan",
+              "doc": "Paid plan to use.",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
+      { "name": "CheckoutBookingRequest_FlowControlSettings",
+        "locations":
+          [ { "lineno": 177,
+              "filename": "com.wix.bookings.api.v1.Bookings.js" } ],
+        "docs":
+          { "summary": "Sets the book flow behavior, some behaviors required permissions.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "forceInPersonCheckout",
+              "type": "boolean",
+              "doc": "when defined as true, checkout the booking as \"in-person\" method, that doesnt required online payment.\n required BOOKINGS.MANAGE_PAYMENTS permission.",
+              "optional": true },
+            { "name": "skipAvailabilityValidation",
+              "type": "boolean",
+              "doc": "when defined as true, skips availability check and allow to book.\n required BOOKINGS.OVERRIDE_AVAILABILITY permission.",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
+      { "name": "ConfirmBookingRequest",
+        "locations":
+          [ { "lineno": 187,
+              "filename": "com.wix.bookings.api.v1.Bookings.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "participantNotification",
+              "type": "wix-bookings-backend.bookings.ParticipantNotification",
+              "doc": "Whether to notify participants about the change and an optional custom message",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
       { "name": "ContactDetails",
         "locations":
-          [ { "lineno": 138,
+          [ { "lineno": 193,
               "filename": "com.wix.bookings.api.v1.Bookings.js" } ],
         "docs":
           { "summary": "The contact details describing the owner of this booking.",
@@ -954,7 +1102,7 @@
         "labels": [] },
       { "name": "CouponDetails",
         "locations":
-          [ { "lineno": 152,
+          [ { "lineno": 207,
               "filename": "com.wix.bookings.api.v1.Bookings.js" } ],
         "docs":
           { "summary": "temporarily in-out , when available indicate coupon usage.",
@@ -978,9 +1126,27 @@
         "extra":
           {  },
         "labels": [] },
+      { "name": "DeclineBookingRequest",
+        "locations":
+          [ { "lineno": 217,
+              "filename": "com.wix.bookings.api.v1.Bookings.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "participantNotification",
+              "type": "wix-bookings-backend.bookings.ParticipantNotification",
+              "doc": "Whether to notify participants about the change and an optional custom message",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
       { "name": "Error",
         "locations":
-          [ { "lineno": 299,
+          [ { "lineno": 360,
               "filename": "com.wix.bookings.api.v1.Bookings.js" } ],
         "docs":
           { "links": [],
@@ -999,7 +1165,7 @@
         "labels": [] },
       { "name": "ExternalCalendarOverrides",
         "locations":
-          [ { "lineno": 373,
+          [ { "lineno": 434,
               "filename": "com.wix.bookings.api.v1.Bookings.js" } ],
         "docs":
           { "summary": "Optional. When provided, the values will be used to override default fields values which are synced to external calendar.",
@@ -1023,7 +1189,7 @@
         "labels": [] },
       { "name": "FormInfo",
         "locations":
-          [ { "lineno": 162,
+          [ { "lineno": 223,
               "filename": "com.wix.bookings.api.v1.Bookings.js" } ],
         "docs":
           { "summary": "Form info submitted when booking. Contains contact details, participants, other form fields specified by the owner for the choosen service.",
@@ -1060,7 +1226,7 @@
         "labels": [] },
       { "name": "FormInfo_CustomFormField",
         "locations":
-          [ { "lineno": 174,
+          [ { "lineno": 235,
               "filename": "com.wix.bookings.api.v1.Bookings.js" } ],
         "docs":
           { "links": [],
@@ -1089,7 +1255,7 @@
         "labels": [] },
       { "name": "LinkedSchedule",
         "locations":
-          [ { "lineno": 382,
+          [ { "lineno": 443,
               "filename": "com.wix.bookings.api.v1.Bookings.js" } ],
         "docs":
           { "links": [],
@@ -1114,7 +1280,7 @@
         "labels": [] },
       { "name": "LocalDateTime",
         "locations":
-          [ { "lineno": 394,
+          [ { "lineno": 455,
               "filename": "com.wix.bookings.api.v1.Bookings.js" } ],
         "docs":
           { "summary": "The time in local date time. Optional.",
@@ -1146,7 +1312,7 @@
         "labels": [] },
       { "name": "Location",
         "locations":
-          [ { "lineno": 306,
+          [ { "lineno": 367,
               "filename": "com.wix.bookings.api.v1.Bookings.js" } ],
         "docs":
           { "summary": "Geographic location of the session.",
@@ -1187,7 +1353,7 @@
           [ "removed" ] },
       { "name": "OnlineConference",
         "locations":
-          [ { "lineno": 187,
+          [ { "lineno": 248,
               "filename": "com.wix.bookings.api.v1.Bookings.js" } ],
         "docs":
           { "summary": "Online conference information",
@@ -1213,7 +1379,7 @@
         "labels": [] },
       { "name": "PaidPlan",
         "locations":
-          [ { "lineno": 319,
+          [ { "lineno": 380,
               "filename": "com.wix.bookings.api.v1.Bookings.js" } ],
         "docs":
           { "summary": "Plan details",
@@ -1236,7 +1402,7 @@
         "labels": [] },
       { "name": "PaidPlanDetails",
         "locations":
-          [ { "lineno": 196,
+          [ { "lineno": 257,
               "filename": "com.wix.bookings.api.v1.Bookings.js" } ],
         "docs":
           { "summary": "Paid plan details used to pay for the booking.",
@@ -1262,7 +1428,7 @@
         "labels": [] },
       { "name": "Participant",
         "locations":
-          [ { "lineno": 407,
+          [ { "lineno": 468,
               "filename": "com.wix.bookings.api.v1.Bookings.js" } ],
         "docs":
           { "links": [],
@@ -1303,7 +1469,7 @@
         "labels": [] },
       { "name": "ParticipantNotification",
         "locations":
-          [ { "lineno": 424,
+          [ { "lineno": 485,
               "filename": "com.wix.bookings.api.v1.Bookings.js" } ],
         "docs":
           { "summary": "Whether to notify participants about the change and an optional custom message",
@@ -1325,7 +1491,7 @@
         "labels": [] },
       { "name": "PaymentDetails",
         "locations":
-          [ { "lineno": 205,
+          [ { "lineno": 266,
               "filename": "com.wix.bookings.api.v1.Bookings.js" } ],
         "docs":
           { "summary": "Payment Details. Optional. On Create, in case of a given empty field, this booking will not be send to checkout for payment.",
@@ -1370,7 +1536,7 @@
         "labels": [] },
       { "name": "PaymentSelection",
         "locations":
-          [ { "lineno": 230,
+          [ { "lineno": 291,
               "filename": "com.wix.bookings.api.v1.Bookings.js" } ],
         "docs":
           { "links": [],
@@ -1391,7 +1557,7 @@
         "labels": [] },
       { "name": "Price",
         "locations":
-          [ { "lineno": 328,
+          [ { "lineno": 389,
               "filename": "com.wix.bookings.api.v1.Bookings.js" } ],
         "docs":
           { "summary": "The final calculated price.",
@@ -1419,7 +1585,7 @@
         "labels": [] },
       { "name": "Rate",
         "locations":
-          [ { "lineno": 338,
+          [ { "lineno": 399,
               "filename": "com.wix.bookings.api.v1.Bookings.js" } ],
         "docs":
           { "summary": "The price options offered to book this session at the time of booking.",
@@ -1441,7 +1607,7 @@
         "labels": [] },
       { "name": "RescheduleRequest",
         "locations":
-          [ { "lineno": 237,
+          [ { "lineno": 298,
               "filename": "com.wix.bookings.api.v1.Bookings.js" } ],
         "docs":
           { "links": [],
@@ -1479,11 +1645,10 @@
                     [ "bySessionId",
                       "createSession",
                       "scheduleId" ] } ] },
-        "labels":
-          [ "changed" ] },
+        "labels": [] },
       { "name": "RescheduleRequest_FlowControlSettings",
         "locations":
-          [ { "lineno": 249,
+          [ { "lineno": 310,
               "filename": "com.wix.bookings.api.v1.Bookings.js" } ],
         "docs":
           { "summary": "Sets the reschedule flow behavior, some behaviors required permissions.",
@@ -1501,7 +1666,7 @@
         "labels": [] },
       { "name": "RescheduleResponse",
         "locations":
-          [ { "lineno": 257,
+          [ { "lineno": 318,
               "filename": "com.wix.bookings.api.v1.Bookings.js" } ],
         "docs":
           { "links": [],
@@ -1517,7 +1682,7 @@
         "labels": [] },
       { "name": "Session",
         "locations":
-          [ { "lineno": 432,
+          [ { "lineno": 493,
               "filename": "com.wix.bookings.api.v1.Bookings.js" } ],
         "docs":
           { "links": [],
@@ -1633,7 +1798,7 @@
         "labels": [] },
       { "name": "Session_Version",
         "locations":
-          [ { "lineno": 487,
+          [ { "lineno": 548,
               "filename": "com.wix.bookings.api.v1.Bookings.js" } ],
         "docs":
           { "links": [],
@@ -1652,7 +1817,7 @@
         "labels": [] },
       { "name": "SetOfSessions",
         "locations":
-          [ { "lineno": 263,
+          [ { "lineno": 324,
               "filename": "com.wix.bookings.api.v1.Bookings.js" } ],
         "docs":
           { "links": [],
@@ -1673,7 +1838,7 @@
         "labels": [] },
       { "name": "SingleSession",
         "locations":
-          [ { "lineno": 270,
+          [ { "lineno": 331,
               "filename": "com.wix.bookings.api.v1.Bookings.js" } ],
         "docs":
           { "links": [],
@@ -1697,7 +1862,7 @@
         "labels": [] },
       { "name": "WixPayDetails",
         "locations":
-          [ { "lineno": 278,
+          [ { "lineno": 339,
               "filename": "com.wix.bookings.api.v1.Bookings.js" } ],
         "docs":
           { "summary": "[DEPRECATED]. USE wix_pay_multiple_details.",

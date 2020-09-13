@@ -27,7 +27,8 @@
             { "name": "couponCode",
               "type": "string",
               "doc": "Coupon to apply to price calculations. An error will be thrown if given coupon is invalid." },
-            { "type": "void" } ],
+            { "name": "checkoutOptionsRequest",
+              "type": "wix-bookings-backend.checkout.CheckoutOptionsRequest" } ],
         "ret":
           { "type":
               { "name": "Promise",
@@ -35,7 +36,7 @@
                   [ "wix-bookings-backend.checkout.CheckoutOptions" ] },
             "doc": "Fulfilled - Checkout options." },
         "locations":
-          [ { "lineno": 295,
+          [ { "lineno": 294,
               "filename": "com.wix.bookings.checkout.api.v1.CheckoutBackend.js" } ],
         "docs":
           { "summary": "Calculates checkout options available to book and check out the given session/schedule.",
@@ -79,7 +80,8 @@
             { "name": "couponCode",
               "type": "string",
               "doc": "Coupon to apply to price calculations. An error will be thrown if given coupon is invalid." },
-            { "type": "void" } ],
+            { "name": "checkoutOptionsRequest",
+              "type": "wix-bookings-backend.checkout.CheckoutOptionsRequest" } ],
         "ret":
           { "type":
               { "name": "Promise",
@@ -87,7 +89,7 @@
                   [ "wix-bookings-backend.checkout.CheckoutOptions" ] },
             "doc": "Fulfilled - Checkout options." },
         "locations":
-          [ { "lineno": 259,
+          [ { "lineno": 258,
               "filename": "com.wix.bookings.checkout.api.v1.CheckoutBackend.js" } ],
         "docs":
           { "summary": "Calculates checkout options available to book and check out the given session/schedule.",
@@ -131,7 +133,8 @@
             { "name": "couponCode",
               "type": "string",
               "doc": "Coupon to apply to price calculations. An error will be thrown if given coupon is invalid." },
-            { "type": "void" } ],
+            { "name": "checkoutOptionsRequest",
+              "type": "wix-bookings-backend.checkout.CheckoutOptionsRequest" } ],
         "ret":
           { "type":
               { "name": "Promise",
@@ -139,7 +142,7 @@
                   [ "wix-bookings-backend.checkout.CheckoutOptions" ] },
             "doc": "Fulfilled - Checkout options." },
         "locations":
-          [ { "lineno": 276,
+          [ { "lineno": 275,
               "filename": "com.wix.bookings.checkout.api.v1.CheckoutBackend.js" } ],
         "docs":
           { "summary": "Calculates checkout options available to book and check out the given session/schedule.",
@@ -206,10 +209,10 @@
                       "scheduleId",
                       "sessionId" ] } ] },
         "labels":
-          [ "new" ] },
+          [ "removed" ] },
       { "name": "CalendarConference",
         "locations":
-          [ { "lineno": 94,
+          [ { "lineno": 106,
               "filename": "com.wix.bookings.checkout.api.v1.CheckoutBackend.js" } ],
         "docs":
           { "summary": "Holding the conference meeting created when the session is created, according to the details set in the Schedule's conference provider information.",
@@ -247,7 +250,7 @@
         "labels": [] },
       { "name": "CalendarDateTime",
         "locations":
-          [ { "lineno": 106,
+          [ { "lineno": 118,
               "filename": "com.wix.bookings.checkout.api.v1.CheckoutBackend.js" } ],
         "docs":
           { "summary": "The end time of the session. Required.",
@@ -295,6 +298,41 @@
         "extra":
           {  },
         "labels": [] },
+      { "name": "CheckoutOptionsRequest",
+        "locations":
+          [ { "lineno": 26,
+              "filename": "com.wix.bookings.checkout.api.v1.CheckoutBackend.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "contactId",
+              "type": "string",
+              "doc": "Member ID for which paid plans will be accessed.",
+              "optional": true },
+            { "name": "createSession",
+              "type": "wix-bookings-backend.checkout.Session",
+              "doc": "A session that will be created for this booking.\n schedule_id, schedule_owner_id, start, and rate are used to calculate the checkout options.\n Start is used to access the relevant paid plans.",
+              "optional": true },
+            { "name": "scheduleId",
+              "type": "string",
+              "doc": "Existing schedule ID. Will be used to access service properties including payment options, rate, and first session start time that will be used to access relevant plans.",
+              "optional": true },
+            { "name": "sessionId",
+              "type": "string",
+              "doc": "Existing session ID.",
+              "optional": true } ],
+        "extra":
+          { "oneOfGroups":
+              [ { "name": "schedule",
+                  "members":
+                    [ "createSession",
+                      "scheduleId",
+                      "sessionId" ] } ] },
+        "labels":
+          [ "new" ] },
       { "name": "CouponDetails",
         "locations":
           [ { "lineno": 1,
@@ -322,7 +360,7 @@
         "labels": [] },
       { "name": "ExternalCalendarOverrides",
         "locations":
-          [ { "lineno": 121,
+          [ { "lineno": 133,
               "filename": "com.wix.bookings.checkout.api.v1.CheckoutBackend.js" } ],
         "docs":
           { "summary": "Optional. When provided, the values will be used to override default fields values which are synced to external calendar.",
@@ -378,7 +416,7 @@
           [ "removed" ] },
       { "name": "LinkedSchedule",
         "locations":
-          [ { "lineno": 130,
+          [ { "lineno": 142,
               "filename": "com.wix.bookings.checkout.api.v1.CheckoutBackend.js" } ],
         "docs":
           { "links": [],
@@ -403,7 +441,7 @@
         "labels": [] },
       { "name": "LocalDateTime",
         "locations":
-          [ { "lineno": 142,
+          [ { "lineno": 154,
               "filename": "com.wix.bookings.checkout.api.v1.CheckoutBackend.js" } ],
         "docs":
           { "summary": "The time in local date time. Optional.",
@@ -435,7 +473,7 @@
         "labels": [] },
       { "name": "Location",
         "locations":
-          [ { "lineno": 55,
+          [ { "lineno": 67,
               "filename": "com.wix.bookings.checkout.api.v1.CheckoutBackend.js" } ],
         "docs":
           { "summary": "Geographic location of the session as free-form text. Optional.",
@@ -459,7 +497,7 @@
         "labels": [] },
       { "name": "PaidPlan",
         "locations":
-          [ { "lineno": 69,
+          [ { "lineno": 81,
               "filename": "com.wix.bookings.checkout.api.v1.CheckoutBackend.js" } ],
         "docs":
           { "links": [],
@@ -481,7 +519,7 @@
         "labels": [] },
       { "name": "PaidPlans",
         "locations":
-          [ { "lineno": 26,
+          [ { "lineno": 38,
               "filename": "com.wix.bookings.checkout.api.v1.CheckoutBackend.js" } ],
         "docs":
           { "summary": "Paid plans available for checkout.",
@@ -506,7 +544,7 @@
         "labels": [] },
       { "name": "PaidPlans_Plan",
         "locations":
-          [ { "lineno": 34,
+          [ { "lineno": 46,
               "filename": "com.wix.bookings.checkout.api.v1.CheckoutBackend.js" } ],
         "docs":
           { "summary": "The plan that should be used for checkout by default. calculated according to internal heuristic.",
@@ -538,7 +576,7 @@
         "labels": [] },
       { "name": "Participant",
         "locations":
-          [ { "lineno": 155,
+          [ { "lineno": 167,
               "filename": "com.wix.bookings.checkout.api.v1.CheckoutBackend.js" } ],
         "docs":
           { "links": [],
@@ -579,7 +617,7 @@
         "labels": [] },
       { "name": "PaymentOptions",
         "locations":
-          [ { "lineno": 237,
+          [ { "lineno": 249,
               "filename": "com.wix.bookings.checkout.api.v1.CheckoutBackend.js" } ],
         "docs":
           { "links": [],
@@ -630,7 +668,7 @@
         "labels": [] },
       { "name": "Payments",
         "locations":
-          [ { "lineno": 46,
+          [ { "lineno": 58,
               "filename": "com.wix.bookings.checkout.api.v1.CheckoutBackend.js" } ],
         "docs":
           { "summary": "Transaction details.",
@@ -653,7 +691,7 @@
         "labels": [] },
       { "name": "Price",
         "locations":
-          [ { "lineno": 77,
+          [ { "lineno": 89,
               "filename": "com.wix.bookings.checkout.api.v1.CheckoutBackend.js" } ],
         "docs":
           { "summary": "`key` of type string, `value` of type ref",
@@ -679,7 +717,7 @@
         "labels": [] },
       { "name": "Rate",
         "locations":
-          [ { "lineno": 86,
+          [ { "lineno": 98,
               "filename": "com.wix.bookings.checkout.api.v1.CheckoutBackend.js" } ],
         "docs":
           { "summary": "The price options offered to participate this session. Optional. The default value is the schedule rate.",
@@ -701,7 +739,7 @@
         "labels": [] },
       { "name": "Session",
         "locations":
-          [ { "lineno": 172,
+          [ { "lineno": 184,
               "filename": "com.wix.bookings.checkout.api.v1.CheckoutBackend.js" } ],
         "docs":
           { "summary": "A session that will be created for this booking.",
@@ -821,7 +859,7 @@
         "labels": [] },
       { "name": "Session_Version",
         "locations":
-          [ { "lineno": 230,
+          [ { "lineno": 242,
               "filename": "com.wix.bookings.checkout.api.v1.CheckoutBackend.js" } ],
         "docs":
           { "links": [],

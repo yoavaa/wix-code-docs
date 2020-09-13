@@ -27,7 +27,7 @@
                   [ "wix-bookings-backend.forms.Form" ] },
             "doc": "Fulfilled - The created form" },
         "locations":
-          [ { "lineno": 101,
+          [ { "lineno": 87,
               "filename": "com.wixpress.bookings.services.api.v1.FormsService.js" } ],
         "docs":
           { "summary": "Creates a form.",
@@ -67,7 +67,7 @@
                   [ "wix-bookings-backend.forms.Form" ] },
             "doc": "Fulfilled - The requested form" },
         "locations":
-          [ { "lineno": 112,
+          [ { "lineno": 98,
               "filename": "com.wixpress.bookings.services.api.v1.FormsService.js" } ],
         "docs":
           { "summary": "Gets a form",
@@ -104,7 +104,9 @@
           [ { "name": "id",
               "type": "string",
               "doc": "Form ID." },
-            { "type": "void" } ],
+            { "name": "form",
+              "type": "wix-bookings-backend.forms.Form",
+              "doc": "The updated form. Must include the form Id" } ],
         "ret":
           { "type":
               { "name": "Promise",
@@ -112,7 +114,7 @@
                   [ "wix-bookings-backend.forms.Form" ] },
             "doc": "Fulfilled - The updated form" },
         "locations":
-          [ { "lineno": 125,
+          [ { "lineno": 111,
               "filename": "com.wixpress.bookings.services.api.v1.FormsService.js" } ],
         "docs":
           { "summary": "Updates a form.",
@@ -184,7 +186,7 @@
         "extra":
           {  },
         "labels":
-          [ "new" ] },
+          [ "removed" ] },
       { "name": "ActionLabels",
         "locations":
           [ { "lineno": 1,
@@ -233,8 +235,7 @@
                   "members":
                     [ "linkLabel",
                       "textLabel" ] } ] },
-        "labels":
-          [ "changed" ] },
+        "labels": [] },
       { "name": "AddressFields",
         "locations":
           [ { "lineno": 18,

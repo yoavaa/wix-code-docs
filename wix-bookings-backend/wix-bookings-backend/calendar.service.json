@@ -21,10 +21,13 @@
           [ { "name": "listSessionsRequest",
               "type": "wix-bookings-backend.calendar.ListSessionsRequest" } ],
         "ret":
-          { "type": "Promise",
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-bookings-backend.calendar.ListSessionsResponse" ] },
             "doc": "" },
         "locations":
-          [ { "lineno": 239,
+          [ { "lineno": 246,
               "filename": "com.wix.bookings.calendar.api.v1.CalendarService.js" } ],
         "docs":
           { "summary": "Returns sessions from the business calendar.",
@@ -93,10 +96,13 @@
           [ { "name": "listSlotsRequest",
               "type": "wix-bookings-backend.calendar.ListSlotsRequest" } ],
         "ret":
-          { "type": "Promise",
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-bookings-backend.calendar.ListSlotsResponse" ] },
             "doc": "" },
         "locations":
-          [ { "lineno": 284,
+          [ { "lineno": 291,
               "filename": "com.wix.bookings.calendar.api.v1.CalendarService.js" } ],
         "docs":
           { "summary": "Returns the schedule slots, calculated by the schedule's availability specification.",
@@ -168,10 +174,10 @@
         "extra":
           {  },
         "labels":
-          [ "new" ] },
+          [ "removed" ] },
       { "name": "CalendarConference",
         "locations":
-          [ { "lineno": 46,
+          [ { "lineno": 62,
               "filename": "com.wix.bookings.calendar.api.v1.CalendarService.js" } ],
         "docs":
           { "summary": "Holding the conference meeting created when the session is created, according to the details set in the Schedule's conference provider information.",
@@ -209,7 +215,7 @@
         "labels": [] },
       { "name": "CalendarDateTime",
         "locations":
-          [ { "lineno": 58,
+          [ { "lineno": 74,
               "filename": "com.wix.bookings.calendar.api.v1.CalendarService.js" } ],
         "docs":
           { "summary": "The end time of the session. Required.",
@@ -237,7 +243,7 @@
         "labels": [] },
       { "name": "ExternalCalendarOverrides",
         "locations":
-          [ { "lineno": 73,
+          [ { "lineno": 89,
               "filename": "com.wix.bookings.calendar.api.v1.CalendarService.js" } ],
         "docs":
           { "summary": "Optional. When provided, the values will be used to override default fields values which are synced to external calendar.",
@@ -261,7 +267,7 @@
         "labels": [] },
       { "name": "LinkedSchedule",
         "locations":
-          [ { "lineno": 82,
+          [ { "lineno": 98,
               "filename": "com.wix.bookings.calendar.api.v1.CalendarService.js" } ],
         "docs":
           { "links": [],
@@ -328,9 +334,32 @@
         "extra":
           {  },
         "labels": [] },
-      { "name": "ListSlotsRequest",
+      { "name": "ListSessionsResponse",
         "locations":
           [ { "lineno": 8,
+              "filename": "com.wix.bookings.calendar.api.v1.CalendarService.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "nextPageToken",
+              "type": "string",
+              "doc": "Sessions paging response.\nToken for the next page of results (read-only, cannot be set in code)" },
+            { "name": "sessions",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-bookings-backend.calendar.Session" ] },
+              "doc": "Sessions on the calendar. (read-only, cannot be set in code)" } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
+      { "name": "ListSlotsRequest",
+        "locations":
+          [ { "lineno": 16,
               "filename": "com.wix.bookings.calendar.api.v1.CalendarService.js" } ],
         "docs":
           { "links": [],
@@ -349,9 +378,32 @@
         "extra":
           {  },
         "labels": [] },
+      { "name": "ListSlotsResponse",
+        "locations":
+          [ { "lineno": 23,
+              "filename": "com.wix.bookings.calendar.api.v1.CalendarService.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "nextPageToken",
+              "type": "string",
+              "doc": "Slots paging response.\nToken for the next page of results (read-only, cannot be set in code)" },
+            { "name": "slots",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-bookings-backend.calendar.Session" ] },
+              "doc": "Slots on the calendar. (read-only, cannot be set in code)" } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
       { "name": "LocalDateTime",
         "locations":
-          [ { "lineno": 94,
+          [ { "lineno": 110,
               "filename": "com.wix.bookings.calendar.api.v1.CalendarService.js" } ],
         "docs":
           { "summary": "The time in local date time. Optional.",
@@ -383,7 +435,7 @@
         "labels": [] },
       { "name": "Location",
         "locations":
-          [ { "lineno": 15,
+          [ { "lineno": 31,
               "filename": "com.wix.bookings.calendar.api.v1.CalendarService.js" } ],
         "docs":
           { "summary": "Geographic location of the session as free-form text. Optional.",
@@ -407,7 +459,7 @@
         "labels": [] },
       { "name": "Paging",
         "locations":
-          [ { "lineno": 201,
+          [ { "lineno": 217,
               "filename": "com.wix.bookings.calendar.api.v1.CalendarService.js" } ],
         "docs":
           { "summary": "Limit number of results",
@@ -429,7 +481,7 @@
         "labels": [] },
       { "name": "Participant",
         "locations":
-          [ { "lineno": 107,
+          [ { "lineno": 123,
               "filename": "com.wix.bookings.calendar.api.v1.CalendarService.js" } ],
         "docs":
           { "links": [],
@@ -470,7 +522,7 @@
         "labels": [] },
       { "name": "Price",
         "locations":
-          [ { "lineno": 29,
+          [ { "lineno": 45,
               "filename": "com.wix.bookings.calendar.api.v1.CalendarService.js" } ],
         "docs":
           { "summary": "`key` of type string, `value` of type ref",
@@ -496,7 +548,7 @@
         "labels": [] },
       { "name": "Query",
         "locations":
-          [ { "lineno": 209,
+          [ { "lineno": 225,
               "filename": "com.wix.bookings.calendar.api.v1.CalendarService.js" } ],
         "docs":
           { "summary": "Partially supported. See description above.",
@@ -539,7 +591,7 @@
         "labels": [] },
       { "name": "Rate",
         "locations":
-          [ { "lineno": 38,
+          [ { "lineno": 54,
               "filename": "com.wix.bookings.calendar.api.v1.CalendarService.js" } ],
         "docs":
           { "summary": "The price options offered to participate this session. Optional. The default value is the schedule rate.",
@@ -561,7 +613,7 @@
         "labels": [] },
       { "name": "Session",
         "locations":
-          [ { "lineno": 124,
+          [ { "lineno": 140,
               "filename": "com.wix.bookings.calendar.api.v1.CalendarService.js" } ],
         "docs":
           { "links": [],
@@ -677,7 +729,7 @@
         "labels": [] },
       { "name": "Session_Version",
         "locations":
-          [ { "lineno": 179,
+          [ { "lineno": 195,
               "filename": "com.wix.bookings.calendar.api.v1.CalendarService.js" } ],
         "docs":
           { "links": [],
@@ -696,7 +748,7 @@
         "labels": [] },
       { "name": "Sorting",
         "locations":
-          [ { "lineno": 220,
+          [ { "lineno": 236,
               "filename": "com.wix.bookings.calendar.api.v1.CalendarService.js" } ],
         "docs":
           { "links": [],
@@ -717,7 +769,7 @@
         "labels": [] },
       { "name": "Value",
         "locations":
-          [ { "lineno": 186,
+          [ { "lineno": 202,
               "filename": "com.wix.bookings.calendar.api.v1.CalendarService.js" } ],
         "docs":
           { "summary": "A filter object. See documentation [here](https://bo.wix.com/wix-docs/rnd/platformization-guidelines/api-query-language#platformization-guidelines_api-query-language_defining-in-protobuf)",
@@ -763,7 +815,6 @@
                       "numberValue",
                       "stringValue",
                       "structValue" ] } ] },
-        "labels":
-          [ "changed" ] } ],
+        "labels": [] } ],
   "extra":
     {  } }

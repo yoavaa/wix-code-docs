@@ -21,12 +21,16 @@
           [ { "name": "registrationId",
               "type": "string",
               "doc": "Registration to book." },
-            { "type": "void" } ],
+            { "name": "enrollRequest",
+              "type": "wix-bookings-backend.waitingList.EnrollRequest" } ],
         "ret":
-          { "type": "Promise",
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-bookings-backend.waitingList.EnrollResponse" ] },
             "doc": "" },
         "locations":
-          [ { "lineno": 336,
+          [ { "lineno": 368,
               "filename": "com.wix.bookings.api.v1.WaitingList.js" } ],
         "docs":
           { "summary": "Books a site member into the session for which they are waitlisted (waiting resource), and the associated booking is checked out.",
@@ -75,7 +79,7 @@
                         [ "wix-bookings-backend.waitingList.WaitingListEntry" ] } ] },
             "doc": "" },
         "locations":
-          [ { "lineno": 366,
+          [ { "lineno": 398,
               "filename": "com.wix.bookings.api.v1.WaitingList.js" } ],
         "docs":
           { "summary": "Returns a list of waitlisted entries.",
@@ -116,7 +120,8 @@
             { "name": "formInfo",
               "type": "wix-bookings-backend.waitingList.FormInfo",
               "doc": "Participant information as filled in the booking form (required).\n Contains contact details and other form fields specified by the owner for this 'waiting resource' (service)." },
-            { "type": "void" } ],
+            { "name": "registerRequest",
+              "type": "wix-bookings-backend.waitingList.RegisterRequest" } ],
         "ret":
           { "type":
               { "name": "Promise",
@@ -124,7 +129,7 @@
                   [ "string" ] },
             "doc": "" },
         "locations":
-          [ { "lineno": 380,
+          [ { "lineno": 412,
               "filename": "com.wix.bookings.api.v1.WaitingList.js" } ],
         "docs":
           { "summary": "Registers a site member to a waitlist.",
@@ -164,10 +169,13 @@
             { "name": "waitingResource",
               "type": "string" } ],
         "ret":
-          { "type": "Promise",
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-bookings-backend.waitingList.LeaveResponse" ] },
             "doc": "" },
         "locations":
-          [ { "lineno": 351,
+          [ { "lineno": 383,
               "filename": "com.wix.bookings.api.v1.WaitingList.js" } ],
         "docs":
           { "summary": "Removes a site member's registration to a waitlist (and cancels the associated pending-state booking).",
@@ -228,7 +236,7 @@
         "extra":
           {  },
         "labels":
-          [ "new" ] },
+          [ "removed" ] },
       { "name": "<TODO>0",
         "locations":
           [ { "lineno": 327,
@@ -249,7 +257,7 @@
         "extra":
           {  },
         "labels":
-          [ "new" ] },
+          [ "removed" ] },
       { "name": "AttendanceInfo",
         "locations":
           [ { "lineno": 1,
@@ -366,8 +374,7 @@
                   "members":
                     [ "setOfSessions",
                       "singleSession" ] } ] },
-        "labels":
-          [ "changed" ] },
+        "labels": [] },
       { "name": "BookedResource",
         "locations":
           [ { "lineno": 41,
@@ -548,6 +555,78 @@
         "extra":
           {  },
         "labels": [] },
+      { "name": "EnrollRequest",
+        "locations":
+          [ { "lineno": 116,
+              "filename": "com.wix.bookings.api.v1.WaitingList.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "couponCode",
+              "type": "string",
+              "doc": "Coupon code to apply to this booking at checkout.",
+              "optional": true },
+            { "name": "flowControlSettings",
+              "type": "wix-bookings-backend.waitingList.EnrollRequest_FlowControlSettings",
+              "doc": "Sets the book flow behavior, some behaviors required permissions.",
+              "optional": true },
+            { "name": "notifyParticipants",
+              "type": "boolean",
+              "optional": true },
+            { "name": "planSelection",
+              "type": "wix-bookings-backend.waitingList.PaidPlan",
+              "doc": "Selected paid plan to apply to this booking at checkout.",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
+      { "name": "EnrollRequest_FlowControlSettings",
+        "locations":
+          [ { "lineno": 125,
+              "filename": "com.wix.bookings.api.v1.WaitingList.js" } ],
+        "docs":
+          { "summary": "Sets the book flow behavior, some behaviors required permissions.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "forceEnrollment",
+              "type": "boolean",
+              "doc": "when defined as true, enroll the specifid registration to the session, with no regard to the registration status.\n required BBOOKINGS.IGNORE_BOOKING_POLICY and BOOKINGS.OVERRIDE_AVAILABILITY permission.",
+              "optional": true },
+            { "name": "forceInPersonCheckout",
+              "type": "boolean",
+              "doc": "when defined as true, checkout the booking as \"in-person\" method, that doesnt required online payment.\n required BOOKINGS.MANAGE_PAYMENTS permission.",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
+      { "name": "EnrollResponse",
+        "locations":
+          [ { "lineno": 135,
+              "filename": "com.wix.bookings.api.v1.WaitingList.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "booking",
+              "type": "wix-bookings-backend.waitingList.Booking",
+              "doc": "Checked-out booking.\n (Online-payments can only be completed in the Wix Bookings UI.) (read-only, cannot be set in code)" },
+            { "name": "registrationId",
+              "type": "string",
+              "doc": "(read-only, cannot be set in code)" } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
       { "name": "FlowControlSettings",
         "locations":
           [ { "lineno": 116,
@@ -569,10 +648,11 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "removed" ] },
       { "name": "FormInfo",
         "locations":
-          [ { "lineno": 126,
+          [ { "lineno": 143,
               "filename": "com.wix.bookings.api.v1.WaitingList.js" } ],
         "docs":
           { "summary": "Form info submitted when booking. Contains contact details, participants, other form fields specified by the owner for the choosen service.",
@@ -609,7 +689,7 @@
         "labels": [] },
       { "name": "FormInfo_CustomFormField",
         "locations":
-          [ { "lineno": 138,
+          [ { "lineno": 155,
               "filename": "com.wix.bookings.api.v1.WaitingList.js" } ],
         "docs":
           { "links": [],
@@ -636,9 +716,59 @@
         "extra":
           {  },
         "labels": [] },
+      { "name": "LeaveResponse",
+        "locations":
+          [ { "lineno": 168,
+              "filename": "com.wix.bookings.api.v1.WaitingList.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "registrationId",
+              "type": "string",
+              "doc": "(read-only, cannot be set in code)" },
+            { "name": "waitingResource",
+              "type": "string",
+              "doc": "(read-only, cannot be set in code)" } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
+      { "name": "LocalDateTime",
+        "locations":
+          [ { "lineno": 357,
+              "filename": "com.wix.bookings.api.v1.WaitingList.js" } ],
+        "docs":
+          { "summary": "Service end time presented to the user. For validation - Optional.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "dayOfMonth",
+              "type": "number",
+              "optional": true },
+            { "name": "hourOfDay",
+              "type": "number",
+              "optional": true },
+            { "name": "minutesOfHour",
+              "type": "number",
+              "optional": true },
+            { "name": "monthOfYear",
+              "type": "number",
+              "optional": true },
+            { "name": "year",
+              "type": "number",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
       { "name": "Location",
         "locations":
-          [ { "lineno": 277,
+          [ { "lineno": 317,
               "filename": "com.wix.bookings.api.v1.WaitingList.js" } ],
         "docs":
           { "summary": "Geographic location of the session.",
@@ -711,7 +841,7 @@
           [ "removed" ] },
       { "name": "OnlineConference",
         "locations":
-          [ { "lineno": 151,
+          [ { "lineno": 175,
               "filename": "com.wix.bookings.api.v1.WaitingList.js" } ],
         "docs":
           { "summary": "Online conference information",
@@ -737,7 +867,7 @@
         "labels": [] },
       { "name": "PaidPlan",
         "locations":
-          [ { "lineno": 290,
+          [ { "lineno": 330,
               "filename": "com.wix.bookings.api.v1.WaitingList.js" } ],
         "docs":
           { "summary": "Selected paid plan to apply to this booking at checkout.",
@@ -760,7 +890,7 @@
         "labels": [] },
       { "name": "PaidPlanDetails",
         "locations":
-          [ { "lineno": 160,
+          [ { "lineno": 184,
               "filename": "com.wix.bookings.api.v1.WaitingList.js" } ],
         "docs":
           { "summary": "Paid plan details used to pay for the booking.",
@@ -786,7 +916,7 @@
         "labels": [] },
       { "name": "PaymentDetails",
         "locations":
-          [ { "lineno": 169,
+          [ { "lineno": 193,
               "filename": "com.wix.bookings.api.v1.WaitingList.js" } ],
         "docs":
           { "summary": "Payment Details. Optional. On Create, in case of a given empty field, this booking will not be send to checkout for payment.",
@@ -831,7 +961,7 @@
         "labels": [] },
       { "name": "PaymentSelection",
         "locations":
-          [ { "lineno": 194,
+          [ { "lineno": 218,
               "filename": "com.wix.bookings.api.v1.WaitingList.js" } ],
         "docs":
           { "links": [],
@@ -852,7 +982,7 @@
         "labels": [] },
       { "name": "Price",
         "locations":
-          [ { "lineno": 299,
+          [ { "lineno": 339,
               "filename": "com.wix.bookings.api.v1.WaitingList.js" } ],
         "docs":
           { "summary": "The final calculated price.",
@@ -880,7 +1010,7 @@
         "labels": [] },
       { "name": "Rate",
         "locations":
-          [ { "lineno": 309,
+          [ { "lineno": 349,
               "filename": "com.wix.bookings.api.v1.WaitingList.js" } ],
         "docs":
           { "summary": "The price options offered to book this session at the time of booking.",
@@ -900,9 +1030,54 @@
         "extra":
           {  },
         "labels": [] },
+      { "name": "RegisterRequest",
+        "locations":
+          [ { "lineno": 225,
+              "filename": "com.wix.bookings.api.v1.WaitingList.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "flowControlSettings",
+              "type": "wix-bookings-backend.waitingList.RegisterRequest_FlowControlSettings",
+              "doc": "Sets the cancel flow behavior, some settings required permissions.",
+              "optional": true },
+            { "name": "presentedEndTime",
+              "type": "wix-bookings-backend.waitingList.LocalDateTime",
+              "doc": "Service end time presented to the user. For validation - Optional.",
+              "optional": true },
+            { "name": "presentedStartTime",
+              "type": "wix-bookings-backend.waitingList.LocalDateTime",
+              "doc": "Service end time presented to the user. For validation - Optional.",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
+      { "name": "RegisterRequest_FlowControlSettings",
+        "locations":
+          [ { "lineno": 233,
+              "filename": "com.wix.bookings.api.v1.WaitingList.js" } ],
+        "docs":
+          { "summary": "Sets the cancel flow behavior, some settings required permissions.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "ignoreWaitlistCapacity",
+              "type": "boolean",
+              "doc": "when defined as true, skips the waitlist defined capacity policy.\n required BOOKINGS.IGNORE_BOOKING_POLICY permission.",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
       { "name": "Registration",
         "locations":
-          [ { "lineno": 201,
+          [ { "lineno": 241,
               "filename": "com.wix.bookings.api.v1.WaitingList.js" } ],
         "docs":
           { "links": [],
@@ -935,7 +1110,7 @@
         "labels": [] },
       { "name": "SetOfSessions",
         "locations":
-          [ { "lineno": 222,
+          [ { "lineno": 262,
               "filename": "com.wix.bookings.api.v1.WaitingList.js" } ],
         "docs":
           { "links": [],
@@ -956,7 +1131,7 @@
         "labels": [] },
       { "name": "SingleSession",
         "locations":
-          [ { "lineno": 229,
+          [ { "lineno": 269,
               "filename": "com.wix.bookings.api.v1.WaitingList.js" } ],
         "docs":
           { "links": [],
@@ -980,7 +1155,7 @@
         "labels": [] },
       { "name": "WaitingListEntry",
         "locations":
-          [ { "lineno": 237,
+          [ { "lineno": 277,
               "filename": "com.wix.bookings.api.v1.WaitingList.js" } ],
         "docs":
           { "links": [],
@@ -1019,7 +1194,7 @@
         "labels": [] },
       { "name": "WixPayDetails",
         "locations":
-          [ { "lineno": 256,
+          [ { "lineno": 296,
               "filename": "com.wix.bookings.api.v1.WaitingList.js" } ],
         "docs":
           { "summary": "[DEPRECATED]. USE wix_pay_multiple_details.",

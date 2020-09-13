@@ -1,8 +1,7 @@
 { "name": "externalCalendarEvents",
   "memberOf": "wix-bookings-backend",
   "mixes": [],
-  "labels":
-    [ "changed" ],
+  "labels": [],
   "location":
     { "lineno": 77,
       "filename": "index.js" },
@@ -246,7 +245,6 @@
                       "numberValue",
                       "stringValue",
                       "structValue" ] } ] },
-        "labels":
-          [ "changed" ] } ],
+        "labels": [] } ],
   "extra":
     {  } }

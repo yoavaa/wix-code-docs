@@ -27,7 +27,7 @@
                   [ "wix-bookings-backend.categories.Category" ] },
             "doc": "Fulfilled - Category data." },
         "locations":
-          [ { "lineno": 43,
+          [ { "lineno": 27,
               "filename": "com.wixpress.bookings.services.api.v1.CategoriesService.js" } ],
         "docs":
           { "summary": "Creates a new category.",
@@ -70,7 +70,7 @@
                   [ "void" ] },
             "doc": "" },
         "locations":
-          [ { "lineno": 54,
+          [ { "lineno": 38,
               "filename": "com.wixpress.bookings.services.api.v1.CategoriesService.js" } ],
         "docs":
           { "summary": "Deletes a category.",
@@ -109,7 +109,7 @@
                   [ "wix-bookings-backend.categories.ListCategoryResponse" ] },
             "doc": "" },
         "locations":
-          [ { "lineno": 66,
+          [ { "lineno": 50,
               "filename": "com.wixpress.bookings.services.api.v1.CategoriesService.js" } ],
         "docs":
           { "summary": "Lists all categories.",
@@ -146,7 +146,8 @@
           [ { "name": "id",
               "type": "string",
               "doc": "Category ID." },
-            { "type": "void" } ],
+            { "name": "category",
+              "type": "wix-bookings-backend.categories.Category" } ],
         "ret":
           { "type":
               { "name": "Promise",
@@ -154,7 +155,7 @@
                   [ "void" ] },
             "doc": "" },
         "locations":
-          [ { "lineno": 80,
+          [ { "lineno": 64,
               "filename": "com.wixpress.bookings.services.api.v1.CategoriesService.js" } ],
         "docs":
           { "summary": "Updates an existing category.",
@@ -212,14 +213,13 @@
         "extra":
           {  },
         "labels":
-          [ "new" ] },
+          [ "removed" ] },
       { "name": "Category",
         "locations":
           [ { "lineno": 1,
               "filename": "com.wixpress.bookings.services.api.v1.CategoriesService.js" } ],
         "docs":
-          { "summary": "A service must be associated with a category in order to be exposed in the Wix Bookings UI. Categories are used to group multiple services together.",
-            "links": [],
+          { "links": [],
             "examples": [],
             "extra":
               {  } },
@@ -232,10 +232,6 @@
               "type": "Object",
               "doc": "Set of key-value pairs.Custom properties that can be associated with the category.",
               "optional": true },
-            { "name": "id",
-              "type": "string",
-              "doc": "Category ID. (read-only, cannot be set in code)",
-              "optional": true },
             { "name": "status",
               "type": "string",
               "doc": "Category status (read-only).\nOne of:\n + \"CREATED\"\n + \"DELETED\"\n(read-only, cannot be set in code)",
@@ -246,10 +242,11 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "changed" ] },
       { "name": "ListCategoryRequest",
         "locations":
-          [ { "lineno": 16,
+          [ { "lineno": 14,
               "filename": "com.wixpress.bookings.services.api.v1.CategoriesService.js" } ],
         "docs":
           { "links": [],
@@ -273,7 +270,7 @@
         "labels": [] },
       { "name": "ListCategoryResponse",
         "locations":
-          [ { "lineno": 23,
+          [ { "lineno": 21,
               "filename": "com.wixpress.bookings.services.api.v1.CategoriesService.js" } ],
         "docs":
           { "links": [],

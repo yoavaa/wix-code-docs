@@ -33,7 +33,7 @@
                   [ "wix-bookings-backend.servicesCatalog.GetServiceResponse" ] },
             "doc": "Fulfilled - A full catalog detailed response containing all the information related to a service." },
         "locations":
-          [ { "lineno": 580,
+          [ { "lineno": 568,
               "filename": "com.wixpress.bookings.services.catalog.api.v1.service.ServicesCatalog.js" } ],
         "docs":
           { "summary": "Retrieves a service, including all its data.",
@@ -63,7 +63,8 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "listByResourceSlug",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "listServicesBySlugRequest",
@@ -75,12 +76,14 @@
                   [ "wix-bookings-backend.servicesCatalog.ListServicesResponse" ] },
             "doc": "Fulfilled - A list of catalog service response." },
         "locations":
-          [ { "lineno": 677,
+          [ { "lineno": 667,
               "filename": "com.wixpress.bookings.services.catalog.api.v1.service.ServicesCatalog.js" } ],
         "docs":
           { "summary": "Retrieves a service, including all its data, by resource slug.",
             "description":
-              [ "> **Permissions**",
+              [ "Default paging: \"query { paging { offset { value: 0 } limit { value: 25 } } }\"",
+                "",
+                "> **Permissions**",
                 "> This endpoint requires the Read Bookings - Public Data, the Read Bookings - Including Participants or the Manage Bookings permissions scope" ],
             "links": [],
             "examples":
@@ -110,13 +113,15 @@
         "nameParams": [],
         "params":
           [ { "name": "listServicesRequest",
-              "type": "wix-bookings-backend.servicesCatalog.ListServicesRequest",
-              "doc": "List catalog items request" } ],
+              "type": "wix-bookings-backend.servicesCatalog.ListServicesRequest" } ],
         "ret":
-          { "type": "Promise",
-            "doc": "" },
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-bookings-backend.servicesCatalog.ListServicesResponse" ] },
+            "doc": "Fulfilled - A list of catalog service response." },
         "locations":
-          [ { "lineno": 595,
+          [ { "lineno": 583,
               "filename": "com.wixpress.bookings.services.catalog.api.v1.service.ServicesCatalog.js" } ],
         "docs":
           { "summary": "Retrieves a list of services, given the provided filtering.",
@@ -154,7 +159,7 @@
                 "Example: ```\"filter { string_value: \"{ \"resources.id\": \"46ce4cd4-46ff-4aa7-9cc0-02fd4f0f3209\" }\" }\"```.",
                 "- `service.policy.bookingsApprovalPolicy.isBusinessApprovalRequired` - query for all services that require business approval.",
                 "Example: ```\"filter { string_value: \"{ \"service.policy.bookingsApprovalPolicy.isBusinessApprovalRequired\": true }\" }\"```.",
-                "- **paging**: Supported. Limit Example: \"query { paging { limit { value: 10 } } }\". Offset Example: \"query { paging { offset { value: 10 } } }\".",
+                "- **paging**: Supported. Limit Example: \"query { paging { limit { value: 10 } } }\". Offset Example: \"query { paging { offset { value: 10 } } }\". Default paging: \"query { paging { offset { value: 0 } limit { value: 25 } } }\"",
                 "- **fieldsets**: not supported.",
                 "- **fields**: any projection is supported.",
                 "Example: query { fields [\"service.id\", \"service.status\", \"service.info.name\"] }",
@@ -194,15 +199,20 @@
           [ { "name": "listServicesBySlugRequest",
               "type": "wix-bookings-backend.servicesCatalog.ListServicesBySlugRequest" } ],
         "ret":
-          { "type": "Promise",
-            "doc": "" },
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-bookings-backend.servicesCatalog.ListServicesResponse" ] },
+            "doc": "Fulfilled - A list of catalog service response." },
         "locations":
-          [ { "lineno": 649,
+          [ { "lineno": 637,
               "filename": "com.wixpress.bookings.services.catalog.api.v1.service.ServicesCatalog.js" } ],
         "docs":
           { "summary": "Retrieves a service, including all its data, by category slug.",
             "description":
-              [ "> **Permissions**",
+              [ "Default paging: \"query { paging { offset { value: 0 } limit { value: 25 } } }\"",
+                "",
+                "> **Permissions**",
                 "> This endpoint requires the Read Bookings - Public Data, the Read Bookings - Including Participants or the Manage Bookings permissions scope" ],
             "links": [],
             "examples":
@@ -234,15 +244,20 @@
           [ { "name": "listServicesBySlugRequest",
               "type": "wix-bookings-backend.servicesCatalog.ListServicesBySlugRequest" } ],
         "ret":
-          { "type": "Promise",
-            "doc": "" },
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-bookings-backend.servicesCatalog.ListServicesResponse" ] },
+            "doc": "Fulfilled - A list of catalog service response." },
         "locations":
-          [ { "lineno": 663,
+          [ { "lineno": 652,
               "filename": "com.wixpress.bookings.services.catalog.api.v1.service.ServicesCatalog.js" } ],
         "docs":
           { "summary": "Retrieves a service, including all its data, by category slug.",
             "description":
-              [ "> **Permissions**",
+              [ "Default paging: \"query { paging { offset { value: 0 } limit { value: 25 } } }\"",
+                "",
+                "> **Permissions**",
                 "> This endpoint requires the Read Bookings - Public Data, the Read Bookings - Including Participants or the Manage Bookings permissions scope" ],
             "links": [],
             "examples":
@@ -294,7 +309,7 @@
         "extra":
           {  },
         "labels":
-          [ "new" ] },
+          [ "removed" ] },
       { "name": "ActionLabels",
         "locations":
           [ { "lineno": 249,
@@ -343,8 +358,7 @@
                   "members":
                     [ "linkLabel",
                       "textLabel" ] } ] },
-        "labels":
-          [ "changed" ] },
+        "labels": [] },
       { "name": "AddressFields",
         "locations":
           [ { "lineno": 266,
@@ -989,36 +1003,39 @@
               "type": "string" },
             { "name": "query",
               "type": "wix-bookings-backend.servicesCatalog.Query",
+              "doc": "Default paging - limit: 25, offset: 0",
               "optional": true },
             { "name": "includeDeleted",
               "type": "boolean",
               "optional": true } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "changed" ] },
       { "name": "ListServicesRequest",
         "locations":
           [ { "lineno": 456,
               "filename": "com.wixpress.bookings.services.catalog.api.v1.service.ServicesCatalog.js" } ],
         "docs":
-          { "summary": "List catalog items request",
-            "links": [],
+          { "links": [],
             "examples": [],
             "extra":
               {  } },
         "members":
           [ { "name": "query",
               "type": "wix-bookings-backend.servicesCatalog.Query",
+              "doc": "Default paging - limit: 25, offset: 0",
               "optional": true },
             { "name": "includeDeleted",
               "type": "boolean",
               "optional": true } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "changed" ] },
       { "name": "ListServicesResponse",
         "locations":
-          [ { "lineno": 464,
+          [ { "lineno": 463,
               "filename": "com.wixpress.bookings.services.catalog.api.v1.service.ServicesCatalog.js" } ],
         "docs":
           { "summary": "A list of catalog service response.",
@@ -1032,17 +1049,17 @@
                 { "name": "Array",
                   "typeParams":
                     [ "wix-bookings-backend.servicesCatalog.GetServiceResponse" ] },
-              "optional": true },
-            { "name": "metadata",
-              "type": "wix-bookings-backend.servicesCatalog.QueryMetaData",
-              "optional": true },
+              "doc": "(read-only, cannot be set in code)" },
             { "name": "responseType",
               "type": "string",
-              "doc": "One of:\n + \"CONSISTENT\"\n + \"EVENTUALLY_CONSISTENT\"",
-              "optional": true } ],
+              "doc": "One of:\n + \"CONSISTENT\"\n + \"EVENTUALLY_CONSISTENT\"\n(read-only, cannot be set in code)" },
+            { "name": "queryMetadata",
+              "type": "wix-bookings-backend.servicesCatalog.QueryMetaData",
+              "doc": "(read-only, cannot be set in code)" } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "changed" ] },
       { "name": "ListServicesResult",
         "locations":
           [ { "lineno": 567,
@@ -1270,7 +1287,8 @@
           [ { "lineno": 547,
               "filename": "com.wixpress.bookings.services.catalog.api.v1.service.ServicesCatalog.js" } ],
         "docs":
-          { "links": [],
+          { "summary": "Default paging - limit: 25, offset: 0",
+            "links": [],
             "examples": [],
             "extra":
               {  } },
@@ -1306,7 +1324,8 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "changed" ] },
       { "name": "QueryMetaData",
         "locations":
           [ { "lineno": 24,
@@ -1679,7 +1698,7 @@
         "labels": [] },
       { "name": "Sorting",
         "locations":
-          [ { "lineno": 557,
+          [ { "lineno": 558,
               "filename": "com.wixpress.bookings.services.catalog.api.v1.service.ServicesCatalog.js" } ],
         "docs":
           { "links": [],
@@ -1809,8 +1828,7 @@
                       "numberValue",
                       "stringValue",
                       "structValue" ] } ] },
-        "labels":
-          [ "changed" ] },
+        "labels": [] },
       { "name": "WaitingListPolicy",
         "locations":
           [ { "lineno": 421,

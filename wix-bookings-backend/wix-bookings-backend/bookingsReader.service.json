@@ -21,10 +21,13 @@
           [ { "name": "listBookingsRequest",
               "type": "wix-bookings-backend.bookingsReader.ListBookingsRequest" } ],
         "ret":
-          { "type": "Promise",
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-bookings-backend.bookingsReader.ListBookingsResponse" ] },
             "doc": "" },
         "locations":
-          [ { "lineno": 339,
+          [ { "lineno": 338,
               "filename": "com.wix.bookings.api.v1.BookingsReader.js" } ],
         "docs":
           { "summary": "Returns a list of bookings; Based on the invoker permissions and the request query.",
@@ -110,7 +113,7 @@
         "extra":
           {  },
         "labels":
-          [ "new" ] },
+          [ "removed" ] },
       { "name": "AllowedActions",
         "locations":
           [ { "lineno": 1,
@@ -231,8 +234,7 @@
                   "members":
                     [ "setOfSessions",
                       "singleSession" ] } ] },
-        "labels":
-          [ "changed" ] },
+        "labels": [] },
       { "name": "BookedResource",
         "locations":
           [ { "lineno": 42,
@@ -516,6 +518,29 @@
         "extra":
           {  },
         "labels": [] },
+      { "name": "ListBookingsResponse",
+        "locations":
+          [ { "lineno": 154,
+              "filename": "com.wix.bookings.api.v1.BookingsReader.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "bookings",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-bookings-backend.bookingsReader.ListBookingEntry" ] },
+              "doc": "(read-only, cannot be set in code)" },
+            { "name": "metadata",
+              "type": "wix-bookings-backend.bookingsReader.QueryMetaData",
+              "doc": "(read-only, cannot be set in code)" } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
       { "name": "ListBookingsResult",
         "locations":
           [ { "lineno": 331,
@@ -542,7 +567,7 @@
           [ "removed" ] },
       { "name": "Location",
         "locations":
-          [ { "lineno": 240,
+          [ { "lineno": 247,
               "filename": "com.wix.bookings.api.v1.BookingsReader.js" } ],
         "docs":
           { "summary": "Geographic location of the session.",
@@ -564,7 +589,7 @@
         "labels": [] },
       { "name": "OnlineConference",
         "locations":
-          [ { "lineno": 154,
+          [ { "lineno": 161,
               "filename": "com.wix.bookings.api.v1.BookingsReader.js" } ],
         "docs":
           { "summary": "Online conference information",
@@ -590,7 +615,7 @@
         "labels": [] },
       { "name": "Paging",
         "locations":
-          [ { "lineno": 303,
+          [ { "lineno": 310,
               "filename": "com.wix.bookings.api.v1.BookingsReader.js" } ],
         "docs":
           { "summary": "Limit number of results",
@@ -612,7 +637,7 @@
         "labels": [] },
       { "name": "PaidPlan",
         "locations":
-          [ { "lineno": 253,
+          [ { "lineno": 260,
               "filename": "com.wix.bookings.api.v1.BookingsReader.js" } ],
         "docs":
           { "summary": "Plan details",
@@ -635,7 +660,7 @@
         "labels": [] },
       { "name": "PaidPlanDetails",
         "locations":
-          [ { "lineno": 163,
+          [ { "lineno": 170,
               "filename": "com.wix.bookings.api.v1.BookingsReader.js" } ],
         "docs":
           { "summary": "Paid plan details used to pay for the booking.",
@@ -661,7 +686,7 @@
         "labels": [] },
       { "name": "PaymentDetails",
         "locations":
-          [ { "lineno": 172,
+          [ { "lineno": 179,
               "filename": "com.wix.bookings.api.v1.BookingsReader.js" } ],
         "docs":
           { "summary": "Payment Details. Optional. On Create, in case of a given empty field, this booking will not be send to checkout for payment.",
@@ -706,7 +731,7 @@
         "labels": [] },
       { "name": "PaymentSelection",
         "locations":
-          [ { "lineno": 197,
+          [ { "lineno": 204,
               "filename": "com.wix.bookings.api.v1.BookingsReader.js" } ],
         "docs":
           { "links": [],
@@ -727,7 +752,7 @@
         "labels": [] },
       { "name": "Price",
         "locations":
-          [ { "lineno": 262,
+          [ { "lineno": 269,
               "filename": "com.wix.bookings.api.v1.BookingsReader.js" } ],
         "docs":
           { "summary": "The final calculated price.",
@@ -755,7 +780,7 @@
         "labels": [] },
       { "name": "Query",
         "locations":
-          [ { "lineno": 311,
+          [ { "lineno": 318,
               "filename": "com.wix.bookings.api.v1.BookingsReader.js" } ],
         "docs":
           { "links": [],
@@ -797,7 +822,7 @@
         "labels": [] },
       { "name": "QueryMetaData",
         "locations":
-          [ { "lineno": 272,
+          [ { "lineno": 279,
               "filename": "com.wix.bookings.api.v1.BookingsReader.js" } ],
         "docs":
           { "links": [],
@@ -819,7 +844,7 @@
         "labels": [] },
       { "name": "Rate",
         "locations":
-          [ { "lineno": 280,
+          [ { "lineno": 287,
               "filename": "com.wix.bookings.api.v1.BookingsReader.js" } ],
         "docs":
           { "summary": "The price options offered to book this session at the time of booking.",
@@ -841,7 +866,7 @@
         "labels": [] },
       { "name": "SetOfSessions",
         "locations":
-          [ { "lineno": 204,
+          [ { "lineno": 211,
               "filename": "com.wix.bookings.api.v1.BookingsReader.js" } ],
         "docs":
           { "links": [],
@@ -862,7 +887,7 @@
         "labels": [] },
       { "name": "SingleSession",
         "locations":
-          [ { "lineno": 211,
+          [ { "lineno": 218,
               "filename": "com.wix.bookings.api.v1.BookingsReader.js" } ],
         "docs":
           { "links": [],
@@ -886,7 +911,7 @@
         "labels": [] },
       { "name": "Sorting",
         "locations":
-          [ { "lineno": 321,
+          [ { "lineno": 328,
               "filename": "com.wix.bookings.api.v1.BookingsReader.js" } ],
         "docs":
           { "links": [],
@@ -907,7 +932,7 @@
         "labels": [] },
       { "name": "Value",
         "locations":
-          [ { "lineno": 288,
+          [ { "lineno": 295,
               "filename": "com.wix.bookings.api.v1.BookingsReader.js" } ],
         "docs":
           { "summary": "A filter object. See documentation [here](https://bo.wix.com/wix-docs/rnd/platformization-guidelines/api-query-language#platformization-guidelines_api-query-language_defining-in-protobuf)",
@@ -953,11 +978,10 @@
                       "numberValue",
                       "stringValue",
                       "structValue" ] } ] },
-        "labels":
-          [ "changed" ] },
+        "labels": [] },
       { "name": "WixPayDetails",
         "locations":
-          [ { "lineno": 219,
+          [ { "lineno": 226,
               "filename": "com.wix.bookings.api.v1.BookingsReader.js" } ],
         "docs":
           { "summary": "[DEPRECATED]. USE wix_pay_multiple_details.",

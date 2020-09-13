@@ -27,7 +27,7 @@
                   [ "wix-bookings-backend.resources.Resource" ] },
             "doc": "Fulfilled - Created resource." },
         "locations":
-          [ { "lineno": 336,
+          [ { "lineno": 315,
               "filename": "com.wixpress.bookings.resources.core.api.v1.resource.ResourcesService.js" } ],
         "docs":
           { "summary": "Creates a resource.",
@@ -67,7 +67,7 @@
                   [ "void" ] },
             "doc": "" },
         "locations":
-          [ { "lineno": 347,
+          [ { "lineno": 326,
               "filename": "com.wixpress.bookings.resources.core.api.v1.resource.ResourcesService.js" } ],
         "docs":
           { "summary": "Deletes a resource. Deleting a resource cancels its schedule.",
@@ -101,10 +101,13 @@
           [ { "name": "listResourcesRequest",
               "type": "wix-bookings-backend.resources.ListResourcesRequest" } ],
         "ret":
-          { "type": "Promise",
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-bookings-backend.resources.ListResourcesResponse" ] },
             "doc": "" },
         "locations":
-          [ { "lineno": 358,
+          [ { "lineno": 337,
               "filename": "com.wixpress.bookings.resources.core.api.v1.resource.ResourcesService.js" } ],
         "docs":
           { "summary": "Queries the business' resources.",
@@ -150,7 +153,9 @@
           [ { "name": "id",
               "type": "string",
               "doc": "Resource's unique ID" },
-            { "type": "void" } ],
+            { "name": "resource",
+              "type": "wix-bookings-backend.resources.Resource",
+              "doc": "Updated resource." } ],
         "ret":
           { "type":
               { "name": "Promise",
@@ -158,7 +163,7 @@
                   [ "void" ] },
             "doc": "" },
         "locations":
-          [ { "lineno": 380,
+          [ { "lineno": 359,
               "filename": "com.wixpress.bookings.resources.core.api.v1.resource.ResourcesService.js" } ],
         "docs":
           { "summary": "Updates a resource. Can be used also to update the resource's schedules.",
@@ -241,7 +246,7 @@
         "extra":
           {  },
         "labels":
-          [ "new" ] },
+          [ "removed" ] },
       { "name": "<TODO>0",
         "locations":
           [ { "lineno": 328,
@@ -265,7 +270,7 @@
         "extra":
           {  },
         "labels":
-          [ "new" ] },
+          [ "removed" ] },
       { "name": "Availability",
         "locations":
           [ { "lineno": 40,
@@ -435,7 +440,7 @@
         "labels": [] },
       { "name": "Image",
         "locations":
-          [ { "lineno": 270,
+          [ { "lineno": 277,
               "filename": "com.wixpress.bookings.resources.core.api.v1.resource.ResourcesService.js" } ],
         "docs":
           { "links": [],
@@ -537,6 +542,29 @@
         "extra":
           {  },
         "labels": [] },
+      { "name": "ListResourcesResponse",
+        "locations":
+          [ { "lineno": 235,
+              "filename": "com.wixpress.bookings.resources.core.api.v1.resource.ResourcesService.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "queryMetadata",
+              "type": "wix-bookings-backend.resources.QueryMetaData",
+              "doc": "(read-only, cannot be set in code)" },
+            { "name": "resources",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-bookings-backend.resources.Resource" ] },
+              "doc": "List of resources matching the query object. (read-only, cannot be set in code)" } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
       { "name": "ListResourcesResult",
         "locations":
           [ { "lineno": 328,
@@ -587,7 +615,7 @@
         "labels": [] },
       { "name": "Paging",
         "locations":
-          [ { "lineno": 280,
+          [ { "lineno": 287,
               "filename": "com.wixpress.bookings.resources.core.api.v1.resource.ResourcesService.js" } ],
         "docs":
           { "summary": "Limit number of results",
@@ -676,7 +704,7 @@
         "labels": [] },
       { "name": "Query",
         "locations":
-          [ { "lineno": 288,
+          [ { "lineno": 295,
               "filename": "com.wixpress.bookings.resources.core.api.v1.resource.ResourcesService.js" } ],
         "docs":
           { "links": [],
@@ -806,7 +834,7 @@
         "labels": [] },
       { "name": "Resource",
         "locations":
-          [ { "lineno": 235,
+          [ { "lineno": 242,
               "filename": "com.wixpress.bookings.resources.core.api.v1.resource.ResourcesService.js" } ],
         "docs":
           { "links": [],
@@ -977,7 +1005,7 @@
         "labels": [] },
       { "name": "Sorting",
         "locations":
-          [ { "lineno": 298,
+          [ { "lineno": 305,
               "filename": "com.wixpress.bookings.resources.core.api.v1.resource.ResourcesService.js" } ],
         "docs":
           { "links": [],
@@ -1078,7 +1106,7 @@
           [ "removed" ] },
       { "name": "Value",
         "locations":
-          [ { "lineno": 255,
+          [ { "lineno": 262,
               "filename": "com.wixpress.bookings.resources.core.api.v1.resource.ResourcesService.js" } ],
         "docs":
           { "summary": "A filter object. See documentation [here](https://bo.wix.com/wix-docs/rnd/platformization-guidelines/api-query-language#platformization-guidelines_api-query-language_defining-in-protobuf)",
@@ -1124,7 +1152,6 @@
                       "numberValue",
                       "stringValue",
                       "structValue" ] } ] },
-        "labels":
-          [ "changed" ] } ],
+        "labels": [] } ],
   "extra":
     {  } }

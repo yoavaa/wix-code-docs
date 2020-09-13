@@ -25,10 +25,13 @@
               "type": "wix-bookings-backend.schedules.Participant",
               "doc": "Participant." } ],
         "ret":
-          { "type": "Promise",
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-bookings-backend.schedules.AddParticipantResponse" ] },
             "doc": "" },
         "locations":
-          [ { "lineno": 345,
+          [ { "lineno": 377,
               "filename": "com.wix.bookings.schedules.api.v1.Schedules.js" } ],
         "docs":
           { "summary": "Adds a participant to a schedule or to a specific session.",
@@ -69,10 +72,13 @@
               "type": "wix-bookings-backend.schedules.Participant",
               "doc": "Participant." } ],
         "ret":
-          { "type": "Promise",
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-bookings-backend.schedules.AddParticipantResponse" ] },
             "doc": "" },
         "locations":
-          [ { "lineno": 359,
+          [ { "lineno": 391,
               "filename": "com.wix.bookings.schedules.api.v1.Schedules.js" } ],
         "docs":
           { "summary": "Adds a participant to a schedule or to a specific session.",
@@ -112,7 +118,8 @@
             { "name": "from",
               "type": "Date",
               "doc": "Time to cancel the sessions from. Optional. If this field is empty, all of this schedule's sessions will be canceled." },
-            { "type": "void" } ],
+            { "name": "cancelScheduleRequest",
+              "type": "wix-bookings-backend.schedules.CancelScheduleRequest" } ],
         "ret":
           { "type":
               { "name": "Promise",
@@ -120,7 +127,7 @@
                   [ "wix-bookings-backend.schedules.Schedule" ] },
             "doc": "Fulfilled - Schedule." },
         "locations":
-          [ { "lineno": 373,
+          [ { "lineno": 405,
               "filename": "com.wix.bookings.schedules.api.v1.Schedules.js" } ],
         "docs":
           { "summary": "Cancels a schedule. Equivalent to batch cancel of sessions linked to a single schedule.",
@@ -164,7 +171,7 @@
                   [ "wix-bookings-backend.schedules.Schedule" ] },
             "doc": "Fulfilled - Schedule." },
         "locations":
-          [ { "lineno": 389,
+          [ { "lineno": 421,
               "filename": "com.wix.bookings.schedules.api.v1.Schedules.js" } ],
         "docs":
           { "summary": "Creates a schedule.",
@@ -210,7 +217,7 @@
                   [ "wix-bookings-backend.schedules.Session" ] },
             "doc": "Fulfilled - Session." },
         "locations":
-          [ { "lineno": 402,
+          [ { "lineno": 434,
               "filename": "com.wix.bookings.schedules.api.v1.Schedules.js" } ],
         "docs":
           { "summary": "Creates a session (adds a session to a schedule).",
@@ -247,7 +254,8 @@
           [ { "name": "id",
               "type": "string",
               "doc": "Session ID. Required." },
-            { "type": "void" } ],
+            { "name": "deleteSessionRequest",
+              "type": "wix-bookings-backend.schedules.DeleteSessionRequest" } ],
         "ret":
           { "type":
               { "name": "Promise",
@@ -255,7 +263,7 @@
                   [ "string" ] },
             "doc": "Fulfilled - Session ID." },
         "locations":
-          [ { "lineno": 416,
+          [ { "lineno": 448,
               "filename": "com.wix.bookings.schedules.api.v1.Schedules.js" } ],
         "docs":
           { "summary": "Deletes a session from a schedule.",
@@ -298,7 +306,7 @@
                   [ "wix-bookings-backend.schedules.Schedule" ] },
             "doc": "Fulfilled - Schedule." },
         "locations":
-          [ { "lineno": 430,
+          [ { "lineno": 462,
               "filename": "com.wix.bookings.schedules.api.v1.Schedules.js" } ],
         "docs":
           { "summary": "Returns a schedule from the calendar.",
@@ -342,7 +350,7 @@
                   [ "wix-bookings-backend.schedules.Session" ] },
             "doc": "Fulfilled - Session." },
         "locations":
-          [ { "lineno": 444,
+          [ { "lineno": 476,
               "filename": "com.wix.bookings.schedules.api.v1.Schedules.js" } ],
         "docs":
           { "summary": "Returns a session from the calendar.",
@@ -394,7 +402,7 @@
                         [ "wix-bookings-backend.schedules.Schedule" ] } ] },
             "doc": "Fulfilled - Schedule." },
         "locations":
-          [ { "lineno": 458,
+          [ { "lineno": 490,
               "filename": "com.wix.bookings.schedules.api.v1.Schedules.js" } ],
         "docs":
           { "summary": "Lists schedules by schedule IDs or schedule owner IDs.",
@@ -446,7 +454,7 @@
                         [ "wix-bookings-backend.schedules.Schedule" ] } ] },
             "doc": "Fulfilled - Schedule." },
         "locations":
-          [ { "lineno": 473,
+          [ { "lineno": 505,
               "filename": "com.wix.bookings.schedules.api.v1.Schedules.js" } ],
         "docs":
           { "summary": "Lists schedules by schedule IDs or schedule owner IDs.",
@@ -487,7 +495,8 @@
                   "typeParams":
                     [ "string" ] },
               "doc": "Session ID." },
-            { "type": "void" } ],
+            { "name": "listSessionsRequest",
+              "type": "wix-bookings-backend.schedules.ListSessionsRequest" } ],
         "ret":
           { "type":
               { "name": "Promise",
@@ -497,7 +506,7 @@
                         [ "wix-bookings-backend.schedules.Session" ] } ] },
             "doc": "Fulfilled - Session." },
         "locations":
-          [ { "lineno": 488,
+          [ { "lineno": 520,
               "filename": "com.wix.bookings.schedules.api.v1.Schedules.js" } ],
         "docs":
           { "summary": "Returns multiple sessions from the calendar.",
@@ -541,7 +550,7 @@
                   [ "string" ] },
             "doc": "Fulfilled - Participant ID." },
         "locations":
-          [ { "lineno": 503,
+          [ { "lineno": 535,
               "filename": "com.wix.bookings.schedules.api.v1.Schedules.js" } ],
         "docs":
           { "summary": "Removes a participant from a schedule or from a specific session.",
@@ -595,7 +604,7 @@
                         [ "wix-bookings-backend.schedules.RecurringInterval" ] } ] },
             "doc": "Fulfilled - A list of intervals where the first is the modified original interval followed by other newly created intervals." },
         "locations":
-          [ { "lineno": 516,
+          [ { "lineno": 548,
               "filename": "com.wix.bookings.schedules.api.v1.Schedules.js" } ],
         "docs":
           { "summary": "Splits an existing interval into two or more parts.",
@@ -635,8 +644,11 @@
             { "name": "id",
               "type": "string",
               "doc": "The recurring interval identifier." },
-            { "type": "void" },
-            { "type": "void" } ],
+            { "name": "recurringInterval",
+              "type": "wix-bookings-backend.schedules.RecurringInterval",
+              "doc": "Recurring Interval" },
+            { "name": "updateIntervalRequest",
+              "type": "wix-bookings-backend.schedules.UpdateIntervalRequest" } ],
         "ret":
           { "type":
               { "name": "Promise",
@@ -644,7 +656,7 @@
                   [ "void" ] },
             "doc": "" },
         "locations":
-          [ { "lineno": 549,
+          [ { "lineno": 581,
               "filename": "com.wix.bookings.schedules.api.v1.Schedules.js" } ],
         "docs":
           { "summary": "Updates an existing recurring interval.",
@@ -681,7 +693,9 @@
           [ { "name": "id",
               "type": "string",
               "doc": "Reservation ID. Required." },
-            { "type": "void" } ],
+            { "name": "participant",
+              "type": "wix-bookings-backend.schedules.Participant",
+              "doc": "Participant to update, identified by the ID field." } ],
         "ret":
           { "type":
               { "name": "Promise",
@@ -689,7 +703,7 @@
                   [ "wix-bookings-backend.schedules.Participant" ] },
             "doc": "Fulfilled - Participant." },
         "locations":
-          [ { "lineno": 565,
+          [ { "lineno": 597,
               "filename": "com.wix.bookings.schedules.api.v1.Schedules.js" } ],
         "docs":
           { "summary": "Updates participant details.",
@@ -728,8 +742,11 @@
           [ { "name": "id",
               "type": "string",
               "doc": "Schedule identifier." },
-            { "type": "void" },
-            { "type": "void" } ],
+            { "name": "schedule",
+              "type": "wix-bookings-backend.schedules.Schedule",
+              "doc": "Schedule." },
+            { "name": "updateScheduleRequest",
+              "type": "wix-bookings-backend.schedules.UpdateScheduleRequest" } ],
         "ret":
           { "type":
               { "name": "Promise",
@@ -737,7 +754,7 @@
                   [ "wix-bookings-backend.schedules.Schedule" ] },
             "doc": "Fulfilled - Schedule." },
         "locations":
-          [ { "lineno": 531,
+          [ { "lineno": 563,
               "filename": "com.wix.bookings.schedules.api.v1.Schedules.js" } ],
         "docs":
           { "summary": "Updates a schedule.",
@@ -777,8 +794,11 @@
           [ { "name": "id",
               "type": "string",
               "doc": "Identifier for this session when session is a single session or generated from recurring interval. Optional." },
-            { "type": "void" },
-            { "type": "void" } ],
+            { "name": "session",
+              "type": "wix-bookings-backend.schedules.Session",
+              "doc": "Session." },
+            { "name": "updateSessionRequest",
+              "type": "wix-bookings-backend.schedules.UpdateSessionRequest" } ],
         "ret":
           { "type":
               { "name": "Promise",
@@ -786,7 +806,7 @@
                   [ "wix-bookings-backend.schedules.Session" ] },
             "doc": "Fulfilled - Session." },
         "locations":
-          [ { "lineno": 581,
+          [ { "lineno": 613,
               "filename": "com.wix.bookings.schedules.api.v1.Schedules.js" } ],
         "docs":
           { "summary": "Updates a session.",
@@ -841,7 +861,7 @@
         "extra":
           {  },
         "labels":
-          [ "new" ] },
+          [ "removed" ] },
       { "name": "<TODO>0",
         "locations":
           [ { "lineno": 337,
@@ -862,10 +882,30 @@
         "extra":
           {  },
         "labels":
+          [ "removed" ] },
+      { "name": "AddParticipantResponse",
+        "locations":
+          [ { "lineno": 32,
+              "filename": "com.wix.bookings.schedules.api.v1.Schedules.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "participant",
+              "type": "wix-bookings-backend.schedules.Participant",
+              "doc": "Participant. (read-only, cannot be set in code)" },
+            { "name": "schedule",
+              "type": "wix-bookings-backend.schedules.Schedule",
+              "doc": "Schedule. (read-only, cannot be set in code)" } ],
+        "extra":
+          {  },
+        "labels":
           [ "new" ] },
       { "name": "Availability",
         "locations":
-          [ { "lineno": 32,
+          [ { "lineno": 39,
               "filename": "com.wix.bookings.schedules.api.v1.Schedules.js" } ],
         "docs":
           { "summary": "Describes how to calculate the schedule's availability for adding participants. Optional.",
@@ -902,7 +942,7 @@
         "labels": [] },
       { "name": "AvailabilityConstraints",
         "locations":
-          [ { "lineno": 47,
+          [ { "lineno": 54,
               "filename": "com.wix.bookings.schedules.api.v1.Schedules.js" } ],
         "docs":
           { "summary": "Additional constraints for calculating the schedule's availability for booking. Optional.",
@@ -933,7 +973,7 @@
         "labels": [] },
       { "name": "CalendarConference",
         "locations":
-          [ { "lineno": 61,
+          [ { "lineno": 68,
               "filename": "com.wix.bookings.schedules.api.v1.Schedules.js" } ],
         "docs":
           { "summary": "A conference meeting created for the schedule. This is used when a participant is added to a schedule.",
@@ -971,7 +1011,7 @@
         "labels": [] },
       { "name": "CalendarDateTime",
         "locations":
-          [ { "lineno": 73,
+          [ { "lineno": 80,
               "filename": "com.wix.bookings.schedules.api.v1.Schedules.js" } ],
         "docs":
           { "summary": "The end time of the session. Required.",
@@ -997,9 +1037,31 @@
         "extra":
           {  },
         "labels": [] },
+      { "name": "CancelScheduleRequest",
+        "locations":
+          [ { "lineno": 95,
+              "filename": "com.wix.bookings.schedules.api.v1.Schedules.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "participantNotification",
+              "type": "wix-bookings-backend.schedules.ParticipantNotification",
+              "doc": "Whether to notify participants about the change, and an optional custom message.",
+              "optional": true },
+            { "name": "preserveFutureSessionsWithParticipants",
+              "type": "boolean",
+              "doc": "Whether to preserve future sessions with reservations. Defaults to false.",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
       { "name": "ConferenceProvider",
         "locations":
-          [ { "lineno": 88,
+          [ { "lineno": 102,
               "filename": "com.wix.bookings.schedules.api.v1.Schedules.js" } ],
         "docs":
           { "summary": "Conferencing Provider. A schedule with a conferencing provider will use to provider information to create a conference meeting on the provider's system when a session is created on the schedule or on one of its linked schedule's.",
@@ -1015,9 +1077,27 @@
         "extra":
           {  },
         "labels": [] },
+      { "name": "DeleteSessionRequest",
+        "locations":
+          [ { "lineno": 109,
+              "filename": "com.wix.bookings.schedules.api.v1.Schedules.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "participantNotification",
+              "type": "wix-bookings-backend.schedules.ParticipantNotification",
+              "doc": "Whether to notify participants about the change, and an optional custom message.",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
       { "name": "ExternalCalendarOverrides",
         "locations":
-          [ { "lineno": 95,
+          [ { "lineno": 115,
               "filename": "com.wix.bookings.schedules.api.v1.Schedules.js" } ],
         "docs":
           { "summary": "Optional.",
@@ -1042,7 +1122,7 @@
         "labels": [] },
       { "name": "FieldMask",
         "locations":
-          [ { "lineno": 322,
+          [ { "lineno": 370,
               "filename": "com.wix.bookings.schedules.api.v1.Schedules.js" } ],
         "docs":
           { "summary": "Session fields to revert to empty, in order to revert to the data inherited from the schedule.",
@@ -1063,7 +1143,7 @@
         "labels": [] },
       { "name": "Frequency",
         "locations":
-          [ { "lineno": 105,
+          [ { "lineno": 125,
               "filename": "com.wix.bookings.schedules.api.v1.Schedules.js" } ],
         "docs":
           { "summary": "The frequency of the interval. Optional. The default is frequency with the default repetition.",
@@ -1081,7 +1161,7 @@
         "labels": [] },
       { "name": "Interval",
         "locations":
-          [ { "lineno": 112,
+          [ { "lineno": 132,
               "filename": "com.wix.bookings.schedules.api.v1.Schedules.js" } ],
         "docs":
           { "summary": "The interval rules. The day, hour and minutes the interval is recurring.",
@@ -1111,7 +1191,7 @@
         "labels": [] },
       { "name": "LinkedSchedule",
         "locations":
-          [ { "lineno": 131,
+          [ { "lineno": 151,
               "filename": "com.wix.bookings.schedules.api.v1.Schedules.js" } ],
         "docs":
           { "links": [],
@@ -1134,9 +1214,27 @@
         "extra":
           {  },
         "labels": [] },
+      { "name": "ListSessionsRequest",
+        "locations":
+          [ { "lineno": 163,
+              "filename": "com.wix.bookings.schedules.api.v1.Schedules.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "fieldMask",
+              "type": "wix-bookings-backend.schedules.FieldMask",
+              "doc": "Field mask of fields to return. Currently only supports the \"scheduleOwnerId\" field.",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
       { "name": "LocalDateTime",
         "locations":
-          [ { "lineno": 143,
+          [ { "lineno": 169,
               "filename": "com.wix.bookings.schedules.api.v1.Schedules.js" } ],
         "docs":
           { "summary": "The time in local date time. Optional.",
@@ -1213,7 +1311,7 @@
           [ "removed" ] },
       { "name": "Participant",
         "locations":
-          [ { "lineno": 156,
+          [ { "lineno": 182,
               "filename": "com.wix.bookings.schedules.api.v1.Schedules.js" } ],
         "docs":
           { "summary": "Participant.",
@@ -1255,7 +1353,7 @@
         "labels": [] },
       { "name": "ParticipantNotification",
         "locations":
-          [ { "lineno": 174,
+          [ { "lineno": 200,
               "filename": "com.wix.bookings.schedules.api.v1.Schedules.js" } ],
         "docs":
           { "summary": "Whether to notify participants about the change, and an optional custom message.",
@@ -1325,7 +1423,7 @@
         "labels": [] },
       { "name": "RecurringInterval",
         "locations":
-          [ { "lineno": 182,
+          [ { "lineno": 208,
               "filename": "com.wix.bookings.schedules.api.v1.Schedules.js" } ],
         "docs":
           { "links": [],
@@ -1369,7 +1467,7 @@
         "labels": [] },
       { "name": "Schedule",
         "locations":
-          [ { "lineno": 199,
+          [ { "lineno": 225,
               "filename": "com.wix.bookings.schedules.api.v1.Schedules.js" } ],
         "docs":
           { "summary": "Schedule.",
@@ -1483,7 +1581,7 @@
         "labels": [] },
       { "name": "Session",
         "locations":
-          [ { "lineno": 247,
+          [ { "lineno": 273,
               "filename": "com.wix.bookings.schedules.api.v1.Schedules.js" } ],
         "docs":
           { "summary": "Session.",
@@ -1597,7 +1695,7 @@
         "labels": [] },
       { "name": "Session_Version",
         "locations":
-          [ { "lineno": 303,
+          [ { "lineno": 329,
               "filename": "com.wix.bookings.schedules.api.v1.Schedules.js" } ],
         "docs":
           { "links": [],
@@ -1616,7 +1714,7 @@
         "labels": [] },
       { "name": "SplitInterval",
         "locations":
-          [ { "lineno": 310,
+          [ { "lineno": 336,
               "filename": "com.wix.bookings.schedules.api.v1.Schedules.js" } ],
         "docs":
           { "summary": "Specify how to split the slots in intervals of minutes.",
@@ -1638,6 +1736,24 @@
         "extra":
           {  },
         "labels": [] },
+      { "name": "UpdateIntervalRequest",
+        "locations":
+          [ { "lineno": 348,
+              "filename": "com.wix.bookings.schedules.api.v1.Schedules.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "participantNotification",
+              "type": "wix-bookings-backend.schedules.ParticipantNotification",
+              "doc": "Whether to notify participants about the change, and an optional custom message.",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
       { "name": "UpdateOptions",
         "locations":
           [ { "lineno": 329,
@@ -1660,6 +1776,58 @@
         "extra":
           {  },
         "labels":
-          [ "removed" ] } ],
+          [ "removed" ] },
+      { "name": "UpdateScheduleRequest",
+        "locations":
+          [ { "lineno": 354,
+              "filename": "com.wix.bookings.schedules.api.v1.Schedules.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "alignTimeExceptions",
+              "type": "boolean",
+              "doc": "Optional. Defaults to false. In case of updated intervals' start time, this field indicates whether to align those interval's time exceptions.",
+              "optional": true },
+            { "name": "fieldMask",
+              "type": "wix-bookings-backend.schedules.FieldMask",
+              "doc": "Field mask of fields to update.",
+              "optional": true },
+            { "name": "participantNotification",
+              "type": "wix-bookings-backend.schedules.ParticipantNotification",
+              "doc": "Whether to notify participants about the change, and an optional custom message.",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
+      { "name": "UpdateSessionRequest",
+        "locations":
+          [ { "lineno": 362,
+              "filename": "com.wix.bookings.schedules.api.v1.Schedules.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "deleted",
+              "type": "wix-bookings-backend.schedules.FieldMask",
+              "doc": "Field mask of fields to update.",
+              "optional": true },
+            { "name": "participantNotification",
+              "type": "wix-bookings-backend.schedules.ParticipantNotification",
+              "doc": "Whether to notify participants about the change, and an optional custom message.",
+              "optional": true },
+            { "name": "updated",
+              "type": "wix-bookings-backend.schedules.FieldMask",
+              "doc": "Field mask of fields to update.",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] } ],
   "extra":
     {  } }
