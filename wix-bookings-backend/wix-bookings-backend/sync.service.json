@@ -1,7 +1,8 @@
 { "name": "sync",
   "memberOf": "wix-bookings-backend",
   "mixes": [],
-  "labels": [],
+  "labels":
+    [ "changed" ],
   "location":
     { "lineno": 89,
       "filename": "index.js" },
@@ -13,7 +14,8 @@
   "properties": [],
   "operations":
     [ { "name": "getSyncStatus",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "resourceId",
@@ -36,15 +38,18 @@
             "examples":
               [ { "title": "basic usage",
                   "body":
-                    [ "import { sync } from 'wix-bookings-backend';",
+                    [ "import { sync } from \"wix-bookings-backend\";",
                       "",
-                      "export function getSyncStatus(request) {",
-                      "  return sync.getSyncStatus(request)",
+                      "export function getSyncStatus() {",
+                      "  let resourceId = \"a string\";",
+                      "",
+                      "  return sync",
+                      "    .getSyncStatus(resourceId)",
                       "    .then((response) => {",
                       "      console.log(response);",
                       "    })",
                       "    .catch((error) => {",
-                      "      console.log(error);",
+                      "      console.error(error);",
                       "    });",
                       "}" ],
                   "extra":
@@ -55,7 +60,8 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "listSyncStatus",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params": [],
         "ret":
@@ -75,15 +81,16 @@
             "examples":
               [ { "title": "basic usage",
                   "body":
-                    [ "import { sync } from 'wix-bookings-backend';",
+                    [ "import { sync } from \"wix-bookings-backend\";",
                       "",
-                      "export function listSyncStatus(request) {",
-                      "  return sync.listSyncStatus(request)",
+                      "export function listSyncStatus() {",
+                      "  return sync",
+                      "    .listSyncStatus()",
                       "    .then((response) => {",
                       "      console.log(response);",
                       "    })",
                       "    .catch((error) => {",
-                      "      console.log(error);",
+                      "      console.error(error);",
                       "    });",
                       "}" ],
                   "extra":
@@ -94,7 +101,8 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "syncExternalCalendar",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "resourceId",
@@ -121,15 +129,20 @@
             "examples":
               [ { "title": "basic usage",
                   "body":
-                    [ "import { sync } from 'wix-bookings-backend';",
+                    [ "import { sync } from \"wix-bookings-backend\";",
                       "",
-                      "export function syncExternalCalendar(request) {",
-                      "  return sync.syncExternalCalendar(request)",
+                      "export function syncExternalCalendar() {",
+                      "  let resourceId = \"a string\";",
+                      "  let syncRequestEmail = \"a string\";",
+                      "  let calendar = \"GOOGLE\";",
+                      "",
+                      "  return sync",
+                      "    .syncExternalCalendar(resourceId, syncRequestEmail, calendar)",
                       "    .then((response) => {",
                       "      console.log(response);",
                       "    })",
                       "    .catch((error) => {",
-                      "      console.log(error);",
+                      "      console.error(error);",
                       "    });",
                       "}" ],
                   "extra":
@@ -140,7 +153,8 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "unSync",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "unSyncRequest",
@@ -160,15 +174,21 @@
             "examples":
               [ { "title": "basic usage",
                   "body":
-                    [ "import { sync } from 'wix-bookings-backend';",
+                    [ "import { sync } from \"wix-bookings-backend\";",
                       "",
-                      "export function unSync(request) {",
-                      "  return sync.unSync(request)",
+                      "export function unSync() {",
+                      "  let unSyncRequest = {",
+                      "    resourceId: \"a string\",",
+                      "    calendar: \"GOOGLE\"",
+                      "  };",
+                      "",
+                      "  return sync",
+                      "    .unSync(unSyncRequest)",
                       "    .then((response) => {",
                       "      console.log(response);",
                       "    })",
                       "    .catch((error) => {",
-                      "      console.log(error);",
+                      "      console.error(error);",
                       "    });",
                       "}" ],
                   "extra":
@@ -179,7 +199,8 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "unsyncExternalCalendar",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "resourceId",
@@ -203,15 +224,19 @@
             "examples":
               [ { "title": "basic usage",
                   "body":
-                    [ "import { sync } from 'wix-bookings-backend';",
+                    [ "import { sync } from \"wix-bookings-backend\";",
                       "",
-                      "export function unsyncExternalCalendar(request) {",
-                      "  return sync.unsyncExternalCalendar(request)",
+                      "export function unsyncExternalCalendar() {",
+                      "  let resourceId = \"a string\";",
+                      "  let calendar = \"GOOGLE\";",
+                      "",
+                      "  return sync",
+                      "    .unsyncExternalCalendar(resourceId, calendar)",
                       "    .then((response) => {",
                       "      console.log(response);",
                       "    })",
                       "    .catch((error) => {",
-                      "      console.log(error);",
+                      "      console.error(error);",
                       "    });",
                       "}" ],
                   "extra":

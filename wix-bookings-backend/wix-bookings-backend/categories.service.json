@@ -14,7 +14,8 @@
   "properties": [],
   "operations":
     [ { "name": "createCategory",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "category",
@@ -35,15 +36,26 @@
             "examples":
               [ { "title": "basic usage",
                   "body":
-                    [ "import { categories } from 'wix-bookings-backend';",
+                    [ "import { categories } from \"wix-bookings-backend\";",
                       "",
-                      "export function createCategory(request) {",
-                      "  return categories.createCategory(request)",
+                      "export function createCategory() {",
+                      "  let category = {",
+                      "    name: \"a string\",",
+                      "    customProperties: {",
+                      "      someKey: \"a string\"",
+                      "    },",
+                      "    id: \"a string\",",
+                      "    status: \"CREATED\",",
+                      "    sortOrder: 42",
+                      "  };",
+                      "",
+                      "  return categories",
+                      "    .createCategory(category)",
                       "    .then((response) => {",
                       "      console.log(response);",
                       "    })",
                       "    .catch((error) => {",
-                      "      console.log(error);",
+                      "      console.error(error);",
                       "    });",
                       "}" ],
                   "extra":
@@ -54,7 +66,8 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "deleteCategory",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "id",
@@ -78,15 +91,19 @@
             "examples":
               [ { "title": "basic usage",
                   "body":
-                    [ "import { categories } from 'wix-bookings-backend';",
+                    [ "import { categories } from \"wix-bookings-backend\";",
                       "",
-                      "export function deleteCategory(request) {",
-                      "  return categories.deleteCategory(request)",
+                      "export function deleteCategory() {",
+                      "  let id = \"a string\";",
+                      "  let deleteServices = true;",
+                      "",
+                      "  return categories",
+                      "    .deleteCategory(id, deleteServices)",
                       "    .then((response) => {",
                       "      console.log(response);",
                       "    })",
                       "    .catch((error) => {",
-                      "      console.log(error);",
+                      "      console.error(error);",
                       "    });",
                       "}" ],
                   "extra":
@@ -97,7 +114,8 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "list",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "listCategoryRequest",
@@ -120,15 +138,21 @@
             "examples":
               [ { "title": "basic usage",
                   "body":
-                    [ "import { categories } from 'wix-bookings-backend';",
+                    [ "import { categories } from \"wix-bookings-backend\";",
                       "",
-                      "export function list(request) {",
-                      "  return categories.list(request)",
+                      "export function list() {",
+                      "  let listCategoryRequest = {",
+                      "    categoryIds: [\"a string\"],",
+                      "    includeDeleted: true",
+                      "  };",
+                      "",
+                      "  return categories",
+                      "    .list(listCategoryRequest)",
                       "    .then((response) => {",
                       "      console.log(response);",
                       "    })",
                       "    .catch((error) => {",
-                      "      console.log(error);",
+                      "      console.error(error);",
                       "    });",
                       "}" ],
                   "extra":
@@ -163,15 +187,26 @@
             "examples":
               [ { "title": "basic usage",
                   "body":
-                    [ "import { categories } from 'wix-bookings-backend';",
+                    [ "import { categories } from \"wix-bookings-backend\";",
                       "",
-                      "export function updateCategory(request) {",
-                      "  return categories.updateCategory(request)",
+                      "export function updateCategory() {",
+                      "  let id = \"a string\";",
+                      "  let category = {",
+                      "    name: \"a string\",",
+                      "    customProperties: {",
+                      "      someKey: \"a string\"",
+                      "    },",
+                      "    status: \"CREATED\",",
+                      "    sortOrder: 42",
+                      "  };",
+                      "",
+                      "  return categories",
+                      "    .updateCategory(id, category)",
                       "    .then((response) => {",
                       "      console.log(response);",
                       "    })",
                       "    .catch((error) => {",
-                      "      console.log(error);",
+                      "      console.error(error);",
                       "    });",
                       "}" ],
                   "extra":
@@ -242,8 +277,7 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "changed" ] },
+        "labels": [] },
       { "name": "ListCategoryRequest",
         "locations":
           [ { "lineno": 14,

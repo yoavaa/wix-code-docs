@@ -42,15 +42,31 @@
             "examples":
               [ { "title": "basic usage",
                   "body":
-                    [ "import { waitingList } from 'wix-bookings-backend';",
+                    [ "import { waitingList } from \"wix-bookings-backend\";",
                       "",
-                      "export function enrollWaitlistParticipant(request) {",
-                      "  return waitingList.enrollWaitlistParticipant(request)",
+                      "export function enrollWaitlistParticipant() {",
+                      "  let registrationId = \"a string\";",
+                      "  let enrollRequest = {",
+                      "    couponCode: \"a string\",",
+                      "    flowControlSettings: {",
+                      "      forceEnrollment: true,",
+                      "      forceInPersonCheckout: true",
+                      "    },",
+                      "    notifyParticipants: true,",
+                      "    planSelection: {",
+                      "      orderId: \"a string\",",
+                      "      benefitId: \"a string\",",
+                      "      planId: \"a string\"",
+                      "    }",
+                      "  };",
+                      "",
+                      "  return waitingList",
+                      "    .enrollWaitlistParticipant(registrationId, enrollRequest)",
                       "    .then((response) => {",
                       "      console.log(response);",
                       "    })",
                       "    .catch((error) => {",
-                      "      console.log(error);",
+                      "      console.error(error);",
                       "    });",
                       "}" ],
                   "extra":
@@ -61,7 +77,8 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "listWaitlistParticipants",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "waitingResources",
@@ -91,15 +108,18 @@
             "examples":
               [ { "title": "basic usage",
                   "body":
-                    [ "import { waitingList } from 'wix-bookings-backend';",
+                    [ "import { waitingList } from \"wix-bookings-backend\";",
                       "",
-                      "export function listWaitlistParticipants(request) {",
-                      "  return waitingList.listWaitlistParticipants(request)",
+                      "export function listWaitlistParticipants() {",
+                      "  let waitingResources = [\"a string\"];",
+                      "",
+                      "  return waitingList",
+                      "    .listWaitlistParticipants(waitingResources)",
                       "    .then((response) => {",
                       "      console.log(response);",
                       "    })",
                       "    .catch((error) => {",
-                      "      console.log(error);",
+                      "      console.error(error);",
                       "    });",
                       "}" ],
                   "extra":
@@ -141,15 +161,66 @@
             "examples":
               [ { "title": "basic usage",
                   "body":
-                    [ "import { waitingList } from 'wix-bookings-backend';",
+                    [ "import { waitingList } from \"wix-bookings-backend\";",
                       "",
-                      "export function registerParticipantToWaitlist(request) {",
-                      "  return waitingList.registerParticipantToWaitlist(request)",
+                      "export function registerParticipantToWaitlist() {",
+                      "  let waitingResource = \"a string\";",
+                      "  let formInfo = {",
+                      "    contactDetails: {",
+                      "      email: \"a string\",",
+                      "      lastName: \"a string\",",
+                      "      firstName: \"a string\",",
+                      "      countryCode: \"a string\",",
+                      "      contactId: \"a string\",",
+                      "      address: \"a string\",",
+                      "      timeZone: \"a string\",",
+                      "      phone: \"a string\"",
+                      "    },",
+                      "    paymentSelection: [",
+                      "      {",
+                      "        rateLabel: \"a string\",",
+                      "        numberOfParticipants: 42",
+                      "      }",
+                      "    ],",
+                      "    customFormFields: {",
+                      "      someKey: \"a string\"",
+                      "    },",
+                      "    additionalFields: [",
+                      "      {",
+                      "        id: \"a string\",",
+                      "        value: \"a string\",",
+                      "        label: \"a string\",",
+                      "        valueType: \"SHORT_TEXT\"",
+                      "      }",
+                      "    ]",
+                      "  };",
+                      "  let registerRequest = {",
+                      "    flowControlSettings: {",
+                      "      ignoreWaitlistCapacity: true",
+                      "    },",
+                      "    presentedEndTime: {",
+                      "      hourOfDay: 42,",
+                      "      dayOfMonth: 42,",
+                      "      year: 42,",
+                      "      monthOfYear: 42,",
+                      "      minutesOfHour: 42",
+                      "    },",
+                      "    presentedStartTime: {",
+                      "      hourOfDay: 42,",
+                      "      dayOfMonth: 42,",
+                      "      year: 42,",
+                      "      monthOfYear: 42,",
+                      "      minutesOfHour: 42",
+                      "    }",
+                      "  };",
+                      "",
+                      "  return waitingList",
+                      "    .registerParticipantToWaitlist(waitingResource, formInfo, registerRequest)",
                       "    .then((response) => {",
                       "      console.log(response);",
                       "    })",
                       "    .catch((error) => {",
-                      "      console.log(error);",
+                      "      console.error(error);",
                       "    });",
                       "}" ],
                   "extra":
@@ -187,15 +258,19 @@
             "examples":
               [ { "title": "basic usage",
                   "body":
-                    [ "import { waitingList } from 'wix-bookings-backend';",
+                    [ "import { waitingList } from \"wix-bookings-backend\";",
                       "",
-                      "export function removeParticipantFromWaitlist(request) {",
-                      "  return waitingList.removeParticipantFromWaitlist(request)",
+                      "export function removeParticipantFromWaitlist() {",
+                      "  let registrationId = \"a string\";",
+                      "  let waitingResource = \"a string\";",
+                      "",
+                      "  return waitingList",
+                      "    .removeParticipantFromWaitlist(registrationId, waitingResource)",
                       "    .then((response) => {",
                       "      console.log(response);",
                       "    })",
                       "    .catch((error) => {",
-                      "      console.log(error);",
+                      "      console.error(error);",
                       "    });",
                       "}" ],
                   "extra":
@@ -582,8 +657,7 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "EnrollRequest_FlowControlSettings",
         "locations":
           [ { "lineno": 125,
@@ -605,8 +679,7 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "EnrollResponse",
         "locations":
           [ { "lineno": 135,
@@ -625,8 +698,7 @@
               "doc": "(read-only, cannot be set in code)" } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "FlowControlSettings",
         "locations":
           [ { "lineno": 116,
@@ -734,8 +806,7 @@
               "doc": "(read-only, cannot be set in code)" } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "LocalDateTime",
         "locations":
           [ { "lineno": 357,
@@ -764,8 +835,7 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "Location",
         "locations":
           [ { "lineno": 317,
@@ -1054,8 +1124,7 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "RegisterRequest_FlowControlSettings",
         "locations":
           [ { "lineno": 233,
@@ -1073,8 +1142,7 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "Registration",
         "locations":
           [ { "lineno": 241,

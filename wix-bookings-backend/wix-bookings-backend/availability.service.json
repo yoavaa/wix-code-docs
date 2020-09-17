@@ -45,15 +45,19 @@
             "examples":
               [ { "title": "basic usage",
                   "body":
-                    [ "import { availability } from 'wix-bookings-backend';",
+                    [ "import { availability } from \"wix-bookings-backend\";",
                       "",
-                      "export function isBookingAvailable(request) {",
-                      "  return availability.isBookingAvailable(request)",
+                      "export function isBookingAvailable() {",
+                      "  let scheduleId = \"a string\";",
+                      "  let partySize = 42;",
+                      "",
+                      "  return availability",
+                      "    .isBookingAvailable(scheduleId, partySize)",
                       "    .then((response) => {",
                       "      console.log(response);",
                       "    })",
                       "    .catch((error) => {",
-                      "      console.log(error);",
+                      "      console.error(error);",
                       "    });",
                       "}" ],
                   "extra":
@@ -95,15 +99,19 @@
             "examples":
               [ { "title": "basic usage",
                   "body":
-                    [ "import { availability } from 'wix-bookings-backend';",
+                    [ "import { availability } from \"wix-bookings-backend\";",
                       "",
-                      "export function isScheduleAvailable(request) {",
-                      "  return availability.isScheduleAvailable(request)",
+                      "export function isScheduleAvailable() {",
+                      "  let scheduleId = \"a string\";",
+                      "  let partySize = 42;",
+                      "",
+                      "  return availability",
+                      "    .isScheduleAvailable(scheduleId, partySize)",
                       "    .then((response) => {",
                       "      console.log(response);",
                       "    })",
                       "    .catch((error) => {",
-                      "      console.log(error);",
+                      "      console.error(error);",
                       "    });",
                       "}" ],
                   "extra":
@@ -145,15 +153,19 @@
             "examples":
               [ { "title": "basic usage",
                   "body":
-                    [ "import { availability } from 'wix-bookings-backend';",
+                    [ "import { availability } from \"wix-bookings-backend\";",
                       "",
-                      "export function isSessionAvailable(request) {",
-                      "  return availability.isSessionAvailable(request)",
+                      "export function isSessionAvailable() {",
+                      "  let sessionId = \"a string\";",
+                      "  let partySize = 42;",
+                      "",
+                      "  return availability",
+                      "    .isSessionAvailable(sessionId, partySize)",
                       "    .then((response) => {",
                       "      console.log(response);",
                       "    })",
                       "    .catch((error) => {",
-                      "      console.log(error);",
+                      "      console.error(error);",
                       "    });",
                       "}" ],
                   "extra":
@@ -195,15 +207,24 @@
             "examples":
               [ { "title": "basic usage",
                   "body":
-                    [ "import { availability } from 'wix-bookings-backend';",
+                    [ "import { availability } from \"wix-bookings-backend\";",
                       "",
-                      "export function isTimeSlotAvailable(request) {",
-                      "  return availability.isTimeSlotAvailable(request)",
+                      "export function isTimeSlotAvailable() {",
+                      "  let session = {",
+                      "    scheduleId: \"a string\",",
+                      "    start: new Date(),",
+                      "    end: new Date(),",
+                      "    requiredScheduleIds: [\"a string\"]",
+                      "  };",
+                      "  let partySize = 42;",
+                      "",
+                      "  return availability",
+                      "    .isTimeSlotAvailable(session, partySize)",
                       "    .then((response) => {",
                       "      console.log(response);",
                       "    })",
                       "    .catch((error) => {",
-                      "      console.log(error);",
+                      "      console.error(error);",
                       "    });",
                       "}" ],
                   "extra":
@@ -214,7 +235,8 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "lockSession",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "sessionId",
@@ -244,15 +266,18 @@
             "examples":
               [ { "title": "basic usage",
                   "body":
-                    [ "import { availability } from 'wix-bookings-backend';",
+                    [ "import { availability } from \"wix-bookings-backend\";",
                       "",
-                      "export function lockSession(request) {",
-                      "  return availability.lockSession(request)",
+                      "export function lockSession() {",
+                      "  let sessionId = \"a string\";",
+                      "",
+                      "  return availability",
+                      "    .lockSession(sessionId)",
                       "    .then((response) => {",
                       "      console.log(response);",
                       "    })",
                       "    .catch((error) => {",
-                      "      console.log(error);",
+                      "      console.error(error);",
                       "    });",
                       "}" ],
                   "extra":
@@ -263,7 +288,8 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "unlockSession",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "sessionId",
@@ -292,15 +318,19 @@
             "examples":
               [ { "title": "basic usage",
                   "body":
-                    [ "import { availability } from 'wix-bookings-backend';",
+                    [ "import { availability } from \"wix-bookings-backend\";",
                       "",
-                      "export function unlockSession(request) {",
-                      "  return availability.unlockSession(request)",
+                      "export function unlockSession() {",
+                      "  let sessionId = \"a string\";",
+                      "  let key = \"a string\";",
+                      "",
+                      "  return availability",
+                      "    .unlockSession(sessionId, key)",
                       "    .then((response) => {",
                       "      console.log(response);",
                       "    })",
                       "    .catch((error) => {",
-                      "      console.log(error);",
+                      "      console.error(error);",
                       "    });",
                       "}" ],
                   "extra":
@@ -381,8 +411,7 @@
               "doc": "The current number of registered participants on this session (read-only, cannot be set in code)" } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "Slot",
         "locations":
           [ { "lineno": 1,

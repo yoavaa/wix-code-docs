@@ -1,7 +1,8 @@
 { "name": "servicesPolicy",
   "memberOf": "wix-bookings-backend",
   "mixes": [],
-  "labels": [],
+  "labels":
+    [ "changed" ],
   "location":
     { "lineno": 161,
       "filename": "index.js" },
@@ -13,7 +14,8 @@
   "properties": [],
   "operations":
     [ { "name": "getPolicy",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params": [],
         "ret":
@@ -30,15 +32,16 @@
             "examples":
               [ { "title": "basic usage",
                   "body":
-                    [ "import { servicesPolicy } from 'wix-bookings-backend';",
+                    [ "import { servicesPolicy } from \"wix-bookings-backend\";",
                       "",
-                      "export function getPolicy(request) {",
-                      "  return servicesPolicy.getPolicy(request)",
+                      "export function getPolicy() {",
+                      "  return servicesPolicy",
+                      "    .getPolicy()",
                       "    .then((response) => {",
                       "      console.log(response);",
                       "    })",
                       "    .catch((error) => {",
-                      "      console.log(error);",
+                      "      console.error(error);",
                       "    });",
                       "}" ],
                   "extra":
@@ -49,7 +52,8 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "updatePolicy",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "policy",
@@ -69,15 +73,30 @@
             "examples":
               [ { "title": "basic usage",
                   "body":
-                    [ "import { servicesPolicy } from 'wix-bookings-backend';",
+                    [ "import { servicesPolicy } from \"wix-bookings-backend\";",
                       "",
-                      "export function updatePolicy(request) {",
-                      "  return servicesPolicy.updatePolicy(request)",
+                      "export function updatePolicy() {",
+                      "  let policy = {",
+                      "    bookUpToXMinutesBefore: 42,",
+                      "    cancelRescheduleUpToXMinutesBefore: 42,",
+                      "    futureBookingsPolicy: {",
+                      "      shouldLimit: true,",
+                      "      limitXMinutesToTheFuture: 42",
+                      "    },",
+                      "    waitingListPolicy: {",
+                      "      isEnabled: true,",
+                      "      capacity: 42,",
+                      "      timeWindowMinutes: 42",
+                      "    }",
+                      "  };",
+                      "",
+                      "  return servicesPolicy",
+                      "    .updatePolicy(policy)",
                       "    .then((response) => {",
                       "      console.log(response);",
                       "    })",
                       "    .catch((error) => {",
-                      "      console.log(error);",
+                      "      console.error(error);",
                       "    });",
                       "}" ],
                   "extra":
