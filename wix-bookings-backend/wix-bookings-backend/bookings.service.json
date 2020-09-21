@@ -1532,7 +1532,7 @@
                     [ "wix-bookings-backend.bookings.PaymentSelection" ] },
               "optional": true },
             { "name": "customFormFields",
-              "type": "Object.<String, FormInfo_CustomFormField>",
+              "type": "Object.<String, wix-bookings-backend.bookings.FormInfo_CustomFormField>",
               "doc": "Set of key-value pairs. Other custom field values that were specified by the user. In the form of field_id to value mapping.\n Deprecated. Is being replaced with additional_fields.",
               "optional": true },
             { "name": "additionalFields",
