@@ -1,7 +1,8 @@
 { "name": "bookings",
   "memberOf": "wix-bookings-backend",
   "mixes": [],
-  "labels": [],
+  "labels":
+    [ "changed" ],
   "location":
     { "lineno": 5,
       "filename": "index.js" },
@@ -1531,7 +1532,7 @@
                     [ "wix-bookings-backend.bookings.PaymentSelection" ] },
               "optional": true },
             { "name": "customFormFields",
-              "type": "Object.<String, wix-bookings-backend.bookings.FormInfo_CustomFormField>",
+              "type": "Map.<String, wix-bookings-backend.bookings.FormInfo_CustomFormField>",
               "doc": "Set of key-value pairs. Other custom field values that were specified by the user. In the form of field_id to value mapping.\n Deprecated. Is being replaced with additional_fields.",
               "optional": true },
             { "name": "additionalFields",
@@ -1543,7 +1544,8 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "changed" ] },
       { "name": "FormInfo_CustomFormField",
         "locations":
           [ { "lineno": 235,
