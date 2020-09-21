@@ -1,8 +1,7 @@
 { "name": "waitingList",
   "memberOf": "wix-bookings-backend",
   "mixes": [],
-  "labels":
-    [ "changed" ],
+  "labels": [],
   "location":
     { "lineno": 41,
       "filename": "index.js" },
@@ -14,8 +13,7 @@
   "properties": [],
   "operations":
     [ { "name": "enrollWaitlistParticipant",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "registrationId",
@@ -77,8 +75,7 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "listWaitlistParticipants",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "waitingResources",
@@ -130,8 +127,7 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "registerParticipantToWaitlist",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "waitingResource",
@@ -231,8 +227,7 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "removeParticipantFromWaitlist",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "registrationId",

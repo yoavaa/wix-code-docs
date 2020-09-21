@@ -1,8 +1,7 @@
 { "name": "schedules",
   "memberOf": "wix-bookings-backend",
   "mixes": [],
-  "labels":
-    [ "changed" ],
+  "labels": [],
   "location":
     { "lineno": 101,
       "filename": "index.js" },
@@ -14,8 +13,7 @@
   "properties": [],
   "operations":
     [ { "name": "addParticipantToSchedule",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "scheduleId",
@@ -73,8 +71,7 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "addParticipantToSession",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "sessionId",
@@ -132,8 +129,7 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "cancelSchedule",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "scheduleId",
@@ -193,8 +189,7 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "createSchedule",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "schedule",
@@ -338,8 +333,7 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "createSession",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "session",
@@ -476,8 +470,7 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "deleteSession",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "id",
@@ -531,8 +524,7 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "getSchedule",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "id",
@@ -579,8 +571,7 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "getSession",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "id",
@@ -627,8 +618,7 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "listSchedulesByIds",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "scheduleIds",
@@ -684,8 +674,7 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "listSchedulesByOwnerIds",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "scheduleOwnerIds",
@@ -741,8 +730,7 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "listSessions",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "ids",
@@ -801,8 +789,7 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "removeParticipant",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "id",
@@ -848,8 +835,7 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "splitInterval",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "scheduleId",
@@ -908,8 +894,7 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "updateInterval",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "scheduleId",
@@ -991,8 +976,7 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "updateParticipant",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "id",
@@ -1051,8 +1035,7 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "updateSchedule",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "id",
@@ -1214,8 +1197,7 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "updateSession",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "id",

@@ -1,8 +1,7 @@
 { "name": "availability",
   "memberOf": "wix-bookings-backend",
   "mixes": [],
-  "labels":
-    [ "changed" ],
+  "labels": [],
   "location":
     { "lineno": 17,
       "filename": "index.js" },
@@ -14,8 +13,7 @@
   "properties": [],
   "operations":
     [ { "name": "isBookingAvailable",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "scheduleId",
@@ -68,8 +66,7 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "isScheduleAvailable",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "scheduleId",
@@ -122,8 +119,7 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "isSessionAvailable",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "sessionId",
@@ -176,8 +172,7 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "isTimeSlotAvailable",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "session",
@@ -235,8 +230,7 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "lockSession",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "sessionId",
@@ -288,8 +282,7 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "unlockSession",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "sessionId",

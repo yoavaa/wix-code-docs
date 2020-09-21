@@ -1,8 +1,7 @@
 { "name": "sync",
   "memberOf": "wix-bookings-backend",
   "mixes": [],
-  "labels":
-    [ "changed" ],
+  "labels": [],
   "location":
     { "lineno": 89,
       "filename": "index.js" },
@@ -14,8 +13,7 @@
   "properties": [],
   "operations":
     [ { "name": "getSyncStatus",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "resourceId",
@@ -60,8 +58,7 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "listSyncStatus",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params": [],
         "ret":
@@ -101,8 +98,7 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "syncExternalCalendar",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "resourceId",
@@ -153,8 +149,7 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "unSync",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "unSyncRequest",
@@ -199,8 +194,7 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "unsyncExternalCalendar",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "resourceId",

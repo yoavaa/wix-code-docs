@@ -1,8 +1,7 @@
 { "name": "resources",
   "memberOf": "wix-bookings-backend",
   "mixes": [],
-  "labels":
-    [ "changed" ],
+  "labels": [],
   "location":
     { "lineno": 113,
       "filename": "index.js" },
@@ -14,8 +13,7 @@
   "properties": [],
   "operations":
     [ { "name": "createResource",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "resource",
@@ -176,8 +174,7 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "deleteResource",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "id",
@@ -220,8 +217,7 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "listResources",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "listResourcesRequest",
@@ -295,8 +291,7 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "updateResource",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "id",

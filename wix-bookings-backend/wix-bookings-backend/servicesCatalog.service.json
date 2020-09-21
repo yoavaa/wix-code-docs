@@ -1,8 +1,7 @@
 { "name": "servicesCatalog",
   "memberOf": "wix-bookings-backend",
   "mixes": [],
-  "labels":
-    [ "changed" ],
+  "labels": [],
   "location":
     { "lineno": 173,
       "filename": "index.js" },
@@ -14,8 +13,7 @@
   "properties": [],
   "operations":
     [ { "name": "getService",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "id",
@@ -68,8 +66,7 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "listByResourceSlug",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "listServicesBySlugRequest",
@@ -138,8 +135,7 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "listServices",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "listServicesRequest",
@@ -246,8 +242,7 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "listServicesByCategorySlug",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "listServicesBySlugRequest",
@@ -316,8 +311,7 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "listServicesByResourceSlug",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "listServicesBySlugRequest",

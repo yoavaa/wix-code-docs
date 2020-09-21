@@ -1,8 +1,7 @@
 { "name": "calendar",
   "memberOf": "wix-bookings-backend",
   "mixes": [],
-  "labels":
-    [ "changed" ],
+  "labels": [],
   "location":
     { "lineno": 53,
       "filename": "index.js" },
@@ -14,8 +13,7 @@
   "properties": [],
   "operations":
     [ { "name": "listSessions",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "listSessionsRequest",
@@ -112,8 +110,7 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "listSlots",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "listSlotsRequest",

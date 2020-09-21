@@ -14,8 +14,7 @@
   "properties": [],
   "operations":
     [ { "name": "book",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "bookRequest",
@@ -213,8 +212,7 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "cancelBooking",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "id",
@@ -278,8 +276,7 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "checkoutBooking",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "bookingId",
@@ -348,8 +345,7 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "confirmBooking",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "id",
@@ -409,8 +405,7 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "declineBooking",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "id",
@@ -469,8 +464,7 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "markBookingAsPaid",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "bookingId",
@@ -513,8 +507,7 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "reschedule",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "rescheduleRequest",
@@ -659,8 +652,7 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "setAttendance",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "bookingId",
@@ -710,8 +702,7 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "updateCustomerInfo",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "bookingId",
@@ -1541,7 +1532,7 @@
                     [ "wix-bookings-backend.bookings.PaymentSelection" ] },
               "optional": true },
             { "name": "customFormFields",
-              "type": "Object",
+              "type": "Object.<String, FormInfo_CustomFormField>",
               "doc": "Set of key-value pairs. Other custom field values that were specified by the user. In the form of field_id to value mapping.\n Deprecated. Is being replaced with additional_fields.",
               "optional": true },
             { "name": "additionalFields",
@@ -1553,7 +1544,8 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "changed" ] },
       { "name": "FormInfo_CustomFormField",
         "locations":
           [ { "lineno": 235,

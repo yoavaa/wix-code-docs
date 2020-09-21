@@ -1,8 +1,7 @@
 { "name": "forms",
   "memberOf": "wix-bookings-backend",
   "mixes": [],
-  "labels":
-    [ "changed" ],
+  "labels": [],
   "location":
     { "lineno": 149,
       "filename": "index.js" },
@@ -14,8 +13,7 @@
   "properties": [],
   "operations":
     [ { "name": "createForm",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "form",
@@ -227,8 +225,7 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "getForm",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "id",
@@ -274,8 +271,7 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "updateForm",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "id",

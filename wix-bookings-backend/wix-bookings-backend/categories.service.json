@@ -1,8 +1,7 @@
 { "name": "categories",
   "memberOf": "wix-bookings-backend",
   "mixes": [],
-  "labels":
-    [ "changed" ],
+  "labels": [],
   "location":
     { "lineno": 137,
       "filename": "index.js" },
@@ -14,8 +13,7 @@
   "properties": [],
   "operations":
     [ { "name": "createCategory",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "category",
@@ -66,8 +64,7 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "deleteCategory",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "id",
@@ -114,8 +111,7 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "list",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "listCategoryRequest",
@@ -163,8 +159,7 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "updateCategory",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "id",
